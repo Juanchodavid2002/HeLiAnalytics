@@ -5,7 +5,7 @@ Requiere: pip install pytest httpx  (httpx es necesario para TestClient de FastA
 """
 
 from fastapi.testclient import TestClient
-from app.main import app, WEB_DIR
+from app.main import app, FRONTEND_DIR
 
 client = TestClient(app)
 
@@ -14,7 +14,7 @@ client = TestClient(app)
 def test_root():
     r = client.get("/")
     assert r.status_code == 200
-    if (WEB_DIR / "index.html").is_file():
+    if (FRONTEND_DIR / "index.html").is_file():
         assert "text/html" in r.headers["content-type"]
     else:
         assert r.json()["app"] == "HeLi Analytics API"

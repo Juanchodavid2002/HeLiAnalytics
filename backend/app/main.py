@@ -37,11 +37,11 @@ app.include_router(insights.router)
 app.include_router(textual.router)
 app.include_router(filtros.router)
 
-WEB_DIR = Path(__file__).resolve().parents[2] / "web"
+FRONTEND_DIR = Path(__file__).resolve().parents[2] / "public"
 
 
-if (WEB_DIR / "index.html").is_file():
-    app.frontend("/", directory=str(WEB_DIR), fallback="index.html")
+if (FRONTEND_DIR / "index.html").is_file():
+    app.frontend("/", directory=str(FRONTEND_DIR), fallback="index.html")
 else:
     @app.get("/")
     def root() -> dict:

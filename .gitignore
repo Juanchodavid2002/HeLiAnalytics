@@ -8,6 +8,7 @@ dist/
 build/
 .angular/
 web/
+public/
 
 # Python
 __pycache__/
