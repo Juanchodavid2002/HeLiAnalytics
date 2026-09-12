@@ -1,0 +1,71 @@
+{
+  "insights": [
+    {
+      "tipo": "hallazgo",
+      "titulo": "Predominancia de Reclamo",
+      "descripcion": "Las PQRS de tipo Reclamo representan el 74.7% de los registros analizados (1683 de 2252), siendo la categoría predominante en el período.",
+      "metrica": "74.7%",
+      "valor": "Reclamo",
+      "orden": 1
+    },
+    {
+      "tipo": "prioridad",
+      "titulo": "Causa crítica: Continuidad",
+      "descripcion": "La causa 'Continuidad' concentra el 68.0% de las PQRS (1532 registros). Es la principal fuente de inconformidad reportada por los usuarios.",
+      "metrica": "68.0%",
+      "valor": "Continuidad",
+      "orden": 2
+    },
+    {
+      "tipo": "hallazgo",
+      "titulo": "Concentración de causas",
+      "descripcion": "Las 3 causas más frecuentes (Continuidad, No Aplica, Oportunidad) concentran el 89.7% de las PQRS analizadas.",
+      "metrica": "89.7%",
+      "valor": "Top 3 causas",
+      "orden": 3
+    },
+    {
+      "tipo": "hallazgo",
+      "titulo": "Canal de ingreso preferente: Correo Electronico",
+      "descripcion": "El canal 'Correo Electronico' concentra el 54.5% de las radicaciones, indicando que la institución debe priorizar la atención y gestión de este canal.",
+      "metrica": "54.5%",
+      "valor": "Correo Electronico",
+      "orden": 4
+    },
+    {
+      "tipo": "oportunidad",
+      "titulo": "Tiempo de respuesta",
+      "descripcion": "La mediana de respuesta es de 4 días y el 100.0% de las PQRS se respondieron en 30 días o menos, en línea con los estándares de la Circular 008 de 2018 de la Supersalud.",
+      "metrica": "4 días",
+      "valor": "100.0% ≤ 30 días",
+      "orden": 5
+    },
+    {
+      "tipo": "oportunidad",
+      "titulo": "Servicio con mayor carga de PQRS: No Ventilado",
+      "descripcion": "El servicio 'No Ventilado' acumula el 36.5% de las PQRS (822 registros), siendo el principal foco de atención para gestiones de mejora.",
+      "metrica": "36.5%",
+      "valor": "No Ventilado",
+      "orden": 6
+    },
+    {
+      "tipo": "tendencia",
+      "titulo": "Mes pico: Octubre",
+      "descripcion": "Octubre fue el mes con mayor radicación de PQRS (442 registros), posible foco de análisis sobre causas estacionales o eventos específicos.",
+      "metrica": "442",
+      "valor": "Octubre",
+      "orden": 7
+    },
+    {
+      "tipo": "hallazgo",
+      "titulo": "Perfil del radicador: Usuario En Manejo Por La Ips",
+      "descripcion": "El 55.0% de las PQRS son radicadas por usuario en manejo por la ips, lo que orienta la estrategia de comunicación y seguimiento institucional.",
+      "metrica": "55.0%",
+      "valor": "Usuario En Manejo Por La Ips",
+      "orden": 8
+    }
+  ],
+  "fecha_generacion": "2025-09-11",
+  "total_registros_analizados": 2252,
+  "periodo": "II semestre 2025"
+}

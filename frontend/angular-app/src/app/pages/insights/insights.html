@@ -1,0 +1,50 @@
+<div class="space-y-6">
+  <div>
+    <h2 class="hel-page-title">Insights</h2>
+    <p class="hel-page-subtitle">
+      Hallazgos, prioridades, oportunidades y tendencias generados exclusivamente desde los datos del periodo {{ periodo() }}.
+    </p>
+  </div>
+
+  @if (hayError()) {
+    <div class="hel-panel flex flex-col items-center justify-center py-16 text-center">
+      <p class="mb-4 text-sm font-medium text-text-primary">No se pudieron cargar los datos.</p>
+      <button type="button" class="rounded-lg bg-secondary px-4 py-2 text-xs font-medium text-white" (click)="reintentar()">
+        Reintentar
+      </button>
+    </div>
+  } @else if (cargando()) {
+    <app-loading />
+  } @else {
+    @if (insights()?.fecha_generacion) {
+      <div class="flex flex-wrap items-center justify-between gap-2 card px-4 py-3 fade-in">
+        <div class="flex flex-wrap items-center gap-x-6 gap-y-1 text-xs text-text-secondary">
+          <span><strong class="text-text-primary">{{ totalAnalizados() }}</strong> registros analizados</span>
+          <span>Generado el {{ fechaGeneracion() }}</span>
+          <span>Periodo {{ periodo() }}</span>
+        </div>
+      </div>
+    }
+
+    <div class="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+      @for (ins of insights()!.insights; track ins.orden) {
+        <div class="card flex flex-col p-5 fade-in transition-shadow hover:shadow-md">
+          <div class="mb-3 flex items-center justify-between gap-2">
+            <span class="hel-chip" [class]="claseTipo(ins.tipo)">
+              {{ etiquetaTipo(ins.tipo) }}
+            </span>
+            <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary/5 text-base font-bold text-primary">
+              {{ ins.orden }}
+            </span>
+          </div>
+          <h3 class="mb-2 text-base font-bold text-text-primary">{{ ins.titulo }}</h3>
+          <p class="flex-1 text-sm leading-relaxed text-text-secondary">{{ ins.descripcion }}</p>
+          <div class="mt-4 rounded-lg bg-slate-50 p-3">
+            <p class="truncate text-[11px] uppercase tracking-wide text-text-secondary">{{ ins.metrica }}</p>
+            <p class="truncate font-mono text-lg font-medium text-primary">{{ ins.valor }}</p>
+          </div>
+        </div>
+      }
+    </div>
+  }
+</div>

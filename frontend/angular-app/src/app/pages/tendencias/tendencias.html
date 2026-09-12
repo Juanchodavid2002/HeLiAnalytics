@@ -1,0 +1,31 @@
+<div class="space-y-6">
+  <div>
+    <h2 class="hel-page-title">Tendencias</h2>
+    <p class="hel-page-subtitle">
+      Evolución temporal de las PQRS y comparación entre tipos, canales y causas.
+    </p>
+  </div>
+
+  @if (hayError()) {
+    <div class="hel-panel flex flex-col items-center justify-center py-16 text-center">
+      <p class="mb-4 text-sm font-medium text-text-primary">No se pudieron cargar los datos.</p>
+      <button type="button" class="rounded-lg bg-secondary px-4 py-2 text-xs font-medium text-white" (click)="reintentar()">
+        Reintentar
+      </button>
+    </div>
+  } @else if (cargando()) {
+    <app-loading />
+  } @else {
+    <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
+      <app-chart-container titulo="PQRS por mes" [opciones]="opcionesPorMes()" [cargando]="cargando()" />
+      <app-chart-container titulo="Tendencia por tipo de PQRS" [opciones]="opcionesPorTipo()" [cargando]="cargando()" />
+    </div>
+
+    <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
+      <app-chart-container titulo="Distribución por canal de ingreso" [opciones]="opcionesCanal()" [cargando]="cargando()" altura="300px" />
+      <app-chart-container titulo="Frecuencia por canal" [opciones]="opcionesCanalBarras()" [cargando]="cargando()" altura="300px" />
+    </div>
+
+    <app-chart-container titulo="Causa × Canal" subtitulo="Mapa de calor de combinaciones causa-canal" [opciones]="opcionesCausaCanal()" [cargando]="cargando()" altura="360px" />
+  }
+</div>

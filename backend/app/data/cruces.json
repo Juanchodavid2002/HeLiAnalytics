@@ -1,0 +1,2534 @@
+{
+  "cruces": [
+    {
+      "variable_x": "tipo_pqrs_grupo",
+      "variable_y": "causa",
+      "tabla": [
+        {
+          "x": "FELICITACION",
+          "valores": [
+            {
+              "y": "ACCESIBILIDAD",
+              "frecuencia": 5
+            },
+            {
+              "y": "CONTINUIDAD",
+              "frecuencia": 43
+            },
+            {
+              "y": "NO APLICA",
+              "frecuencia": 207
+            },
+            {
+              "y": "OPORTUNIDAD",
+              "frecuencia": 1
+            },
+            {
+              "y": "PERTINENCIA",
+              "frecuencia": 2
+            },
+            {
+              "y": "SEGURIDAD",
+              "frecuencia": 2
+            }
+          ]
+        },
+        {
+          "x": "PETICION",
+          "valores": [
+            {
+              "y": "ACCESIBILIDAD",
+              "frecuencia": 12
+            },
+            {
+              "y": "CONTINUIDAD",
+              "frecuencia": 148
+            },
+            {
+              "y": "NO APLICA",
+              "frecuencia": 33
+            },
+            {
+              "y": "OPORTUNIDAD",
+              "frecuencia": 31
+            },
+            {
+              "y": "PERTINENCIA",
+              "frecuencia": 38
+            },
+            {
+              "y": "SEGURIDAD",
+              "frecuencia": 10
+            }
+          ]
+        },
+        {
+          "x": "QUEJA",
+          "valores": [
+            {
+              "y": "ACCESIBILIDAD",
+              "frecuencia": 1
+            },
+            {
+              "y": "CONTINUIDAD",
+              "frecuencia": 12
+            },
+            {
+              "y": "NO APLICA",
+              "frecuencia": 6
+            },
+            {
+              "y": "OPORTUNIDAD",
+              "frecuencia": 5
+            },
+            {
+              "y": "PERTINENCIA",
+              "frecuencia": 5
+            },
+            {
+              "y": "SEGURIDAD",
+              "frecuencia": 8
+            }
+          ]
+        },
+        {
+          "x": "RECLAMO",
+          "valores": [
+            {
+              "y": "ACCESIBILIDAD",
+              "frecuencia": 43
+            },
+            {
+              "y": "CONTINUIDAD",
+              "frecuencia": 1329
+            },
+            {
+              "y": "NO APLICA",
+              "frecuencia": 52
+            },
+            {
+              "y": "OPORTUNIDAD",
+              "frecuencia": 152
+            },
+            {
+              "y": "PERTINENCIA",
+              "frecuencia": 45
+            },
+            {
+              "y": "SEGURIDAD",
+              "frecuencia": 62
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "variable_x": "tipo_pqrs_grupo",
+      "variable_y": "programa",
+      "tabla": [
+        {
+          "x": "FELICITACION",
+          "valores": [
+            {
+              "y": "APLICACIÓN DE BIOLOGICO",
+              "frecuencia": 0
+            },
+            {
+              "y": "APLICACIÓN DE MEDICAMENTO",
+              "frecuencia": 90
+            },
+            {
+              "y": "DOMICILIARIO",
+              "frecuencia": 0
+            },
+            {
+              "y": "HOSPITALIZACIÓN GENERAL",
+              "frecuencia": 20
+            },
+            {
+              "y": "NEW PALEX",
+              "frecuencia": 0
+            },
+            {
+              "y": "NO VENTILADO",
+              "frecuencia": 20
+            },
+            {
+              "y": "PUNTUAL",
+              "frecuencia": 3
+            },
+            {
+              "y": "SANITAS PREMIUM",
+              "frecuencia": 0
+            },
+            {
+              "y": "UNIDAD DE CUIDADO COGNITIVO",
+              "frecuencia": 1
+            },
+            {
+              "y": "UNIDAD DE CUIDADO CRÓNICO",
+              "frecuencia": 26
+            },
+            {
+              "y": "UNIDAD DE REHABILITACIÓN",
+              "frecuencia": 29
+            },
+            {
+              "y": "UNIDAD DE SALUD MENTAL",
+              "frecuencia": 69
+            },
+            {
+              "y": "VENTILADO",
+              "frecuencia": 2
+            },
+            {
+              "y": "VENTILADO NO INVASIVO",
+              "frecuencia": 0
+            }
+          ]
+        },
+        {
+          "x": "PETICION",
+          "valores": [
+            {
+              "y": "APLICACIÓN DE BIOLOGICO",
+              "frecuencia": 0
+            },
+            {
+              "y": "APLICACIÓN DE MEDICAMENTO",
+              "frecuencia": 8
+            },
+            {
+              "y": "DOMICILIARIO",
+              "frecuencia": 3
+            },
+            {
+              "y": "HOSPITALIZACIÓN GENERAL",
+              "frecuencia": 5
+            },
+            {
+              "y": "NEW PALEX",
+              "frecuencia": 0
+            },
+            {
+              "y": "NO VENTILADO",
+              "frecuencia": 97
+            },
+            {
+              "y": "PUNTUAL",
+              "frecuencia": 39
+            },
+            {
+              "y": "SANITAS PREMIUM",
+              "frecuencia": 2
+            },
+            {
+              "y": "UNIDAD DE CUIDADO COGNITIVO",
+              "frecuencia": 0
+            },
+            {
+              "y": "UNIDAD DE CUIDADO CRÓNICO",
+              "frecuencia": 24
+            },
+            {
+              "y": "UNIDAD DE REHABILITACIÓN",
+              "frecuencia": 44
+            },
+            {
+              "y": "UNIDAD DE SALUD MENTAL",
+              "frecuencia": 44
+            },
+            {
+              "y": "VENTILADO",
+              "frecuencia": 6
+            },
+            {
+              "y": "VENTILADO NO INVASIVO",
+              "frecuencia": 0
+            }
+          ]
+        },
+        {
+          "x": "QUEJA",
+          "valores": [
+            {
+              "y": "APLICACIÓN DE BIOLOGICO",
+              "frecuencia": 0
+            },
+            {
+              "y": "APLICACIÓN DE MEDICAMENTO",
+              "frecuencia": 0
+            },
+            {
+              "y": "DOMICILIARIO",
+              "frecuencia": 1
+            },
+            {
+              "y": "HOSPITALIZACIÓN GENERAL",
+              "frecuencia": 3
+            },
+            {
+              "y": "NEW PALEX",
+              "frecuencia": 0
+            },
+            {
+              "y": "NO VENTILADO",
+              "frecuencia": 8
+            },
+            {
+              "y": "PUNTUAL",
+              "frecuencia": 0
+            },
+            {
+              "y": "SANITAS PREMIUM",
+              "frecuencia": 0
+            },
+            {
+              "y": "UNIDAD DE CUIDADO COGNITIVO",
+              "frecuencia": 0
+            },
+            {
+              "y": "UNIDAD DE CUIDADO CRÓNICO",
+              "frecuencia": 8
+            },
+            {
+              "y": "UNIDAD DE REHABILITACIÓN",
+              "frecuencia": 5
+            },
+            {
+              "y": "UNIDAD DE SALUD MENTAL",
+              "frecuencia": 12
+            },
+            {
+              "y": "VENTILADO",
+              "frecuencia": 0
+            },
+            {
+              "y": "VENTILADO NO INVASIVO",
+              "frecuencia": 0
+            }
+          ]
+        },
+        {
+          "x": "RECLAMO",
+          "valores": [
+            {
+              "y": "APLICACIÓN DE BIOLOGICO",
+              "frecuencia": 2
+            },
+            {
+              "y": "APLICACIÓN DE MEDICAMENTO",
+              "frecuencia": 211
+            },
+            {
+              "y": "DOMICILIARIO",
+              "frecuencia": 15
+            },
+            {
+              "y": "HOSPITALIZACIÓN GENERAL",
+              "frecuencia": 25
+            },
+            {
+              "y": "NEW PALEX",
+              "frecuencia": 4
+            },
+            {
+              "y": "NO VENTILADO",
+              "frecuencia": 697
+            },
+            {
+              "y": "PUNTUAL",
+              "frecuencia": 279
+            },
+            {
+              "y": "SANITAS PREMIUM",
+              "frecuencia": 7
+            },
+            {
+              "y": "UNIDAD DE CUIDADO COGNITIVO",
+              "frecuencia": 0
+            },
+            {
+              "y": "UNIDAD DE CUIDADO CRÓNICO",
+              "frecuencia": 33
+            },
+            {
+              "y": "UNIDAD DE REHABILITACIÓN",
+              "frecuencia": 314
+            },
+            {
+              "y": "UNIDAD DE SALUD MENTAL",
+              "frecuencia": 51
+            },
+            {
+              "y": "VENTILADO",
+              "frecuencia": 42
+            },
+            {
+              "y": "VENTILADO NO INVASIVO",
+              "frecuencia": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "variable_x": "causa",
+      "variable_y": "programa",
+      "tabla": [
+        {
+          "x": "ACCESIBILIDAD",
+          "valores": [
+            {
+              "y": "APLICACIÓN DE BIOLOGICO",
+              "frecuencia": 0
+            },
+            {
+              "y": "APLICACIÓN DE MEDICAMENTO",
+              "frecuencia": 3
+            },
+            {
+              "y": "DOMICILIARIO",
+              "frecuencia": 1
+            },
+            {
+              "y": "HOSPITALIZACIÓN GENERAL",
+              "frecuencia": 0
+            },
+            {
+              "y": "NEW PALEX",
+              "frecuencia": 0
+            },
+            {
+              "y": "NO VENTILADO",
+              "frecuencia": 23
+            },
+            {
+              "y": "PUNTUAL",
+              "frecuencia": 7
+            },
+            {
+              "y": "SANITAS PREMIUM",
+              "frecuencia": 0
+            },
+            {
+              "y": "UNIDAD DE CUIDADO COGNITIVO",
+              "frecuencia": 0
+            },
+            {
+              "y": "UNIDAD DE CUIDADO CRÓNICO",
+              "frecuencia": 2
+            },
+            {
+              "y": "UNIDAD DE REHABILITACIÓN",
+              "frecuencia": 24
+            },
+            {
+              "y": "UNIDAD DE SALUD MENTAL",
+              "frecuencia": 1
+            },
+            {
+              "y": "VENTILADO",
+              "frecuencia": 0
+            },
+            {
+              "y": "VENTILADO NO INVASIVO",
+              "frecuencia": 0
+            }
+          ]
+        },
+        {
+          "x": "CONTINUIDAD",
+          "valores": [
+            {
+              "y": "APLICACIÓN DE BIOLOGICO",
+              "frecuencia": 2
+            },
+            {
+              "y": "APLICACIÓN DE MEDICAMENTO",
+              "frecuencia": 166
+            },
+            {
+              "y": "DOMICILIARIO",
+              "frecuencia": 16
+            },
+            {
+              "y": "HOSPITALIZACIÓN GENERAL",
+              "frecuencia": 15
+            },
+            {
+              "y": "NEW PALEX",
+              "frecuencia": 3
+            },
+            {
+              "y": "NO VENTILADO",
+              "frecuencia": 687
+            },
+            {
+              "y": "PUNTUAL",
+              "frecuencia": 269
+            },
+            {
+              "y": "SANITAS PREMIUM",
+              "frecuencia": 6
+            },
+            {
+              "y": "UNIDAD DE CUIDADO COGNITIVO",
+              "frecuencia": 1
+            },
+            {
+              "y": "UNIDAD DE CUIDADO CRÓNICO",
+              "frecuencia": 26
+            },
+            {
+              "y": "UNIDAD DE REHABILITACIÓN",
+              "frecuencia": 234
+            },
+            {
+              "y": "UNIDAD DE SALUD MENTAL",
+              "frecuencia": 60
+            },
+            {
+              "y": "VENTILADO",
+              "frecuencia": 44
+            },
+            {
+              "y": "VENTILADO NO INVASIVO",
+              "frecuencia": 3
+            }
+          ]
+        },
+        {
+          "x": "NO APLICA",
+          "valores": [
+            {
+              "y": "APLICACIÓN DE BIOLOGICO",
+              "frecuencia": 0
+            },
+            {
+              "y": "APLICACIÓN DE MEDICAMENTO",
+              "frecuencia": 92
+            },
+            {
+              "y": "DOMICILIARIO",
+              "frecuencia": 0
+            },
+            {
+              "y": "HOSPITALIZACIÓN GENERAL",
+              "frecuencia": 21
+            },
+            {
+              "y": "NEW PALEX",
+              "frecuencia": 0
+            },
+            {
+              "y": "NO VENTILADO",
+              "frecuencia": 39
+            },
+            {
+              "y": "PUNTUAL",
+              "frecuencia": 12
+            },
+            {
+              "y": "SANITAS PREMIUM",
+              "frecuencia": 0
+            },
+            {
+              "y": "UNIDAD DE CUIDADO COGNITIVO",
+              "frecuencia": 0
+            },
+            {
+              "y": "UNIDAD DE CUIDADO CRÓNICO",
+              "frecuencia": 33
+            },
+            {
+              "y": "UNIDAD DE REHABILITACIÓN",
+              "frecuencia": 36
+            },
+            {
+              "y": "UNIDAD DE SALUD MENTAL",
+              "frecuencia": 62
+            },
+            {
+              "y": "VENTILADO",
+              "frecuencia": 3
+            },
+            {
+              "y": "VENTILADO NO INVASIVO",
+              "frecuencia": 0
+            }
+          ]
+        },
+        {
+          "x": "OPORTUNIDAD",
+          "valores": [
+            {
+              "y": "APLICACIÓN DE BIOLOGICO",
+              "frecuencia": 0
+            },
+            {
+              "y": "APLICACIÓN DE MEDICAMENTO",
+              "frecuencia": 17
+            },
+            {
+              "y": "DOMICILIARIO",
+              "frecuencia": 1
+            },
+            {
+              "y": "HOSPITALIZACIÓN GENERAL",
+              "frecuencia": 6
+            },
+            {
+              "y": "NEW PALEX",
+              "frecuencia": 1
+            },
+            {
+              "y": "NO VENTILADO",
+              "frecuencia": 46
+            },
+            {
+              "y": "PUNTUAL",
+              "frecuencia": 23
+            },
+            {
+              "y": "SANITAS PREMIUM",
+              "frecuencia": 2
+            },
+            {
+              "y": "UNIDAD DE CUIDADO COGNITIVO",
+              "frecuencia": 0
+            },
+            {
+              "y": "UNIDAD DE CUIDADO CRÓNICO",
+              "frecuencia": 6
+            },
+            {
+              "y": "UNIDAD DE REHABILITACIÓN",
+              "frecuencia": 83
+            },
+            {
+              "y": "UNIDAD DE SALUD MENTAL",
+              "frecuencia": 3
+            },
+            {
+              "y": "VENTILADO",
+              "frecuencia": 1
+            },
+            {
+              "y": "VENTILADO NO INVASIVO",
+              "frecuencia": 0
+            }
+          ]
+        },
+        {
+          "x": "PERTINENCIA",
+          "valores": [
+            {
+              "y": "APLICACIÓN DE BIOLOGICO",
+              "frecuencia": 0
+            },
+            {
+              "y": "APLICACIÓN DE MEDICAMENTO",
+              "frecuencia": 4
+            },
+            {
+              "y": "DOMICILIARIO",
+              "frecuencia": 0
+            },
+            {
+              "y": "HOSPITALIZACIÓN GENERAL",
+              "frecuencia": 8
+            },
+            {
+              "y": "NEW PALEX",
+              "frecuencia": 0
+            },
+            {
+              "y": "NO VENTILADO",
+              "frecuencia": 19
+            },
+            {
+              "y": "PUNTUAL",
+              "frecuencia": 6
+            },
+            {
+              "y": "SANITAS PREMIUM",
+              "frecuencia": 1
+            },
+            {
+              "y": "UNIDAD DE CUIDADO COGNITIVO",
+              "frecuencia": 0
+            },
+            {
+              "y": "UNIDAD DE CUIDADO CRÓNICO",
+              "frecuencia": 19
+            },
+            {
+              "y": "UNIDAD DE REHABILITACIÓN",
+              "frecuencia": 8
+            },
+            {
+              "y": "UNIDAD DE SALUD MENTAL",
+              "frecuencia": 25
+            },
+            {
+              "y": "VENTILADO",
+              "frecuencia": 0
+            },
+            {
+              "y": "VENTILADO NO INVASIVO",
+              "frecuencia": 0
+            }
+          ]
+        },
+        {
+          "x": "SEGURIDAD",
+          "valores": [
+            {
+              "y": "APLICACIÓN DE BIOLOGICO",
+              "frecuencia": 0
+            },
+            {
+              "y": "APLICACIÓN DE MEDICAMENTO",
+              "frecuencia": 27
+            },
+            {
+              "y": "DOMICILIARIO",
+              "frecuencia": 1
+            },
+            {
+              "y": "HOSPITALIZACIÓN GENERAL",
+              "frecuencia": 3
+            },
+            {
+              "y": "NEW PALEX",
+              "frecuencia": 0
+            },
+            {
+              "y": "NO VENTILADO",
+              "frecuencia": 8
+            },
+            {
+              "y": "PUNTUAL",
+              "frecuencia": 4
+            },
+            {
+              "y": "SANITAS PREMIUM",
+              "frecuencia": 0
+            },
+            {
+              "y": "UNIDAD DE CUIDADO COGNITIVO",
+              "frecuencia": 0
+            },
+            {
+              "y": "UNIDAD DE CUIDADO CRÓNICO",
+              "frecuencia": 5
+            },
+            {
+              "y": "UNIDAD DE REHABILITACIÓN",
+              "frecuencia": 7
+            },
+            {
+              "y": "UNIDAD DE SALUD MENTAL",
+              "frecuencia": 25
+            },
+            {
+              "y": "VENTILADO",
+              "frecuencia": 2
+            },
+            {
+              "y": "VENTILADO NO INVASIVO",
+              "frecuencia": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "variable_x": "causa",
+      "variable_y": "canal",
+      "tabla": [
+        {
+          "x": "ACCESIBILIDAD",
+          "valores": [
+            {
+              "y": "BUZON DE SUGERENCIAS",
+              "frecuencia": 12
+            },
+            {
+              "y": "CALLCENTER",
+              "frecuencia": 1
+            },
+            {
+              "y": "CORREO ELECTRONICO",
+              "frecuencia": 28
+            },
+            {
+              "y": "PCR SANITAS",
+              "frecuencia": 11
+            },
+            {
+              "y": "PRESENCIAL",
+              "frecuencia": 5
+            },
+            {
+              "y": "PÁGINA WEB",
+              "frecuencia": 4
+            }
+          ]
+        },
+        {
+          "x": "CONTINUIDAD",
+          "valores": [
+            {
+              "y": "BUZON DE SUGERENCIAS",
+              "frecuencia": 117
+            },
+            {
+              "y": "CALLCENTER",
+              "frecuencia": 2
+            },
+            {
+              "y": "CORREO ELECTRONICO",
+              "frecuencia": 966
+            },
+            {
+              "y": "PCR SANITAS",
+              "frecuencia": 3
+            },
+            {
+              "y": "PRESENCIAL",
+              "frecuencia": 13
+            },
+            {
+              "y": "PÁGINA WEB",
+              "frecuencia": 431
+            }
+          ]
+        },
+        {
+          "x": "NO APLICA",
+          "valores": [
+            {
+              "y": "BUZON DE SUGERENCIAS",
+              "frecuencia": 145
+            },
+            {
+              "y": "CALLCENTER",
+              "frecuencia": 0
+            },
+            {
+              "y": "CORREO ELECTRONICO",
+              "frecuencia": 34
+            },
+            {
+              "y": "PCR SANITAS",
+              "frecuencia": 1
+            },
+            {
+              "y": "PRESENCIAL",
+              "frecuencia": 7
+            },
+            {
+              "y": "PÁGINA WEB",
+              "frecuencia": 111
+            }
+          ]
+        },
+        {
+          "x": "OPORTUNIDAD",
+          "valores": [
+            {
+              "y": "BUZON DE SUGERENCIAS",
+              "frecuencia": 16
+            },
+            {
+              "y": "CALLCENTER",
+              "frecuencia": 0
+            },
+            {
+              "y": "CORREO ELECTRONICO",
+              "frecuencia": 103
+            },
+            {
+              "y": "PCR SANITAS",
+              "frecuencia": 1
+            },
+            {
+              "y": "PRESENCIAL",
+              "frecuencia": 6
+            },
+            {
+              "y": "PÁGINA WEB",
+              "frecuencia": 63
+            }
+          ]
+        },
+        {
+          "x": "PERTINENCIA",
+          "valores": [
+            {
+              "y": "BUZON DE SUGERENCIAS",
+              "frecuencia": 12
+            },
+            {
+              "y": "CALLCENTER",
+              "frecuencia": 3
+            },
+            {
+              "y": "CORREO ELECTRONICO",
+              "frecuencia": 45
+            },
+            {
+              "y": "PCR SANITAS",
+              "frecuencia": 5
+            },
+            {
+              "y": "PRESENCIAL",
+              "frecuencia": 1
+            },
+            {
+              "y": "PÁGINA WEB",
+              "frecuencia": 24
+            }
+          ]
+        },
+        {
+          "x": "SEGURIDAD",
+          "valores": [
+            {
+              "y": "BUZON DE SUGERENCIAS",
+              "frecuencia": 11
+            },
+            {
+              "y": "CALLCENTER",
+              "frecuencia": 0
+            },
+            {
+              "y": "CORREO ELECTRONICO",
+              "frecuencia": 52
+            },
+            {
+              "y": "PCR SANITAS",
+              "frecuencia": 0
+            },
+            {
+              "y": "PRESENCIAL",
+              "frecuencia": 3
+            },
+            {
+              "y": "PÁGINA WEB",
+              "frecuencia": 16
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "variable_x": "programa",
+      "variable_y": "canal",
+      "tabla": [
+        {
+          "x": "APLICACIÓN DE BIOLOGICO",
+          "valores": [
+            {
+              "y": "BUZON DE SUGERENCIAS",
+              "frecuencia": 2
+            },
+            {
+              "y": "CALLCENTER",
+              "frecuencia": 0
+            },
+            {
+              "y": "CORREO ELECTRONICO",
+              "frecuencia": 0
+            },
+            {
+              "y": "PCR SANITAS",
+              "frecuencia": 0
+            },
+            {
+              "y": "PRESENCIAL",
+              "frecuencia": 0
+            },
+            {
+              "y": "PÁGINA WEB",
+              "frecuencia": 0
+            }
+          ]
+        },
+        {
+          "x": "APLICACIÓN DE MEDICAMENTO",
+          "valores": [
+            {
+              "y": "BUZON DE SUGERENCIAS",
+              "frecuencia": 0
+            },
+            {
+              "y": "CALLCENTER",
+              "frecuencia": 1
+            },
+            {
+              "y": "CORREO ELECTRONICO",
+              "frecuencia": 180
+            },
+            {
+              "y": "PCR SANITAS",
+              "frecuencia": 0
+            },
+            {
+              "y": "PRESENCIAL",
+              "frecuencia": 0
+            },
+            {
+              "y": "PÁGINA WEB",
+              "frecuencia": 128
+            }
+          ]
+        },
+        {
+          "x": "DOMICILIARIO",
+          "valores": [
+            {
+              "y": "BUZON DE SUGERENCIAS",
+              "frecuencia": 5
+            },
+            {
+              "y": "CALLCENTER",
+              "frecuencia": 0
+            },
+            {
+              "y": "CORREO ELECTRONICO",
+              "frecuencia": 5
+            },
+            {
+              "y": "PCR SANITAS",
+              "frecuencia": 0
+            },
+            {
+              "y": "PRESENCIAL",
+              "frecuencia": 2
+            },
+            {
+              "y": "PÁGINA WEB",
+              "frecuencia": 7
+            }
+          ]
+        },
+        {
+          "x": "HOSPITALIZACIÓN GENERAL",
+          "valores": [
+            {
+              "y": "BUZON DE SUGERENCIAS",
+              "frecuencia": 29
+            },
+            {
+              "y": "CALLCENTER",
+              "frecuencia": 0
+            },
+            {
+              "y": "CORREO ELECTRONICO",
+              "frecuencia": 13
+            },
+            {
+              "y": "PCR SANITAS",
+              "frecuencia": 0
+            },
+            {
+              "y": "PRESENCIAL",
+              "frecuencia": 0
+            },
+            {
+              "y": "PÁGINA WEB",
+              "frecuencia": 11
+            }
+          ]
+        },
+        {
+          "x": "NEW PALEX",
+          "valores": [
+            {
+              "y": "BUZON DE SUGERENCIAS",
+              "frecuencia": 0
+            },
+            {
+              "y": "CALLCENTER",
+              "frecuencia": 0
+            },
+            {
+              "y": "CORREO ELECTRONICO",
+              "frecuencia": 3
+            },
+            {
+              "y": "PCR SANITAS",
+              "frecuencia": 0
+            },
+            {
+              "y": "PRESENCIAL",
+              "frecuencia": 0
+            },
+            {
+              "y": "PÁGINA WEB",
+              "frecuencia": 1
+            }
+          ]
+        },
+        {
+          "x": "NO VENTILADO",
+          "valores": [
+            {
+              "y": "BUZON DE SUGERENCIAS",
+              "frecuencia": 41
+            },
+            {
+              "y": "CALLCENTER",
+              "frecuencia": 5
+            },
+            {
+              "y": "CORREO ELECTRONICO",
+              "frecuencia": 507
+            },
+            {
+              "y": "PCR SANITAS",
+              "frecuencia": 2
+            },
+            {
+              "y": "PRESENCIAL",
+              "frecuencia": 15
+            },
+            {
+              "y": "PÁGINA WEB",
+              "frecuencia": 252
+            }
+          ]
+        },
+        {
+          "x": "PUNTUAL",
+          "valores": [
+            {
+              "y": "BUZON DE SUGERENCIAS",
+              "frecuencia": 8
+            },
+            {
+              "y": "CALLCENTER",
+              "frecuencia": 0
+            },
+            {
+              "y": "CORREO ELECTRONICO",
+              "frecuencia": 204
+            },
+            {
+              "y": "PCR SANITAS",
+              "frecuencia": 0
+            },
+            {
+              "y": "PRESENCIAL",
+              "frecuencia": 4
+            },
+            {
+              "y": "PÁGINA WEB",
+              "frecuencia": 105
+            }
+          ]
+        },
+        {
+          "x": "SANITAS PREMIUM",
+          "valores": [
+            {
+              "y": "BUZON DE SUGERENCIAS",
+              "frecuencia": 0
+            },
+            {
+              "y": "CALLCENTER",
+              "frecuencia": 0
+            },
+            {
+              "y": "CORREO ELECTRONICO",
+              "frecuencia": 5
+            },
+            {
+              "y": "PCR SANITAS",
+              "frecuencia": 0
+            },
+            {
+              "y": "PRESENCIAL",
+              "frecuencia": 0
+            },
+            {
+              "y": "PÁGINA WEB",
+              "frecuencia": 4
+            }
+          ]
+        },
+        {
+          "x": "UNIDAD DE CUIDADO COGNITIVO",
+          "valores": [
+            {
+              "y": "BUZON DE SUGERENCIAS",
+              "frecuencia": 1
+            },
+            {
+              "y": "CALLCENTER",
+              "frecuencia": 0
+            },
+            {
+              "y": "CORREO ELECTRONICO",
+              "frecuencia": 0
+            },
+            {
+              "y": "PCR SANITAS",
+              "frecuencia": 0
+            },
+            {
+              "y": "PRESENCIAL",
+              "frecuencia": 0
+            },
+            {
+              "y": "PÁGINA WEB",
+              "frecuencia": 0
+            }
+          ]
+        },
+        {
+          "x": "UNIDAD DE CUIDADO CRÓNICO",
+          "valores": [
+            {
+              "y": "BUZON DE SUGERENCIAS",
+              "frecuencia": 47
+            },
+            {
+              "y": "CALLCENTER",
+              "frecuencia": 0
+            },
+            {
+              "y": "CORREO ELECTRONICO",
+              "frecuencia": 32
+            },
+            {
+              "y": "PCR SANITAS",
+              "frecuencia": 1
+            },
+            {
+              "y": "PRESENCIAL",
+              "frecuencia": 2
+            },
+            {
+              "y": "PÁGINA WEB",
+              "frecuencia": 9
+            }
+          ]
+        },
+        {
+          "x": "UNIDAD DE REHABILITACIÓN",
+          "valores": [
+            {
+              "y": "BUZON DE SUGERENCIAS",
+              "frecuencia": 89
+            },
+            {
+              "y": "CALLCENTER",
+              "frecuencia": 0
+            },
+            {
+              "y": "CORREO ELECTRONICO",
+              "frecuencia": 186
+            },
+            {
+              "y": "PCR SANITAS",
+              "frecuencia": 16
+            },
+            {
+              "y": "PRESENCIAL",
+              "frecuencia": 8
+            },
+            {
+              "y": "PÁGINA WEB",
+              "frecuencia": 93
+            }
+          ]
+        },
+        {
+          "x": "UNIDAD DE SALUD MENTAL",
+          "valores": [
+            {
+              "y": "BUZON DE SUGERENCIAS",
+              "frecuencia": 90
+            },
+            {
+              "y": "CALLCENTER",
+              "frecuencia": 0
+            },
+            {
+              "y": "CORREO ELECTRONICO",
+              "frecuencia": 51
+            },
+            {
+              "y": "PCR SANITAS",
+              "frecuencia": 2
+            },
+            {
+              "y": "PRESENCIAL",
+              "frecuencia": 4
+            },
+            {
+              "y": "PÁGINA WEB",
+              "frecuencia": 29
+            }
+          ]
+        },
+        {
+          "x": "VENTILADO",
+          "valores": [
+            {
+              "y": "BUZON DE SUGERENCIAS",
+              "frecuencia": 1
+            },
+            {
+              "y": "CALLCENTER",
+              "frecuencia": 0
+            },
+            {
+              "y": "CORREO ELECTRONICO",
+              "frecuencia": 40
+            },
+            {
+              "y": "PCR SANITAS",
+              "frecuencia": 0
+            },
+            {
+              "y": "PRESENCIAL",
+              "frecuencia": 0
+            },
+            {
+              "y": "PÁGINA WEB",
+              "frecuencia": 9
+            }
+          ]
+        },
+        {
+          "x": "VENTILADO NO INVASIVO",
+          "valores": [
+            {
+              "y": "BUZON DE SUGERENCIAS",
+              "frecuencia": 0
+            },
+            {
+              "y": "CALLCENTER",
+              "frecuencia": 0
+            },
+            {
+              "y": "CORREO ELECTRONICO",
+              "frecuencia": 2
+            },
+            {
+              "y": "PCR SANITAS",
+              "frecuencia": 0
+            },
+            {
+              "y": "PRESENCIAL",
+              "frecuencia": 0
+            },
+            {
+              "y": "PÁGINA WEB",
+              "frecuencia": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "variable_x": "programa",
+      "variable_y": "tipo_pqrs_grupo",
+      "tabla": [
+        {
+          "x": "APLICACIÓN DE BIOLOGICO",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 0
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 0
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 0
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 2
+            }
+          ]
+        },
+        {
+          "x": "APLICACIÓN DE MEDICAMENTO",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 90
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 8
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 0
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 211
+            }
+          ]
+        },
+        {
+          "x": "DOMICILIARIO",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 0
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 3
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 1
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 15
+            }
+          ]
+        },
+        {
+          "x": "HOSPITALIZACIÓN GENERAL",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 20
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 5
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 3
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 25
+            }
+          ]
+        },
+        {
+          "x": "NEW PALEX",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 0
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 0
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 0
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 4
+            }
+          ]
+        },
+        {
+          "x": "NO VENTILADO",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 20
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 97
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 8
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 697
+            }
+          ]
+        },
+        {
+          "x": "PUNTUAL",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 3
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 39
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 0
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 279
+            }
+          ]
+        },
+        {
+          "x": "SANITAS PREMIUM",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 0
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 2
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 0
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 7
+            }
+          ]
+        },
+        {
+          "x": "UNIDAD DE CUIDADO COGNITIVO",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 1
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 0
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 0
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 0
+            }
+          ]
+        },
+        {
+          "x": "UNIDAD DE CUIDADO CRÓNICO",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 26
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 24
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 8
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 33
+            }
+          ]
+        },
+        {
+          "x": "UNIDAD DE REHABILITACIÓN",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 29
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 44
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 5
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 314
+            }
+          ]
+        },
+        {
+          "x": "UNIDAD DE SALUD MENTAL",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 69
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 44
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 12
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 51
+            }
+          ]
+        },
+        {
+          "x": "VENTILADO",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 2
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 6
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 0
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 42
+            }
+          ]
+        },
+        {
+          "x": "VENTILADO NO INVASIVO",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 0
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 0
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 0
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "variable_x": "tipo_pqrs_grupo",
+      "variable_y": "canal",
+      "tabla": [
+        {
+          "x": "FELICITACION",
+          "valores": [
+            {
+              "y": "BUZON DE SUGERENCIAS",
+              "frecuencia": 150
+            },
+            {
+              "y": "CALLCENTER",
+              "frecuencia": 0
+            },
+            {
+              "y": "CORREO ELECTRONICO",
+              "frecuencia": 11
+            },
+            {
+              "y": "PCR SANITAS",
+              "frecuencia": 0
+            },
+            {
+              "y": "PRESENCIAL",
+              "frecuencia": 5
+            },
+            {
+              "y": "PÁGINA WEB",
+              "frecuencia": 94
+            }
+          ]
+        },
+        {
+          "x": "PETICION",
+          "valores": [
+            {
+              "y": "BUZON DE SUGERENCIAS",
+              "frecuencia": 23
+            },
+            {
+              "y": "CALLCENTER",
+              "frecuencia": 0
+            },
+            {
+              "y": "CORREO ELECTRONICO",
+              "frecuencia": 116
+            },
+            {
+              "y": "PCR SANITAS",
+              "frecuencia": 9
+            },
+            {
+              "y": "PRESENCIAL",
+              "frecuencia": 8
+            },
+            {
+              "y": "PÁGINA WEB",
+              "frecuencia": 116
+            }
+          ]
+        },
+        {
+          "x": "QUEJA",
+          "valores": [
+            {
+              "y": "BUZON DE SUGERENCIAS",
+              "frecuencia": 16
+            },
+            {
+              "y": "CALLCENTER",
+              "frecuencia": 0
+            },
+            {
+              "y": "CORREO ELECTRONICO",
+              "frecuencia": 15
+            },
+            {
+              "y": "PCR SANITAS",
+              "frecuencia": 0
+            },
+            {
+              "y": "PRESENCIAL",
+              "frecuencia": 1
+            },
+            {
+              "y": "PÁGINA WEB",
+              "frecuencia": 5
+            }
+          ]
+        },
+        {
+          "x": "RECLAMO",
+          "valores": [
+            {
+              "y": "BUZON DE SUGERENCIAS",
+              "frecuencia": 124
+            },
+            {
+              "y": "CALLCENTER",
+              "frecuencia": 6
+            },
+            {
+              "y": "CORREO ELECTRONICO",
+              "frecuencia": 1086
+            },
+            {
+              "y": "PCR SANITAS",
+              "frecuencia": 12
+            },
+            {
+              "y": "PRESENCIAL",
+              "frecuencia": 21
+            },
+            {
+              "y": "PÁGINA WEB",
+              "frecuencia": 434
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "variable_x": "causa",
+      "variable_y": "mes",
+      "tabla": [
+        {
+          "x": "ACCESIBILIDAD",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 12
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 8
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 10
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 3
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 27
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 1
+            }
+          ]
+        },
+        {
+          "x": "CONTINUIDAD",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 252
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 255
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 273
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 203
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 314
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 235
+            }
+          ]
+        },
+        {
+          "x": "NO APLICA",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 50
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 84
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 38
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 42
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 46
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 38
+            }
+          ]
+        },
+        {
+          "x": "OPORTUNIDAD",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 58
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 4
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 70
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 4
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 23
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 30
+            }
+          ]
+        },
+        {
+          "x": "PERTINENCIA",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 19
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 10
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 15
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 16
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 20
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 10
+            }
+          ]
+        },
+        {
+          "x": "SEGURIDAD",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 20
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 6
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 20
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 10
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 12
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 14
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "variable_x": "programa",
+      "variable_y": "mes",
+      "tabla": [
+        {
+          "x": "APLICACIÓN DE BIOLOGICO",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 1
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 0
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 0
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 0
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 0
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 1
+            }
+          ]
+        },
+        {
+          "x": "APLICACIÓN DE MEDICAMENTO",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 66
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 97
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 53
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 30
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 28
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 35
+            }
+          ]
+        },
+        {
+          "x": "DOMICILIARIO",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 4
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 0
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 5
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 0
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 7
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 3
+            }
+          ]
+        },
+        {
+          "x": "HOSPITALIZACIÓN GENERAL",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 14
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 6
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 14
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 5
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 8
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 6
+            }
+          ]
+        },
+        {
+          "x": "NEW PALEX",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 1
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 0
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 3
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 0
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 0
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 0
+            }
+          ]
+        },
+        {
+          "x": "NO VENTILADO",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 138
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 134
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 176
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 93
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 168
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 113
+            }
+          ]
+        },
+        {
+          "x": "PUNTUAL",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 37
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 49
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 53
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 68
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 70
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 44
+            }
+          ]
+        },
+        {
+          "x": "SANITAS PREMIUM",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 2
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 2
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 5
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 0
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 0
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 0
+            }
+          ]
+        },
+        {
+          "x": "UNIDAD DE CUIDADO COGNITIVO",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 0
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 0
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 0
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 0
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 1
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 0
+            }
+          ]
+        },
+        {
+          "x": "UNIDAD DE CUIDADO CRÓNICO",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 16
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 14
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 6
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 13
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 23
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 19
+            }
+          ]
+        },
+        {
+          "x": "UNIDAD DE REHABILITACIÓN",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 95
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 34
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 72
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 35
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 85
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 71
+            }
+          ]
+        },
+        {
+          "x": "UNIDAD DE SALUD MENTAL",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 28
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 20
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 28
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 26
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 47
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 27
+            }
+          ]
+        },
+        {
+          "x": "VENTILADO",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 8
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 11
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 11
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 7
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 5
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 8
+            }
+          ]
+        },
+        {
+          "x": "VENTILADO NO INVASIVO",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 1
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 0
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 0
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 1
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 0
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "variable_x": "canal",
+      "variable_y": "mes",
+      "tabla": [
+        {
+          "x": "BUZON DE SUGERENCIAS",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 67
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 28
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 52
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 26
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 78
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 62
+            }
+          ]
+        },
+        {
+          "x": "CALLCENTER",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 3
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 0
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 1
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 0
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 1
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 1
+            }
+          ]
+        },
+        {
+          "x": "CORREO ELECTRONICO",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 219
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 197
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 229
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 145
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 252
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 186
+            }
+          ]
+        },
+        {
+          "x": "PCR SANITAS",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 14
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 7
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 0
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 0
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 0
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 0
+            }
+          ]
+        },
+        {
+          "x": "PRESENCIAL",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 6
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 5
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 4
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 6
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 8
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 6
+            }
+          ]
+        },
+        {
+          "x": "PÁGINA WEB",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 102
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 130
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 140
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 101
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 103
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 73
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

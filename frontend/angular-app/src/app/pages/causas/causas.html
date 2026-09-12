@@ -1,0 +1,43 @@
+<div class="space-y-6">
+  <div>
+    <h2 class="hel-page-title">Causas</h2>
+    <p class="hel-page-subtitle">
+      Análisis de las causas de inconformidad reportadas y su relación con tipo, servicio y tiempo de respuesta.
+    </p>
+  </div>
+
+  @if (hayError()) {
+    <div class="hel-panel flex flex-col items-center justify-center py-16 text-center">
+      <p class="mb-4 text-sm font-medium text-text-primary">No se pudieron cargar los datos.</p>
+      <button type="button" class="rounded-lg bg-secondary px-4 py-2 text-xs font-medium text-white" (click)="reintentar()">
+        Reintentar
+      </button>
+    </div>
+  } @else if (cargando()) {
+    <app-loading />
+  } @else {
+    @if (indicadores()) {
+      <div class="grid grid-cols-2 gap-3 lg:grid-cols-5">
+        @for (ind of indicadores()!; track ind.titulo) {
+          <div class="card p-4 fade-in">
+            <p class="text-xs font-medium uppercase tracking-wide text-[var(--text-muted)]">{{ ind.titulo }}</p>
+            <p class="mt-1 font-mono text-lg font-medium leading-tight text-[var(--text)]">{{ ind.valor }}</p>
+            <p class="mt-1 text-[11px] text-[var(--text-secondary)]">{{ ind.detalle }}</p>
+          </div>
+        }
+      </div>
+    }
+
+    <app-chart-container titulo="Ranking de causas" subtitulo="Las 3 primeras concentran el 89.7% de las PQRS" [opciones]="opcionesRanking()" [cargando]="cargando()" />
+
+    <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
+      <app-chart-container titulo="Causa × Tipo de PQRS" subtitulo="Barras por tipo de PQRS" [opciones]="opcionesTipoCausa()" [cargando]="cargando()" altura="320px" />
+      <app-chart-container titulo="Causa × Servicio" subtitulo="Mapa de calor de causa-servicio" [opciones]="opcionesCausaServicio()" [cargando]="cargando()" altura="320px" />
+    </div>
+
+    <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
+      <app-chart-container titulo="Distribución del tiempo de respuesta" subtitulo="Rangos de días hasta el cierre" [opciones]="opcionesTiempo()" [cargando]="cargando()" altura="320px" />
+      <app-chart-container titulo="PQRS por mes" [opciones]="opcionesCausaMes()" [cargando]="cargando()" altura="320px" />
+    </div>
+  }
+</div>

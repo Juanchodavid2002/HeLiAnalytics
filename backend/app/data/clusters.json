@@ -1,0 +1,582 @@
+{
+  "algoritmo": "K-Prototypes",
+  "num_clusters": 5,
+  "gamma": 1.0,
+  "variables_categoricas": [
+    "tipo_pqrs_grupo",
+    "causa",
+    "canal",
+    "programa"
+  ],
+  "variables_numericas": [
+    "dias_respuesta (escalada min-max)"
+  ],
+  "criterio_seleccion_k": "Método del codo (último salto sustantivo de costo en k=5), tamaños de segmento balanceados (CV más bajo) e interpretabilidad de los perfiles. La silueta Hamming (categórico) se reporta como limitación por modas dominantes de las variables.",
+  "metricas": {
+    "costo_total": 2258.21
+  },
+  "clusters": [
+    {
+      "id": 0,
+      "cantidad": 586,
+      "participacion_pct": 26.0,
+      "perfil": {
+        "tipo_pqrs_grupo": {
+          "moda": "RECLAMO",
+          "pct_moda": 89.1,
+          "top": [
+            {
+              "categoria": "RECLAMO",
+              "porcentaje": 89.1
+            },
+            {
+              "categoria": "PETICION",
+              "porcentaje": 9.2
+            },
+            {
+              "categoria": "QUEJA",
+              "porcentaje": 1.5
+            },
+            {
+              "categoria": "FELICITACION",
+              "porcentaje": 0.2
+            }
+          ]
+        },
+        "causa": {
+          "moda": "CONTINUIDAD",
+          "pct_moda": 84.5,
+          "top": [
+            {
+              "categoria": "CONTINUIDAD",
+              "porcentaje": 84.5
+            },
+            {
+              "categoria": "OPORTUNIDAD",
+              "porcentaje": 6.1
+            },
+            {
+              "categoria": "SEGURIDAD",
+              "porcentaje": 2.6
+            },
+            {
+              "categoria": "ACCESIBILIDAD",
+              "porcentaje": 2.4
+            },
+            {
+              "categoria": "PERTINENCIA",
+              "porcentaje": 2.4
+            }
+          ]
+        },
+        "canal": {
+          "moda": "CORREO ELECTRONICO",
+          "pct_moda": 97.6,
+          "top": [
+            {
+              "categoria": "CORREO ELECTRONICO",
+              "porcentaje": 97.6
+            },
+            {
+              "categoria": "PRESENCIAL",
+              "porcentaje": 1.4
+            },
+            {
+              "categoria": "BUZON DE SUGERENCIAS",
+              "porcentaje": 0.9
+            },
+            {
+              "categoria": "CALLCENTER",
+              "porcentaje": 0.2
+            }
+          ]
+        },
+        "programa": {
+          "moda": "NO VENTILADO",
+          "pct_moda": 88.2,
+          "top": [
+            {
+              "categoria": "NO VENTILADO",
+              "porcentaje": 88.2
+            },
+            {
+              "categoria": "VENTILADO",
+              "porcentaje": 2.6
+            },
+            {
+              "categoria": "UNIDAD DE SALUD MENTAL",
+              "porcentaje": 2.0
+            },
+            {
+              "categoria": "APLICACIÓN DE MEDICAMENTO",
+              "porcentaje": 2.0
+            },
+            {
+              "categoria": "UNIDAD DE REHABILITACIÓN",
+              "porcentaje": 2.0
+            }
+          ]
+        },
+        "dias_respuesta": {
+          "media": 11.1,
+          "mediana": 8.0
+        }
+      },
+      "nombre": "Reclamo · Continuidad · Correo Electronico",
+      "interpretacion": "Segmento dominado por reclamos (89.1%), causa continuidad (84.5%), canal correo electronico (97.6%) y servicio no ventilado (88.2%). Representa 26.0% de las PQRS (586 registros); respuesta mediana de 8.0 días.",
+      "letra": "A"
+    },
+    {
+      "id": 1,
+      "cantidad": 273,
+      "participacion_pct": 12.1,
+      "perfil": {
+        "tipo_pqrs_grupo": {
+          "moda": "FELICITACION",
+          "pct_moda": 79.1,
+          "top": [
+            {
+              "categoria": "FELICITACION",
+              "porcentaje": 79.1
+            },
+            {
+              "categoria": "PETICION",
+              "porcentaje": 14.7
+            },
+            {
+              "categoria": "RECLAMO",
+              "porcentaje": 4.8
+            },
+            {
+              "categoria": "QUEJA",
+              "porcentaje": 1.5
+            }
+          ]
+        },
+        "causa": {
+          "moda": "NO APLICA",
+          "pct_moda": 85.3,
+          "top": [
+            {
+              "categoria": "NO APLICA",
+              "porcentaje": 85.3
+            },
+            {
+              "categoria": "OPORTUNIDAD",
+              "porcentaje": 5.1
+            },
+            {
+              "categoria": "PERTINENCIA",
+              "porcentaje": 3.3
+            },
+            {
+              "categoria": "CONTINUIDAD",
+              "porcentaje": 2.6
+            },
+            {
+              "categoria": "SEGURIDAD",
+              "porcentaje": 2.2
+            }
+          ]
+        },
+        "canal": {
+          "moda": "PÁGINA WEB",
+          "pct_moda": 51.3,
+          "top": [
+            {
+              "categoria": "PÁGINA WEB",
+              "porcentaje": 51.3
+            },
+            {
+              "categoria": "BUZON DE SUGERENCIAS",
+              "porcentaje": 41.4
+            },
+            {
+              "categoria": "CORREO ELECTRONICO",
+              "porcentaje": 5.1
+            },
+            {
+              "categoria": "PRESENCIAL",
+              "porcentaje": 1.8
+            },
+            {
+              "categoria": "PCR SANITAS",
+              "porcentaje": 0.4
+            }
+          ]
+        },
+        "programa": {
+          "moda": "APLICACIÓN DE MEDICAMENTO",
+          "pct_moda": 38.5,
+          "top": [
+            {
+              "categoria": "APLICACIÓN DE MEDICAMENTO",
+              "porcentaje": 38.5
+            },
+            {
+              "categoria": "UNIDAD DE SALUD MENTAL",
+              "porcentaje": 22.3
+            },
+            {
+              "categoria": "UNIDAD DE CUIDADO CRÓNICO",
+              "porcentaje": 10.6
+            },
+            {
+              "categoria": "UNIDAD DE REHABILITACIÓN",
+              "porcentaje": 10.3
+            },
+            {
+              "categoria": "HOSPITALIZACIÓN GENERAL",
+              "porcentaje": 8.1
+            }
+          ]
+        },
+        "dias_respuesta": {
+          "media": 1.1,
+          "mediana": 0.0
+        }
+      },
+      "nombre": "Felicitacion · No Aplica · Página Web",
+      "interpretacion": "Segmento dominado por felicitacions (79.1%), causa no aplica (85.3%), canal página web (51.3%) y servicio aplicación de medicamento (38.5%). Representa 12.1% de las PQRS (273 registros); respuesta mediana de 0.0 días.",
+      "letra": "B"
+    },
+    {
+      "id": 2,
+      "cantidad": 399,
+      "participacion_pct": 17.7,
+      "perfil": {
+        "tipo_pqrs_grupo": {
+          "moda": "RECLAMO",
+          "pct_moda": 81.2,
+          "top": [
+            {
+              "categoria": "RECLAMO",
+              "porcentaje": 81.2
+            },
+            {
+              "categoria": "PETICION",
+              "porcentaje": 18.3
+            },
+            {
+              "categoria": "QUEJA",
+              "porcentaje": 0.3
+            },
+            {
+              "categoria": "FELICITACION",
+              "porcentaje": 0.3
+            }
+          ]
+        },
+        "causa": {
+          "moda": "CONTINUIDAD",
+          "pct_moda": 85.0,
+          "top": [
+            {
+              "categoria": "CONTINUIDAD",
+              "porcentaje": 85.0
+            },
+            {
+              "categoria": "OPORTUNIDAD",
+              "porcentaje": 6.0
+            },
+            {
+              "categoria": "PERTINENCIA",
+              "porcentaje": 4.5
+            },
+            {
+              "categoria": "SEGURIDAD",
+              "porcentaje": 2.0
+            },
+            {
+              "categoria": "ACCESIBILIDAD",
+              "porcentaje": 1.5
+            }
+          ]
+        },
+        "canal": {
+          "moda": "PÁGINA WEB",
+          "pct_moda": 96.2,
+          "top": [
+            {
+              "categoria": "PÁGINA WEB",
+              "porcentaje": 96.2
+            },
+            {
+              "categoria": "PRESENCIAL",
+              "porcentaje": 1.8
+            },
+            {
+              "categoria": "CALLCENTER",
+              "porcentaje": 1.0
+            },
+            {
+              "categoria": "BUZON DE SUGERENCIAS",
+              "porcentaje": 0.5
+            },
+            {
+              "categoria": "PCR SANITAS",
+              "porcentaje": 0.5
+            }
+          ]
+        },
+        "programa": {
+          "moda": "NO VENTILADO",
+          "pct_moda": 66.2,
+          "top": [
+            {
+              "categoria": "NO VENTILADO",
+              "porcentaje": 66.2
+            },
+            {
+              "categoria": "PUNTUAL",
+              "porcentaje": 11.0
+            },
+            {
+              "categoria": "APLICACIÓN DE MEDICAMENTO",
+              "porcentaje": 7.0
+            },
+            {
+              "categoria": "UNIDAD DE SALUD MENTAL",
+              "porcentaje": 4.0
+            },
+            {
+              "categoria": "UNIDAD DE REHABILITACIÓN",
+              "porcentaje": 2.8
+            }
+          ]
+        },
+        "dias_respuesta": {
+          "media": 10.0,
+          "mediana": 7.0
+        }
+      },
+      "nombre": "Reclamo · Continuidad · Página Web",
+      "interpretacion": "Segmento dominado por reclamos (81.2%), causa continuidad (85.0%), canal página web (96.2%) y servicio no ventilado (66.2%). Representa 17.7% de las PQRS (399 registros); respuesta mediana de 7.0 días.",
+      "letra": "C"
+    },
+    {
+      "id": 3,
+      "cantidad": 443,
+      "participacion_pct": 19.7,
+      "perfil": {
+        "tipo_pqrs_grupo": {
+          "moda": "RECLAMO",
+          "pct_moda": 77.4,
+          "top": [
+            {
+              "categoria": "RECLAMO",
+              "porcentaje": 77.4
+            },
+            {
+              "categoria": "PETICION",
+              "porcentaje": 9.5
+            },
+            {
+              "categoria": "FELICITACION",
+              "porcentaje": 9.3
+            },
+            {
+              "categoria": "QUEJA",
+              "porcentaje": 3.8
+            }
+          ]
+        },
+        "causa": {
+          "moda": "CONTINUIDAD",
+          "pct_moda": 61.4,
+          "top": [
+            {
+              "categoria": "CONTINUIDAD",
+              "porcentaje": 61.4
+            },
+            {
+              "categoria": "OPORTUNIDAD",
+              "porcentaje": 16.7
+            },
+            {
+              "categoria": "NO APLICA",
+              "porcentaje": 8.4
+            },
+            {
+              "categoria": "ACCESIBILIDAD",
+              "porcentaje": 5.9
+            },
+            {
+              "categoria": "PERTINENCIA",
+              "porcentaje": 4.1
+            }
+          ]
+        },
+        "canal": {
+          "moda": "BUZON DE SUGERENCIAS",
+          "pct_moda": 42.2,
+          "top": [
+            {
+              "categoria": "BUZON DE SUGERENCIAS",
+              "porcentaje": 42.2
+            },
+            {
+              "categoria": "CORREO ELECTRONICO",
+              "porcentaje": 35.2
+            },
+            {
+              "categoria": "PÁGINA WEB",
+              "porcentaje": 15.6
+            },
+            {
+              "categoria": "PCR SANITAS",
+              "porcentaje": 4.1
+            },
+            {
+              "categoria": "PRESENCIAL",
+              "porcentaje": 2.7
+            }
+          ]
+        },
+        "programa": {
+          "moda": "UNIDAD DE REHABILITACIÓN",
+          "pct_moda": 72.9,
+          "top": [
+            {
+              "categoria": "UNIDAD DE REHABILITACIÓN",
+              "porcentaje": 72.9
+            },
+            {
+              "categoria": "UNIDAD DE SALUD MENTAL",
+              "porcentaje": 11.1
+            },
+            {
+              "categoria": "NO VENTILADO",
+              "porcentaje": 5.4
+            },
+            {
+              "categoria": "UNIDAD DE CUIDADO CRÓNICO",
+              "porcentaje": 5.2
+            },
+            {
+              "categoria": "HOSPITALIZACIÓN GENERAL",
+              "porcentaje": 2.3
+            }
+          ]
+        },
+        "dias_respuesta": {
+          "media": 2.6,
+          "mediana": 2.0
+        }
+      },
+      "nombre": "Reclamo · Continuidad · Buzon De Sugerencias",
+      "interpretacion": "Segmento dominado por reclamos (77.4%), causa continuidad (61.4%), canal buzon de sugerencias (42.2%) y servicio unidad de rehabilitación (72.9%). Representa 19.7% de las PQRS (443 registros); respuesta mediana de 2.0 días.",
+      "letra": "D"
+    },
+    {
+      "id": 4,
+      "cantidad": 551,
+      "participacion_pct": 24.5,
+      "perfil": {
+        "tipo_pqrs_grupo": {
+          "moda": "RECLAMO",
+          "pct_moda": 87.3,
+          "top": [
+            {
+              "categoria": "RECLAMO",
+              "porcentaje": 87.3
+            },
+            {
+              "categoria": "PETICION",
+              "porcentaje": 11.4
+            },
+            {
+              "categoria": "QUEJA",
+              "porcentaje": 1.1
+            },
+            {
+              "categoria": "FELICITACION",
+              "porcentaje": 0.2
+            }
+          ]
+        },
+        "causa": {
+          "moda": "CONTINUIDAD",
+          "pct_moda": 76.0,
+          "top": [
+            {
+              "categoria": "CONTINUIDAD",
+              "porcentaje": 76.0
+            },
+            {
+              "categoria": "OPORTUNIDAD",
+              "porcentaje": 7.4
+            },
+            {
+              "categoria": "SEGURIDAD",
+              "porcentaje": 6.7
+            },
+            {
+              "categoria": "PERTINENCIA",
+              "porcentaje": 5.6
+            },
+            {
+              "categoria": "NO APLICA",
+              "porcentaje": 2.2
+            }
+          ]
+        },
+        "canal": {
+          "moda": "CORREO ELECTRONICO",
+          "pct_moda": 88.2,
+          "top": [
+            {
+              "categoria": "CORREO ELECTRONICO",
+              "porcentaje": 88.2
+            },
+            {
+              "categoria": "PÁGINA WEB",
+              "porcentaje": 10.2
+            },
+            {
+              "categoria": "BUZON DE SUGERENCIAS",
+              "porcentaje": 1.1
+            },
+            {
+              "categoria": "PRESENCIAL",
+              "porcentaje": 0.5
+            }
+          ]
+        },
+        "programa": {
+          "moda": "PUNTUAL",
+          "pct_moda": 48.6,
+          "top": [
+            {
+              "categoria": "PUNTUAL",
+              "porcentaje": 48.6
+            },
+            {
+              "categoria": "APLICACIÓN DE MEDICAMENTO",
+              "porcentaje": 29.6
+            },
+            {
+              "categoria": "UNIDAD DE SALUD MENTAL",
+              "porcentaje": 6.9
+            },
+            {
+              "categoria": "UNIDAD DE CUIDADO CRÓNICO",
+              "porcentaje": 4.4
+            },
+            {
+              "categoria": "VENTILADO",
+              "porcentaje": 4.2
+            }
+          ]
+        },
+        "dias_respuesta": {
+          "media": 5.7,
+          "mediana": 4.0
+        }
+      },
+      "nombre": "Reclamo · Continuidad · Correo Electronico",
+      "interpretacion": "Segmento dominado por reclamos (87.3%), causa continuidad (76.0%), canal correo electronico (88.2%) y servicio puntual (48.6%). Representa 24.5% de las PQRS (551 registros); respuesta mediana de 4.0 días.",
+      "letra": "E"
+    }
+  ]
+}

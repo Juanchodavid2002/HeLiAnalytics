@@ -1,0 +1,244 @@
+# Perfilamiento del dataset BASE.xlsx
+
+Registros: 2261
+Columnas: 31
+
+## Perfil por columna
+
+                    columna      tipo_dato  nulos  pct_nulos  valores_unicos                                                                                                                      ejemplos
+                         ID          int64      0        0.0            2261                                                                                                                       41 | 42
+                     Código            str      0        0.0            2261                                                                                                       RP_25_0041 | RP_25_0042
+                     Estado            str      0        0.0               1                                                                                                                       CERRADA
+          Fecha del Reporte datetime64[us]      0        0.0             178                                                                                                       2025-07-01 | 2025-07-01
+                        Mes            str      0        0.0               6                                                                      Julio, Agosto, Septiembre, Octubre, Noviembre, Diciembre
+            Fecha del Hecho            str      0        0.0             187                                                                                     2025-07-01 00:00:00 | 2025-07-01 00:00:00
+            Fecha de Cierre            str      0        0.0            2261                                                                                     2025-07-02 12:35:41 | 2025-07-08 16:12:16
+                      Login            str      0        0.0              25                                                                           YERLI JOHANNA GOMEZ BAEZ | YERLI JOHANNA GOMEZ BAEZ
+          Tipo de Solicitud            str      0        0.0               6                         RECLAMO RIESGO PRIORIZADO, RECLAMO RIESGO SIMPLE, PETICIÓN, FELICITACIÓN, QUEJA, RECLAMO RIESGO VITAL
+            Tipo de Usuario            str      0        0.0               6                     ASEGURADORA, USUARIO EN MANEJO POR LA IPS, ENTES DE CONTROL, ANÓNIMO, EMPRESA O PERSONA JURIDICA, PÉRGAMO
+                    Reporta         object      0        0.0            1959                                                                                      PAEZ VEGA JOSE SANTIAGO | ALVARO SÁNCHEZ
+                     Correo            str      0        0.0            1307                                                                       pqrregionalbuc@epssanitas.com | saxofon8018@hotmail.com
+                     Hechos            str      0        0.0            2220 Queja:\n\n* con diagnóstico: Encefalopatía no especificado, In | Enfermero instala antibiótico a domicilio incumple el horari
+Identificación del Paciente            str      0        0.0            1710                                                                                                   TI-1092738845 | CC-80181055
+        Nombre del Paciente            str      0        0.0            1753                                                                                      PAEZ VEGA JOSE SANTIAGO | ALVARO SÁNCHEZ
+                     Ámbito            str      5        0.2               4                                                                        PAD CRÓNICO , PAD AGUDO , AMBULATORIO, HOSPITALIZACIÓN
+                   Programa            str     25        1.1              14                                                                                      NO VENTILADO | APLICACIÓN DE MEDICAMENTO
+                Aseguradora            str     68        3.0              35                                         ENTIDAD PROMOTORA DE SALUD SANITAS S.A.S. | ENTIDAD PROMOTORA DE SALUD SANITAS S.A.S.
+                   Regional            str      7        0.3              13                                                                                             NORTE DE SANTANDER | BOGOTÁ, D.C.
+                       Sede            str      7        0.3              25                                                                                                           CÚCUTA | MONTEVIDEO
+                Vencimiento            str      0        0.0               2                                                                                                           NO VENCIDA, VENCIDA
+              Clasificación            str      0        0.0               6                                                    OPORTUNIDAD, CONTINUIDAD, ACCESIBILIDAD, NO APLICA, PERTINENCIA, SEGURIDAD
+          Área de Solicitud            str      0        0.0              30                                                                                         ENFERMERIA | APLIACION DE MEDICAMENTO
+                  Servicios            str      0        0.0               2                                                                                                 SIN SERVICIOS, PRUEBA DE TIPO
+       Medio de Transmisión            str      0        0.0               6                                     CORREO ELECTRONICO, PÁGINA WEB, BUZON DE SUGERENCIAS, PRESENCIAL, CALLCENTER, PCR SANITAS
+                Descripción            str      0        0.0             181                                       servicio de enfermeria | Cordial saludo \n\nSolcito de su colaboracion para poder dar r
+                   Guardián            str      0        0.0              24                                                                VILLAMIZAR CLAVIJO JENNY PAOLA | CASTRO CUSTODE EDWIN SANTIAGO
+                  Respuesta            str      0        0.0            1967   Se adjunta soportes del mes de junio del servicio de auxilia | el área encargada informa de manera clara y precisa que este
+               Involucrados            str      0        0.0             153                                                                         HERMOGENES ORTEGA GALVIS | YURI PAOLA TORRES AVENDAÑO
+  Respuesta de Involucrados            str    334       14.8            1827 Se adjunta soportes del mes de junio del servicio de auxilia | Cordial saludo\n\nEn respuesta a su comunicación sobre la pres
+           Archivos de PQRS            str      0        0.0            1218                                              HC JOSE SANTIAGO PAEZ VEGA.pdf, registros de auxiliar de enf | descargar.php.pdf
+
+============================================================
+### Estado
+Estado
+CERRADA    2261
+
+============================================================
+### Tipo de Solicitud
+Tipo de Solicitud
+RECLAMO RIESGO SIMPLE        849
+RECLAMO RIESGO PRIORIZADO    832
+PETICIÓN                     272
+FELICITACIÓN                 268
+QUEJA                         37
+RECLAMO RIESGO VITAL           3
+
+============================================================
+### Tipo de Usuario
+Tipo de Usuario
+USUARIO EN MANEJO POR LA IPS    1247
+ASEGURADORA                      923
+ANÓNIMO                           59
+EMPRESA O PERSONA JURIDICA        18
+ENTES DE CONTROL                  13
+PÉRGAMO                            1
+
+============================================================
+### Mes
+Mes
+Octubre       442
+Julio         426
+Agosto        411
+Diciembre     376
+Septiembre    328
+Noviembre     278
+
+============================================================
+### Ambito
+
+### Ambito: NO ENCONTRADA
+
+============================================================
+### Programa
+Programa
+NO VENTILADO                   797
+UNIDAD DE REHABILITACIÓN       392
+PUNTUAL                        321
+APLICACIÓN DE MEDICAMENTO      317
+UNIDAD DE SALUD MENTAL         176
+UNIDAD DE CUIDADO CRÓNICO       91
+HOSPITALIZACIÓN GENERAL         53
+VENTILADO                       50
+NaN                             25
+DOMICILIARIO                    19
+SANITAS PREMIUM                 10
+NEW PALEX                        4
+VENTILADO NO INVASIVO            3
+APLICACIÓN DE BIOLOGICO          2
+UNIDAD DE CUIDADO COGNITIVO      1
+
+============================================================
+### Aseguradora
+Aseguradora
+ENTIDAD PROMOTORA DE SALUD SANITAS S.A.S.                         1103
+NUEVA EPS SA                                                       264
+FAMISANAR EPS SAS                                                  248
+SALUD TOTAL EPS SA                                                 164
+CAJA DE COMPENSACION FAMILIAR COMPENSAR                            126
+CAPITAL SALUD EPS                                                   84
+NaN                                                                 68
+FIDEICOMISOS PATRIMONIOS AUTÓNOMOS FIDUCIARIA LA PREVISORA S.A      52
+COOSALUD EPS SA                                                     27
+HEALTH & LIFE IPS SAS                                               21
+SALUD OCUPACIONAL SANITAS SAS                                       20
+PIJAOS SALUD EPS                                                    17
+PROTEGER EPS S.A.S.                                                 15
+EMSSANAR SAS                                                         7
+ASOCIACION PROFAMILIA                                                4
+ALIANSALUD EPS                                                       4
+EPS SURAMERICANA S.A.                                                4
+SALUD OCUPACIONAL COLSANITAS                                         3
+COMPAÑIA DE MEDICINA PREPAGADA COLSANITAS S A                        3
+SOCIEDAD CLINICA EMCOSALUD S.A.                                      3
+PARTICULAR                                                           3
+ASMET SALUD EPS SAS                                                  2
+SEGUROS DE VIDA SURAMERICANA S.A.                                    2
+UNIVERSIDAD PEDAGÓGICA Y TECNOLÓGICA DE COLOMBIA                     2
+UNIVERSIDAD NACIONAL DE COLOMBIA                                     2
+ENTIDAD PROMOTORA DE SALUD MALLAMÁS EPS INDÍGENA                     2
+ALLIANZ SEGUROS DE VIDA S.A.                                         2
+UNION TEMPORAL MEDISALUD                                             1
+CAJA DE COMPENSACION FAMILIAR DEL HUILA                              1
+COLMENA SEGUROS DE VIDA S.A.                                         1
+COLMENA SEGUROS RIESGOS LABORALES S.A.                               1
+UNION TEMPORAL SERVISALUD SAN JOSE                                   1
+MEDISANITAS SA                                                       1
+COLMEDICA MEDICINA PREPAGADA SA                                      1
+CLINICA COLSANITAS S A                                               1
+REGIONAL DE ASEGURAMIENTO EN SALUD N°1                               1
+
+============================================================
+### Regional
+Regional
+BOGOTÁ, D.C.          1082
+HUILA                  400
+SANTANDER              188
+BOYACÁ                 132
+TOLIMA                 124
+NORTE DE SANTANDER     112
+CUNDINAMARCA           103
+META                    85
+CESAR                    8
+VALLE DEL CAUCA          8
+ATLÁNTICO                7
+NaN                      7
+ANTIOQUIA                3
+QUINDIO                  2
+
+============================================================
+### Sede
+Sede
+MONTEVIDEO              915
+NEIVA                   400
+SAN FRANCISCO           179
+IBAGUÉ                  124
+CÚCUTA                  111
+TOBERIN                  88
+BARZAL VILLAVICENCIO     85
+SUBACHOQUE               81
+TUNJA                    80
+CASTELLANA               53
+GREEN HILLS              29
+DUITAMA                  23
+GIRARDOT                 21
+MODELIA                  18
+CABECERA                  9
+VALLEDUPAR                8
+CALI                      8
+BARRANQUILLA              7
+NaN                       7
+J VARGAS                  4
+MEDELLÍN                  3
+HOUSE INN                 2
+CHAPINERO                 2
+ARMENIA                   2
+CAJICÁ                    1
+CUCUTA                    1
+
+============================================================
+### Vencimiento
+Vencimiento
+NO VENCIDA    1158
+VENCIDA       1103
+
+============================================================
+### Clasificacion
+
+### Clasificacion: NO ENCONTRADA
+
+============================================================
+### Area de Solicitud
+
+### Area de Solicitud: NO ENCONTRADA
+
+============================================================
+### Servicios
+Servicios
+SIN SERVICIOS     2260
+PRUEBA DE TIPO       1
+
+============================================================
+### Medio de Transmision
+
+### Medio de Transmision: NO ENCONTRADA
+
+============================================================
+### Tipo de Solicitud
+Tipo de Solicitud
+RECLAMO RIESGO SIMPLE        849
+RECLAMO RIESGO PRIORIZADO    832
+PETICIÓN                     272
+FELICITACIÓN                 268
+QUEJA                         37
+RECLAMO RIESGO VITAL           3
+
+============================================================
+### Verificación Fecha del Reporte vs Mes
+Consistencia Mes vs Fecha del Reporte: 2261 de 2261 (100.0%)
+Rango de Fecha del Reporte: 2025-07-01 00:00:00 a 2025-12-31 00:00:00
+
+### Cálculo de tiempo de respuesta (Fecha de Cierre - Fecha del Reporte)
+Registros con fecha de cierre válida: 2261
+Media días de respuesta: 8.7
+Mediana días: 4.0
+Min/Max días: 0 / 263
+
+============================================================
+### Distribución de días de respuesta
+0-1 días: 659 (29.1%)
+2-7 días: 1005 (44.4%)
+8-15 días: 305 (13.5%)
+16-30 días: 147 (6.5%)
+31-60 días: 103 (4.6%)
+61-90 días: 23 (1.0%)
+>90 días: 19 (0.8%)

@@ -1,0 +1,42 @@
+<div class="space-y-6">
+  <div>
+    <h2 class="hel-page-title">Análisis Textual</h2>
+    <p class="hel-page-subtitle">
+      Exploración del lenguaje natural utilizado en los campos de texto de las PQRS (Hechos, Respuesta).
+    </p>
+  </div>
+
+  @if (hayError()) {
+    <div class="hel-panel flex flex-col items-center justify-center py-16 text-center">
+      <p class="mb-4 text-sm font-medium text-text-primary">No se pudieron cargar los datos.</p>
+      <button type="button" class="rounded-lg bg-secondary px-4 py-2 text-xs font-medium text-white" (click)="reintentar()">
+        Reintentar
+      </button>
+    </div>
+  } @else if (cargando()) {
+    <app-loading />
+  } @else if (textual()?.disponible === false) {
+    <div class="hel-panel flex flex-col items-center justify-center py-16 text-center">
+      <span class="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-slate-100">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 4h12M6 8h12m-12 4h12m-12 4h7" />
+        </svg>
+      </span>
+      <h3 class="mb-2 text-base font-bold text-text-primary">Análisis textual pendiente</h3>
+      <p class="max-w-md text-sm text-text-secondary">
+        {{ textual()?.detalle ?? 'El análisis de lenguaje natural aún no está disponible.' }}
+      </p>
+      <div class="mt-6 w-full max-w-md rounded-xl bg-slate-50 p-4 text-left">
+        <p class="text-xs font-semibold uppercase tracking-wide text-text-secondary">Estado de los datos</p>
+        <p class="mt-2 text-sm text-text-primary">
+          Los campos de texto (Hechos, Respuesta, Respuesta de Involucrados) están disponibles en el dataset analítico
+          para un futuro procesamiento NLP.
+        </p>
+      </div>
+    </div>
+  } @else {
+    <div class="hel-panel">
+      <p class="text-sm text-text-primary">Análisis textual disponible: {{ totalPalabras() }} términos extraídos.</p>
+    </div>
+  }
+</div>

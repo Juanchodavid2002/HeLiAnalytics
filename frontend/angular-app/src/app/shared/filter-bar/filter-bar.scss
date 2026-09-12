@@ -1,0 +1,17 @@
+.chip-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1rem;
+  height: 1rem;
+  padding: 0 4px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #fff;
+  background: var(--secondary);
+}
+
+.filter-chip.active .chip-count {
+  background: rgba(255, 255, 255, 0.28);
+}

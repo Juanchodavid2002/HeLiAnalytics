@@ -1,0 +1,875 @@
+{
+  "variables": [
+    {
+      "variable": "tipo_pqrs",
+      "total": 2252,
+      "frecuencias": [
+        {
+          "categoria": "RECLAMO RIESGO SIMPLE",
+          "frecuencia": 848,
+          "porcentaje": 37.7
+        },
+        {
+          "categoria": "RECLAMO RIESGO PRIORIZADO",
+          "frecuencia": 832,
+          "porcentaje": 36.9
+        },
+        {
+          "categoria": "PETICIÓN",
+          "frecuencia": 272,
+          "porcentaje": 12.1
+        },
+        {
+          "categoria": "FELICITACIÓN",
+          "frecuencia": 260,
+          "porcentaje": 11.5
+        },
+        {
+          "categoria": "QUEJA",
+          "frecuencia": 37,
+          "porcentaje": 1.6
+        },
+        {
+          "categoria": "RECLAMO RIESGO VITAL",
+          "frecuencia": 3,
+          "porcentaje": 0.1
+        }
+      ],
+      "con_nulos": false
+    },
+    {
+      "variable": "tipo_pqrs_grupo",
+      "total": 2252,
+      "frecuencias": [
+        {
+          "categoria": "RECLAMO",
+          "frecuencia": 1683,
+          "porcentaje": 74.7
+        },
+        {
+          "categoria": "PETICION",
+          "frecuencia": 272,
+          "porcentaje": 12.1
+        },
+        {
+          "categoria": "FELICITACION",
+          "frecuencia": 260,
+          "porcentaje": 11.5
+        },
+        {
+          "categoria": "QUEJA",
+          "frecuencia": 37,
+          "porcentaje": 1.6
+        }
+      ],
+      "con_nulos": false
+    },
+    {
+      "variable": "causa",
+      "total": 2252,
+      "frecuencias": [
+        {
+          "categoria": "CONTINUIDAD",
+          "frecuencia": 1532,
+          "porcentaje": 68.0
+        },
+        {
+          "categoria": "NO APLICA",
+          "frecuencia": 298,
+          "porcentaje": 13.2
+        },
+        {
+          "categoria": "OPORTUNIDAD",
+          "frecuencia": 189,
+          "porcentaje": 8.4
+        },
+        {
+          "categoria": "PERTINENCIA",
+          "frecuencia": 90,
+          "porcentaje": 4.0
+        },
+        {
+          "categoria": "SEGURIDAD",
+          "frecuencia": 82,
+          "porcentaje": 3.6
+        },
+        {
+          "categoria": "ACCESIBILIDAD",
+          "frecuencia": 61,
+          "porcentaje": 2.7
+        }
+      ],
+      "con_nulos": false
+    },
+    {
+      "variable": "canal",
+      "total": 2252,
+      "frecuencias": [
+        {
+          "categoria": "CORREO ELECTRONICO",
+          "frecuencia": 1228,
+          "porcentaje": 54.5
+        },
+        {
+          "categoria": "PÁGINA WEB",
+          "frecuencia": 649,
+          "porcentaje": 28.8
+        },
+        {
+          "categoria": "BUZON DE SUGERENCIAS",
+          "frecuencia": 313,
+          "porcentaje": 13.9
+        },
+        {
+          "categoria": "PRESENCIAL",
+          "frecuencia": 35,
+          "porcentaje": 1.6
+        },
+        {
+          "categoria": "PCR SANITAS",
+          "frecuencia": 21,
+          "porcentaje": 0.9
+        },
+        {
+          "categoria": "CALLCENTER",
+          "frecuencia": 6,
+          "porcentaje": 0.3
+        }
+      ],
+      "con_nulos": false
+    },
+    {
+      "variable": "programa",
+      "total": 2252,
+      "frecuencias": [
+        {
+          "categoria": "NO VENTILADO",
+          "frecuencia": 822,
+          "porcentaje": 36.5
+        },
+        {
+          "categoria": "UNIDAD DE REHABILITACIÓN",
+          "frecuencia": 392,
+          "porcentaje": 17.4
+        },
+        {
+          "categoria": "PUNTUAL",
+          "frecuencia": 321,
+          "porcentaje": 14.3
+        },
+        {
+          "categoria": "APLICACIÓN DE MEDICAMENTO",
+          "frecuencia": 309,
+          "porcentaje": 13.7
+        },
+        {
+          "categoria": "UNIDAD DE SALUD MENTAL",
+          "frecuencia": 176,
+          "porcentaje": 7.8
+        },
+        {
+          "categoria": "UNIDAD DE CUIDADO CRÓNICO",
+          "frecuencia": 91,
+          "porcentaje": 4.0
+        },
+        {
+          "categoria": "HOSPITALIZACIÓN GENERAL",
+          "frecuencia": 53,
+          "porcentaje": 2.4
+        },
+        {
+          "categoria": "VENTILADO",
+          "frecuencia": 50,
+          "porcentaje": 2.2
+        },
+        {
+          "categoria": "DOMICILIARIO",
+          "frecuencia": 19,
+          "porcentaje": 0.8
+        },
+        {
+          "categoria": "SANITAS PREMIUM",
+          "frecuencia": 9,
+          "porcentaje": 0.4
+        },
+        {
+          "categoria": "NEW PALEX",
+          "frecuencia": 4,
+          "porcentaje": 0.2
+        },
+        {
+          "categoria": "VENTILADO NO INVASIVO",
+          "frecuencia": 3,
+          "porcentaje": 0.1
+        },
+        {
+          "categoria": "APLICACIÓN DE BIOLOGICO",
+          "frecuencia": 2,
+          "porcentaje": 0.1
+        },
+        {
+          "categoria": "UNIDAD DE CUIDADO COGNITIVO",
+          "frecuencia": 1,
+          "porcentaje": 0.0
+        }
+      ],
+      "con_nulos": false
+    },
+    {
+      "variable": "ambito",
+      "total": 2252,
+      "frecuencias": [
+        {
+          "categoria": "PAD CRÓNICO",
+          "frecuencia": 856,
+          "porcentaje": 38.0
+        },
+        {
+          "categoria": "PAD AGUDO",
+          "frecuencia": 643,
+          "porcentaje": 28.6
+        },
+        {
+          "categoria": "AMBULATORIO",
+          "frecuencia": 415,
+          "porcentaje": 18.4
+        },
+        {
+          "categoria": "HOSPITALIZACIÓN",
+          "frecuencia": 338,
+          "porcentaje": 15.0
+        }
+      ],
+      "con_nulos": false
+    },
+    {
+      "variable": "area_solicitud",
+      "total": 2252,
+      "frecuencias": [
+        {
+          "categoria": "MÚLTIPLES SERVICIOS",
+          "frecuencia": 764,
+          "porcentaje": 33.9
+        },
+        {
+          "categoria": "ENFERMERIA",
+          "frecuencia": 302,
+          "porcentaje": 13.4
+        },
+        {
+          "categoria": "MEDICINA GENERAL",
+          "frecuencia": 208,
+          "porcentaje": 9.2
+        },
+        {
+          "categoria": "APLIACION DE MEDICAMENTO",
+          "frecuencia": 199,
+          "porcentaje": 8.8
+        },
+        {
+          "categoria": "TERAPIA FISICA",
+          "frecuencia": 182,
+          "porcentaje": 8.1
+        },
+        {
+          "categoria": "CUIDADOR",
+          "frecuencia": 101,
+          "porcentaje": 4.5
+        },
+        {
+          "categoria": "INSTITUCIONALIZACIÓN EN UNIDAD DE SALUD MENTAL",
+          "frecuencia": 77,
+          "porcentaje": 3.4
+        },
+        {
+          "categoria": "ENVÍO DE DOCUMENTACION",
+          "frecuencia": 73,
+          "porcentaje": 3.2
+        },
+        {
+          "categoria": "REHABILITACIÓN FUNCIONAL",
+          "frecuencia": 47,
+          "porcentaje": 2.1
+        },
+        {
+          "categoria": "TERAPIA DEL LENGUAJE",
+          "frecuencia": 43,
+          "porcentaje": 1.9
+        },
+        {
+          "categoria": "TERAPIA OCUPACIONAL",
+          "frecuencia": 40,
+          "porcentaje": 1.8
+        },
+        {
+          "categoria": "TRATO HUMANIZADO",
+          "frecuencia": 39,
+          "porcentaje": 1.7
+        },
+        {
+          "categoria": "RECOLECCIÓN DE RESIDUOS",
+          "frecuencia": 33,
+          "porcentaje": 1.5
+        },
+        {
+          "categoria": "FISIATRIA",
+          "frecuencia": 23,
+          "porcentaje": 1.0
+        },
+        {
+          "categoria": "INSUMOS O MEDICAMENTOS",
+          "frecuencia": 19,
+          "porcentaje": 0.8
+        },
+        {
+          "categoria": "LABORATORIOS",
+          "frecuencia": 15,
+          "porcentaje": 0.7
+        },
+        {
+          "categoria": "CLINICA DE HERIDAS",
+          "frecuencia": 11,
+          "porcentaje": 0.5
+        },
+        {
+          "categoria": "TERAPIA RESPIRATORIA",
+          "frecuencia": 11,
+          "porcentaje": 0.5
+        },
+        {
+          "categoria": "NUTRICIÓN Y DIETETICA",
+          "frecuencia": 10,
+          "porcentaje": 0.4
+        },
+        {
+          "categoria": "PSIQUIATRIA PEDIATRICO",
+          "frecuencia": 10,
+          "porcentaje": 0.4
+        },
+        {
+          "categoria": "CALLCENTER",
+          "frecuencia": 9,
+          "porcentaje": 0.4
+        },
+        {
+          "categoria": "PSICOLOGIA ADULTO",
+          "frecuencia": 8,
+          "porcentaje": 0.4
+        },
+        {
+          "categoria": "PSIQUIATRIA ADULTO",
+          "frecuencia": 6,
+          "porcentaje": 0.3
+        },
+        {
+          "categoria": "DIETAS HOSPITALARIAS",
+          "frecuencia": 4,
+          "porcentaje": 0.2
+        },
+        {
+          "categoria": "PERDIDA DE OBJETOS PERSONALES",
+          "frecuencia": 4,
+          "porcentaje": 0.2
+        },
+        {
+          "categoria": "PSICOLOGIA PEDIATRICO",
+          "frecuencia": 4,
+          "porcentaje": 0.2
+        },
+        {
+          "categoria": "INFRAESTRUCTURA",
+          "frecuencia": 3,
+          "porcentaje": 0.1
+        },
+        {
+          "categoria": "MEDICINA INTERNA",
+          "frecuencia": 3,
+          "porcentaje": 0.1
+        },
+        {
+          "categoria": "DEMORA EN GENERACIÓN DE MIPRES",
+          "frecuencia": 2,
+          "porcentaje": 0.1
+        },
+        {
+          "categoria": "TRABAJO SOCIAL",
+          "frecuencia": 2,
+          "porcentaje": 0.1
+        }
+      ],
+      "con_nulos": false
+    },
+    {
+      "variable": "tipo_usuario",
+      "total": 2252,
+      "frecuencias": [
+        {
+          "categoria": "USUARIO EN MANEJO POR LA IPS",
+          "frecuencia": 1238,
+          "porcentaje": 55.0
+        },
+        {
+          "categoria": "ASEGURADORA",
+          "frecuencia": 923,
+          "porcentaje": 41.0
+        },
+        {
+          "categoria": "ANÓNIMO",
+          "frecuencia": 59,
+          "porcentaje": 2.6
+        },
+        {
+          "categoria": "EMPRESA O PERSONA JURIDICA",
+          "frecuencia": 18,
+          "porcentaje": 0.8
+        },
+        {
+          "categoria": "ENTES DE CONTROL",
+          "frecuencia": 13,
+          "porcentaje": 0.6
+        },
+        {
+          "categoria": "PÉRGAMO",
+          "frecuencia": 1,
+          "porcentaje": 0.0
+        }
+      ],
+      "con_nulos": false
+    },
+    {
+      "variable": "regional",
+      "total": 2252,
+      "frecuencias": [
+        {
+          "categoria": "BOGOTÁ, D.C.",
+          "frecuencia": 1081,
+          "porcentaje": 48.0
+        },
+        {
+          "categoria": "HUILA",
+          "frecuencia": 400,
+          "porcentaje": 17.8
+        },
+        {
+          "categoria": "SANTANDER",
+          "frecuencia": 188,
+          "porcentaje": 8.3
+        },
+        {
+          "categoria": "BOYACÁ",
+          "frecuencia": 132,
+          "porcentaje": 5.9
+        },
+        {
+          "categoria": "TOLIMA",
+          "frecuencia": 123,
+          "porcentaje": 5.5
+        },
+        {
+          "categoria": "NORTE DE SANTANDER",
+          "frecuencia": 112,
+          "porcentaje": 5.0
+        },
+        {
+          "categoria": "CUNDINAMARCA",
+          "frecuencia": 103,
+          "porcentaje": 4.6
+        },
+        {
+          "categoria": "META",
+          "frecuencia": 85,
+          "porcentaje": 3.8
+        },
+        {
+          "categoria": "CESAR",
+          "frecuencia": 8,
+          "porcentaje": 0.4
+        },
+        {
+          "categoria": "VALLE DEL CAUCA",
+          "frecuencia": 8,
+          "porcentaje": 0.4
+        },
+        {
+          "categoria": "ATLÁNTICO",
+          "frecuencia": 7,
+          "porcentaje": 0.3
+        },
+        {
+          "categoria": "ANTIOQUIA",
+          "frecuencia": 3,
+          "porcentaje": 0.1
+        },
+        {
+          "categoria": "QUINDIO",
+          "frecuencia": 2,
+          "porcentaje": 0.1
+        }
+      ],
+      "con_nulos": false
+    },
+    {
+      "variable": "sede",
+      "total": 2252,
+      "frecuencias": [
+        {
+          "categoria": "MONTEVIDEO",
+          "frecuencia": 914,
+          "porcentaje": 40.6
+        },
+        {
+          "categoria": "NEIVA",
+          "frecuencia": 400,
+          "porcentaje": 17.8
+        },
+        {
+          "categoria": "SAN FRANCISCO",
+          "frecuencia": 179,
+          "porcentaje": 7.9
+        },
+        {
+          "categoria": "IBAGUÉ",
+          "frecuencia": 123,
+          "porcentaje": 5.5
+        },
+        {
+          "categoria": "CÚCUTA",
+          "frecuencia": 112,
+          "porcentaje": 5.0
+        },
+        {
+          "categoria": "TOBERIN",
+          "frecuencia": 88,
+          "porcentaje": 3.9
+        },
+        {
+          "categoria": "BARZAL VILLAVICENCIO",
+          "frecuencia": 85,
+          "porcentaje": 3.8
+        },
+        {
+          "categoria": "SUBACHOQUE",
+          "frecuencia": 81,
+          "porcentaje": 3.6
+        },
+        {
+          "categoria": "TUNJA",
+          "frecuencia": 80,
+          "porcentaje": 3.6
+        },
+        {
+          "categoria": "CASTELLANA",
+          "frecuencia": 53,
+          "porcentaje": 2.4
+        },
+        {
+          "categoria": "GREEN HILLS",
+          "frecuencia": 29,
+          "porcentaje": 1.3
+        },
+        {
+          "categoria": "DUITAMA",
+          "frecuencia": 23,
+          "porcentaje": 1.0
+        },
+        {
+          "categoria": "GIRARDOT",
+          "frecuencia": 21,
+          "porcentaje": 0.9
+        },
+        {
+          "categoria": "MODELIA",
+          "frecuencia": 18,
+          "porcentaje": 0.8
+        },
+        {
+          "categoria": "CABECERA",
+          "frecuencia": 9,
+          "porcentaje": 0.4
+        },
+        {
+          "categoria": "VALLEDUPAR",
+          "frecuencia": 8,
+          "porcentaje": 0.4
+        },
+        {
+          "categoria": "CALI",
+          "frecuencia": 8,
+          "porcentaje": 0.4
+        },
+        {
+          "categoria": "BARRANQUILLA",
+          "frecuencia": 7,
+          "porcentaje": 0.3
+        },
+        {
+          "categoria": "J VARGAS",
+          "frecuencia": 4,
+          "porcentaje": 0.2
+        },
+        {
+          "categoria": "MEDELLÍN",
+          "frecuencia": 3,
+          "porcentaje": 0.1
+        },
+        {
+          "categoria": "HOUSE INN",
+          "frecuencia": 2,
+          "porcentaje": 0.1
+        },
+        {
+          "categoria": "CHAPINERO",
+          "frecuencia": 2,
+          "porcentaje": 0.1
+        },
+        {
+          "categoria": "ARMENIA",
+          "frecuencia": 2,
+          "porcentaje": 0.1
+        },
+        {
+          "categoria": "CAJICÁ",
+          "frecuencia": 1,
+          "porcentaje": 0.0
+        }
+      ],
+      "con_nulos": false
+    },
+    {
+      "variable": "vencimiento",
+      "total": 2252,
+      "frecuencias": [
+        {
+          "categoria": "NO VENCIDA",
+          "frecuencia": 1151,
+          "porcentaje": 51.1
+        },
+        {
+          "categoria": "VENCIDA",
+          "frecuencia": 1101,
+          "porcentaje": 48.9
+        }
+      ],
+      "con_nulos": false
+    },
+    {
+      "variable": "aseguradora",
+      "total": 2252,
+      "frecuencias": [
+        {
+          "categoria": "ENTIDAD PROMOTORA DE SALUD SANITAS S.A.S.",
+          "frecuencia": 1164,
+          "porcentaje": 51.7
+        },
+        {
+          "categoria": "NUEVA EPS SA",
+          "frecuencia": 264,
+          "porcentaje": 11.7
+        },
+        {
+          "categoria": "FAMISANAR EPS SAS",
+          "frecuencia": 247,
+          "porcentaje": 11.0
+        },
+        {
+          "categoria": "SALUD TOTAL EPS SA",
+          "frecuencia": 163,
+          "porcentaje": 7.2
+        },
+        {
+          "categoria": "CAJA DE COMPENSACION FAMILIAR COMPENSAR",
+          "frecuencia": 126,
+          "porcentaje": 5.6
+        },
+        {
+          "categoria": "CAPITAL SALUD EPS",
+          "frecuencia": 84,
+          "porcentaje": 3.7
+        },
+        {
+          "categoria": "FIDEICOMISOS PATRIMONIOS AUTÓNOMOS FIDUCIARIA LA PREVISORA S.A",
+          "frecuencia": 52,
+          "porcentaje": 2.3
+        },
+        {
+          "categoria": "COOSALUD EPS SA",
+          "frecuencia": 27,
+          "porcentaje": 1.2
+        },
+        {
+          "categoria": "HEALTH & LIFE IPS SAS",
+          "frecuencia": 21,
+          "porcentaje": 0.9
+        },
+        {
+          "categoria": "SALUD OCUPACIONAL SANITAS SAS",
+          "frecuencia": 20,
+          "porcentaje": 0.9
+        },
+        {
+          "categoria": "PIJAOS SALUD EPS",
+          "frecuencia": 17,
+          "porcentaje": 0.8
+        },
+        {
+          "categoria": "PROTEGER EPS S.A.S.",
+          "frecuencia": 15,
+          "porcentaje": 0.7
+        },
+        {
+          "categoria": "EMSSANAR SAS",
+          "frecuencia": 7,
+          "porcentaje": 0.3
+        },
+        {
+          "categoria": "ASOCIACION PROFAMILIA",
+          "frecuencia": 4,
+          "porcentaje": 0.2
+        },
+        {
+          "categoria": "ALIANSALUD EPS",
+          "frecuencia": 4,
+          "porcentaje": 0.2
+        },
+        {
+          "categoria": "EPS SURAMERICANA S.A.",
+          "frecuencia": 4,
+          "porcentaje": 0.2
+        },
+        {
+          "categoria": "SALUD OCUPACIONAL COLSANITAS",
+          "frecuencia": 3,
+          "porcentaje": 0.1
+        },
+        {
+          "categoria": "COMPAÑIA DE MEDICINA PREPAGADA COLSANITAS S A",
+          "frecuencia": 3,
+          "porcentaje": 0.1
+        },
+        {
+          "categoria": "SOCIEDAD CLINICA EMCOSALUD S.A.",
+          "frecuencia": 3,
+          "porcentaje": 0.1
+        },
+        {
+          "categoria": "PARTICULAR",
+          "frecuencia": 3,
+          "porcentaje": 0.1
+        },
+        {
+          "categoria": "ASMET SALUD EPS SAS",
+          "frecuencia": 2,
+          "porcentaje": 0.1
+        },
+        {
+          "categoria": "SEGUROS DE VIDA SURAMERICANA S.A.",
+          "frecuencia": 2,
+          "porcentaje": 0.1
+        },
+        {
+          "categoria": "UNIVERSIDAD PEDAGÓGICA Y TECNOLÓGICA DE COLOMBIA",
+          "frecuencia": 2,
+          "porcentaje": 0.1
+        },
+        {
+          "categoria": "UNIVERSIDAD NACIONAL DE COLOMBIA",
+          "frecuencia": 2,
+          "porcentaje": 0.1
+        },
+        {
+          "categoria": "ENTIDAD PROMOTORA DE SALUD MALLAMÁS EPS INDÍGENA",
+          "frecuencia": 2,
+          "porcentaje": 0.1
+        },
+        {
+          "categoria": "ALLIANZ SEGUROS DE VIDA S.A.",
+          "frecuencia": 2,
+          "porcentaje": 0.1
+        },
+        {
+          "categoria": "UNION TEMPORAL MEDISALUD",
+          "frecuencia": 1,
+          "porcentaje": 0.0
+        },
+        {
+          "categoria": "CAJA DE COMPENSACION FAMILIAR DEL HUILA",
+          "frecuencia": 1,
+          "porcentaje": 0.0
+        },
+        {
+          "categoria": "COLMENA SEGUROS DE VIDA S.A.",
+          "frecuencia": 1,
+          "porcentaje": 0.0
+        },
+        {
+          "categoria": "COLMENA SEGUROS RIESGOS LABORALES S.A.",
+          "frecuencia": 1,
+          "porcentaje": 0.0
+        },
+        {
+          "categoria": "UNION TEMPORAL SERVISALUD SAN JOSE",
+          "frecuencia": 1,
+          "porcentaje": 0.0
+        },
+        {
+          "categoria": "MEDISANITAS SA",
+          "frecuencia": 1,
+          "porcentaje": 0.0
+        },
+        {
+          "categoria": "COLMEDICA MEDICINA PREPAGADA SA",
+          "frecuencia": 1,
+          "porcentaje": 0.0
+        },
+        {
+          "categoria": "CLINICA COLSANITAS S A",
+          "frecuencia": 1,
+          "porcentaje": 0.0
+        },
+        {
+          "categoria": "REGIONAL DE ASEGURAMIENTO EN SALUD N°1",
+          "frecuencia": 1,
+          "porcentaje": 0.0
+        }
+      ],
+      "con_nulos": false
+    },
+    {
+      "variable": "mes",
+      "total": 2252,
+      "frecuencias": [
+        {
+          "categoria": "OCTUBRE",
+          "frecuencia": 442,
+          "porcentaje": 19.6
+        },
+        {
+          "categoria": "JULIO",
+          "frecuencia": 426,
+          "porcentaje": 18.9
+        },
+        {
+          "categoria": "AGOSTO",
+          "frecuencia": 411,
+          "porcentaje": 18.3
+        },
+        {
+          "categoria": "DICIEMBRE",
+          "frecuencia": 367,
+          "porcentaje": 16.3
+        },
+        {
+          "categoria": "SEPTIEMBRE",
+          "frecuencia": 328,
+          "porcentaje": 14.6
+        },
+        {
+          "categoria": "NOVIEMBRE",
+          "frecuencia": 278,
+          "porcentaje": 12.3
+        }
+      ],
+      "con_nulos": false
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "media": 6.7,
+  "mediana": 4.0,
+  "desviacion": 8.2,
+  "min": 0,
+  "max": 29,
+  "p25": 1.0,
+  "p75": 8.0,
+  "n_menor_igual_30": 2252,
+  "pct_menor_igual_30": 100.0,
+  "distribucion_bins": [
+    {
+      "rango": "0-1 días",
+      "frecuencia": 652
+    },
+    {
+      "rango": "2-7 días",
+      "frecuencia": 1003
+    },
+    {
+      "rango": "8-15 días",
+      "frecuencia": 305
+    },
+    {
+      "rango": "16-30 días",
+      "frecuencia": 292
+    },
+    {
+      "rango": "31-60 días",
+      "frecuencia": 0
+    },
+    {
+      "rango": "61-90 días",
+      "frecuencia": 0
+    },
+    {
+      "rango": "más de 90 días",
+      "frecuencia": 0
+    }
+  ]
+}

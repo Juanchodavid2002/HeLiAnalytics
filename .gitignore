@@ -1,0 +1,54 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build output
+dist/
+build/
+.angular/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+*.egg
+venv/
+.venv/
+.env
+.pytest_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data — NEVER commit raw data
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+ProyectoDocumento/BASE.xlsx
+
+# Sensitive data
+*.env
+.env.local
+.env.production
+
+# Logs
+*.log
+npm-debug.log*
+
+# Coverage
+coverage/
+htmlcov/

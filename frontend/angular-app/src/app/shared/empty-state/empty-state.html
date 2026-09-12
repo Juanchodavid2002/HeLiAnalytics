@@ -1,0 +1,14 @@
+<div class="flex flex-col items-center justify-center rounded-2xl border border-dashed border-slate-300 bg-[var(--bg-soft)] px-6 py-12 text-center">
+  <svg xmlns="http://www.w3.org/2000/svg" class="mb-3 h-12 w-12 text-slate-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+  </svg>
+  <p class="mb-1 text-sm font-medium text-[var(--text)]">No se encontraron registros</p>
+  <p class="mb-4 text-xs text-[var(--text-secondary)]">{{ mensaje() }}</p>
+  <button
+    type="button"
+    class="inline-flex items-center gap-1.5 rounded-lg bg-[var(--primary)] px-4 py-2 text-xs font-medium text-white shadow-sm transition-colors hover:bg-[var(--primary-dark)]"
+    (click)="limpiar.emit()"
+  >
+    Limpiar filtros
+  </button>
+</div>

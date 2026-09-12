@@ -1,0 +1,370 @@
+﻿"""Análisis exploratorio de datos (EDA) y exportación de resultados JSON.
+
+Genera los archivos JSON consumibles por la API FastAPI:
+- resumen.json
+- distribuciones.json
+- cruces.json
+- temporal.json
+- insights.json
+"""
+
+import json
+from pathlib import Path
+
+import numpy as np
+import pandas as pd
+
+ROOT = Path(__file__).resolve().parents[2]
+ANALYTIC_PATH = ROOT / "data" / "processed" / "pqrs_analitico_v2.csv"
+OUT_DIR = ROOT / "backend" / "app" / "data"
+
+# Variables categóricas de interés para distribuciones
+CATEGORICAS = [
+    "tipo_pqrs",
+    "tipo_pqrs_grupo",
+    "causa",
+    "canal",
+    "programa",
+    "ambito",
+    "area_solicitud",
+    "tipo_usuario",
+    "regional",
+    "sede",
+    "vencimiento",
+    "aseguradora",
+    "mes",
+]
+
+
+def distribucion(df: pd.DataFrame, col: str) -> dict:
+    """Frecuencias y porcentajes de una variable categórica."""
+    vc = df[col].value_counts(dropna=False)
+    total = vc.sum()
+    return {
+        "variable": col,
+        "total": int(total),
+        "frecuencias": [
+            {
+                "categoria": str(k) if not (isinstance(k, float) and np.isnan(k)) else "SIN DATO",
+                "frecuencia": int(v),
+                "porcentaje": round(float(v) / total * 100, 1),
+            }
+            for k, v in vc.items()
+        ],
+        "con_nulos": bool(df[col].isna().any()),
+    }
+
+
+def cruce(df: pd.DataFrame, x: str, y: str) -> dict:
+    """Tabla cruzada entre dos variables categóricas."""
+    ct = pd.crosstab(df[x], df[y])
+    filas = []
+    for i in ct.index:
+        filas.append(
+            {
+                "x": i,
+                "valores": [{"y": j, "frecuencia": int(ct.loc[i, j])} for j in ct.columns],
+            }
+        )
+    return {"variable_x": x, "variable_y": y, "tabla": filas}
+
+
+def eda(df: pd.DataFrame) -> dict:
+    results = {}
+
+    # --- RESUMEN ---
+    dist_tipo = {d["categoria"]: d["frecuencia"] for d in distribucion(df, "tipo_pqrs")["frecuencias"]}
+    causa_top = df["causa"].value_counts().idxmax()
+    canal_top = df["canal"].value_counts().idxmax()
+    servicio_top = df["programa"].value_counts().idxmax()
+    tipo_usuario_bins = df["tipo_usuario"].value_counts().idxmax()
+
+    results["resumen"] = {
+        "total_pqrs": int(len(df)),
+        "periodo": {
+            "inicio": str(df["fecha_reporte"].min().date()),
+            "fin": str(df["fecha_reporte"].max().date()),
+        },
+        "distribucion_tipo": dist_tipo,
+        "distribucion_tipo_grupo": {
+            d["categoria"]: d["frecuencia"]
+            for d in distribucion(df, "tipo_pqrs_grupo")["frecuencias"]
+        },
+        "causa_mas_frecuente": {
+            "categoria": causa_top,
+            "frecuencia": int(df["causa"].value_counts().max()),
+        },
+        "canal_mas_utilizado": {
+            "categoria": canal_top,
+            "frecuencia": int(df["canal"].value_counts().max()),
+        },
+        "servicio_mas_pqrs": {
+            "categoria": servicio_top,
+            "frecuencia": int(df["programa"].value_counts().max()),
+        },
+        "tiempo_promedio_respuesta_dias": round(float(df["dias_respuesta"].mean()), 1),
+        "tiempo_mediana_respuesta_dias": round(float(df["dias_respuesta"].median()), 1),
+        "tipo_usuario_mas_frecuente": {
+            "categoria": tipo_usuario_bins,
+            "frecuencia": int(df["tipo_usuario"].value_counts().max()),
+        },
+    }
+
+    # --- DISTRIBUCIONES ---
+    results["distribuciones"] = {
+        "variables": [distribucion(df, c) for c in CATEGORICAS]
+    }
+
+    # Estadísticas de tiempo de respuesta
+    dias = df["dias_respuesta"]
+    results["tiempo_respuesta"] = {
+        "media": round(float(dias.mean()), 1),
+        "mediana": round(float(dias.median()), 1),
+        "desviacion": round(float(dias.std()), 1),
+        "min": int(dias.min()),
+        "max": int(dias.max()),
+        "p25": round(float(dias.quantile(0.25)), 1),
+        "p75": round(float(dias.quantile(0.75)), 1),
+        "n_menor_igual_30": int((dias <= 30).sum()),
+        "pct_menor_igual_30": round(float((dias <= 30).mean() * 100), 1),
+        "distribucion_bins": [
+            {"rango": "0-1 días", "frecuencia": int(((dias > -1) & (dias <= 1)).sum())},
+            {"rango": "2-7 días", "frecuencia": int(((dias > 1) & (dias <= 7)).sum())},
+            {"rango": "8-15 días", "frecuencia": int(((dias > 7) & (dias <= 15)).sum())},
+            {"rango": "16-30 días", "frecuencia": int(((dias > 15) & (dias <= 30)).sum())},
+            {"rango": "31-60 días", "frecuencia": int(((dias > 30) & (dias <= 60)).sum())},
+            {"rango": "61-90 días", "frecuencia": int(((dias > 60) & (dias <= 90)).sum())},
+            {"rango": "más de 90 días", "frecuencia": int((dias > 90).sum())},
+        ],
+    }
+
+    # --- CRUCES ---
+    cruces = [
+        ("tipo_pqrs_grupo", "causa"),
+        ("tipo_pqrs_grupo", "programa"),
+        ("causa", "programa"),
+        ("causa", "canal"),
+        ("programa", "canal"),
+        ("programa", "tipo_pqrs_grupo"),
+        ("tipo_pqrs_grupo", "canal"),
+        ("causa", "mes"),
+        ("programa", "mes"),
+        ("canal", "mes"),
+    ]
+    results["cruces"] = {"cruces": [cruce(df, x, y) for x, y in cruces]}
+
+    # --- TEMPORAL ---
+    por_mes = df.groupby("mes_num").size().sort_index()
+    por_mes_ext = df.groupby(["mes_num", "tipo_pqrs_grupo"]).size().unstack(fill_value=0)
+    results["temporal"] = {
+        "por_mes": [
+            {"mes": nombres[int(i)], "mes_num": int(i), "cantidad": int(v)} for i, v in por_mes.items()
+        ],
+        "por_mes_tipo": [
+            {
+                "mes": nombres[int(i)],
+                "mes_num": int(i),
+                "tipos": {
+                    str(col): int(por_mes_ext.loc[i, col])
+                    for col in por_mes_ext.columns
+                },
+            }
+            for i in por_mes_ext.index
+        ],
+        "por_programa_mes": [
+            {
+                "mes": nombres[int(i)],
+                "mes_num": int(i),
+                "programas": {
+                    str(col): int(v)
+                    for col, v in df[df["mes_num"] == i]["programa"].value_counts().items()
+                },
+            }
+            for i in sorted(df["mes_num"].unique())
+        ],
+    }
+
+    return results
+
+
+nombres = {7: "Julio", 8: "Agosto", 9: "Septiembre", 10: "Octubre", 11: "Noviembre", 12: "Diciembre"}
+
+
+def generar_insights(df: pd.DataFrame, res: dict) -> list:
+    """Genera insights automáticos basados exclusivamente en datos reales."""
+    insights = []
+
+    # 1. Tipo de PQRS dominante
+    tipo = df["tipo_pqrs_grupo"].value_counts(normalize=True)
+    tipo_top, tipo_pct = tipo.index[0], tipo.iloc[0] * 100
+    insights.append(
+        {
+            "tipo": "hallazgo",
+            "titulo": f"Predominancia de {tipo_top.title()}",
+            "descripcion": (
+                f"Las PQRS de tipo {tipo_top.title()} representan el {tipo_pct:.1f}% "
+                f"de los registros analizados ({int(tipo.iloc[0] * len(df))} de {len(df)}), "
+                "siendo la categoría predominante en el período."
+            ),
+            "metrica": f"{tipo_pct:.1f}%",
+            "valor": tipo_top.title(),
+            "orden": 1,
+        }
+    )
+
+    # 2. Causa más frecuente
+    causa = df["causa"].value_counts(normalize=True)
+    causa_top, causa_pct = causa.index[0], causa.iloc[0] * 100
+    insights.append(
+        {
+            "tipo": "prioridad",
+            "titulo": f"Causa crítica: {causa_top.title()}",
+            "descripcion": (
+                f"La causa '{causa_top.title()}' concentra el {causa_pct:.1f}% de las PQRS "
+                f"({int(causa.iloc[0] * len(df))} registros). Es la principal fuente "
+                "de inconformidad reportada por los usuarios."
+            ),
+            "metrica": f"{causa_pct:.1f}%",
+            "valor": causa_top.title(),
+            "orden": 2,
+        }
+    )
+
+    # 3. Top 3 causas
+    causa3 = causa.head(3)
+    suma3 = causa3.sum() * 100
+    insights.append(
+        {
+            "tipo": "hallazgo",
+            "titulo": "Concentración de causas",
+            "descripcion": (
+                f"Las 3 causas más frecuentes ({', '.join(c.title() for c in causa3.index)}) "
+                f"concentran el {suma3:.1f}% de las PQRS analizadas."
+            ),
+            "metrica": f"{suma3:.1f}%",
+            "valor": "Top 3 causas",
+            "orden": 3,
+        }
+    )
+
+    # 4. Canal dominante
+    canal = df["canal"].value_counts(normalize=True)
+    canal_top, canal_pct = canal.index[0], canal.iloc[0] * 100
+    insights.append(
+        {
+            "tipo": "hallazgo",
+            "titulo": f"Canal de ingreso preferente: {canal_top.title()}",
+            "descripcion": (
+                f"El canal '{canal_top.title()}' concentra el {canal_pct:.1f}% de las radicaciones, "
+                f"indicando que la institución debe priorizar la atención y gestión de este canal."
+            ),
+            "metrica": f"{canal_pct:.1f}%",
+            "valor": canal_top.title(),
+            "orden": 4,
+        }
+    )
+
+    # 5. Tiempo de respuesta
+    mediana = df["dias_respuesta"].median()
+    p30 = (df["dias_respuesta"] <= 30).mean() * 100
+    insights.append(
+        {
+            "tipo": "oportunidad",
+            "titulo": "Tiempo de respuesta",
+            "descripcion": (
+                f"La mediana de respuesta es de {mediana:.0f} días y el {p30:.1f}% de las PQRS "
+                "se respondieron en 30 días o menos, en línea con los estándares "
+                "de la Circular 008 de 2018 de la Supersalud."
+            ),
+            "metrica": f"{mediana:.0f} días",
+            "valor": f"{p30:.1f}% ≤ 30 días",
+            "orden": 5,
+        }
+    )
+
+    # 6. Servicio/programa con más PQRS
+    prog = df["programa"].value_counts(normalize=True)
+    prog_top, prog_pct = prog.index[0], prog.iloc[0] * 100
+    insights.append(
+        {
+            "tipo": "oportunidad",
+            "titulo": f"Servicio con mayor carga de PQRS: {prog_top.title()}",
+            "descripcion": (
+                f"El servicio '{prog_top.title()}' acumula el {prog_pct:.1f}% de las PQRS "
+                f"({int(prog.iloc[0] * len(df))} registros), siendo el principal foco "
+                "de atención para gestiones de mejora."
+            ),
+            "metrica": f"{prog_pct:.1f}%",
+            "valor": prog_top.title(),
+            "orden": 6,
+        }
+    )
+
+    # 7. Mes con más PQRS
+    mes = df.groupby("mes")["fecha_reporte"].count().sort_values(ascending=False)
+    mes_top, mes_cnt = mes.index[0], mes.iloc[0]
+    insights.append(
+        {
+            "tipo": "tendencia",
+            "titulo": f"Mes pico: {mes_top.title()}",
+            "descripcion": (
+                f"{mes_top.title()} fue el mes con mayor radicación de PQRS ({mes_cnt} registros), "
+                "posible foco de análisis sobre causas estacionales o eventos específicos."
+            ),
+            "metrica": str(mes_cnt),
+            "valor": mes_top.title(),
+            "orden": 7,
+        }
+    )
+
+    # 8. Tipo de usuario dominante
+    tu = df["tipo_usuario"].value_counts(normalize=True)
+    tu_top, tu_pct = tu.index[0], tu.iloc[0] * 100
+    insights.append(
+        {
+            "tipo": "hallazgo",
+            "titulo": f"Perfil del radicador: {tu_top.title()}",
+            "descripcion": (
+                f"El {tu_pct:.1f}% de las PQRS son radicadas por {tu_top.title().lower().replace(' ', ' ')}, "
+                "lo que orienta la estrategia de comunicación y seguimiento institucional."
+            ),
+            "metrica": f"{tu_pct:.1f}%",
+            "valor": tu_top.title(),
+            "orden": 8,
+        }
+    )
+
+    return insights
+
+
+def exportar(df: pd.DataFrame) -> None:
+    results = eda(df)
+    results["insights"] = {
+        "insights": generar_insights(df, results),
+        "fecha_generacion": "2025-09-11",
+        "total_registros_analizados": int(len(df)),
+        "periodo": "II semestre 2025",
+    }
+
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    archivos = {
+        "resumen.json": results["resumen"],
+        "distribuciones.json": results["distribuciones"],
+        "cruces.json": results["cruces"],
+        "temporal.json": results["temporal"],
+        "tiempo_respuesta.json": results["tiempo_respuesta"],
+        "insights.json": results["insights"],
+    }
+    for nombre, data in archivos.items():
+        (OUT_DIR / nombre).write_text(
+            json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8"
+        )
+        print(f"  OK {nombre}")
+
+    print(f"Exportados {len(archivos)} JSON a {OUT_DIR}")
+
+
+if __name__ == "__main__":
+    data = pd.read_csv(ANALYTIC_PATH, parse_dates=["fecha_reporte", "fecha_cierre"])
+    print(f"Cargado: {data.shape}")
+    exportar(data)
