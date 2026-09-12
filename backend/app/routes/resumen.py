@@ -1,8 +1,8 @@
-"""Endpoint /api/resumen: KPIs generales del dashboard."""
+﻿"""Endpoint /api/resumen: KPIs generales del dashboard."""
 
 from fastapi import APIRouter
 
-from app.config import cargar_json
+from ..config import cargar_json
 
 router = APIRouter(prefix="/api", tags=["resumen"])
 

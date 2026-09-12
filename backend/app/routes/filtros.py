@@ -1,8 +1,8 @@
-"""Endpoint /api/filtros: valores disponibles para los filtros del dashboard."""
+﻿"""Endpoint /api/filtros: valores disponibles para los filtros del dashboard."""
 
 from fastapi import APIRouter
 
-from app.config import cargar_json
+from ..config import cargar_json
 
 router = APIRouter(prefix="/api", tags=["filtros"])
 

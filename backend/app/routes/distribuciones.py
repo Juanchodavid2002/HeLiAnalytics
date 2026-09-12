@@ -1,8 +1,8 @@
-"""Endpoints /api/distribuciones*: distribuciones de frecuencias."""
+﻿"""Endpoints /api/distribuciones*: distribuciones de frecuencias."""
 
 from fastapi import APIRouter, HTTPException
 
-from app.config import cargar_json
+from ..config import cargar_json
 
 router = APIRouter(prefix="/api/distribuciones", tags=["distribuciones"])
 

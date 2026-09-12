@@ -1,8 +1,8 @@
-"""Endpoint /api/cruces: cruces de variables precomputados."""
+﻿"""Endpoint /api/cruces: cruces de variables precomputados."""
 
 from fastapi import APIRouter, HTTPException, Query
 
-from app.config import cargar_json
+from ..config import cargar_json
 
 router = APIRouter(prefix="/api/cruces", tags=["cruces"])
 

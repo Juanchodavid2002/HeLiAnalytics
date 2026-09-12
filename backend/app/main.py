@@ -1,9 +1,11 @@
 """Punto de entrada de la API HeLi Analytics."""
 
+from pathlib import Path
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.routes import (
+from .routes import (
     resumen,
     distribuciones,
     cruces,
@@ -35,14 +37,19 @@ app.include_router(insights.router)
 app.include_router(textual.router)
 app.include_router(filtros.router)
 
+WEB_DIR = Path(__file__).resolve().parents[2] / "web"
 
-@app.get("/")
-def root() -> dict:
-    return {
-        "app": "HeLi Analytics API",
-        "version": "1.0.0",
-        "docs": "/docs",
-    }
+
+if (WEB_DIR / "index.html").is_file():
+    app.frontend("/", directory=str(WEB_DIR), fallback="index.html")
+else:
+    @app.get("/")
+    def root() -> dict:
+        return {
+            "app": "HeLi Analytics API",
+            "version": "1.0.0",
+            "docs": "/docs",
+        }
 
 
 @app.get("/health")

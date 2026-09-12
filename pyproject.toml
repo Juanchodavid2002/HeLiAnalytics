@@ -1,0 +1,13 @@
+[project]
+name = "heli-analytics"
+version = "1.0.0"
+description = "Centro de Inteligencia de PQRS - HeLi Salud IPS (FastAPI + Angular)"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.138.0",
+    "uvicorn[standard]>=0.23.0",
+    "pydantic>=2.0.0",
+]
+
+[tool.vercel]
+entrypoint = "backend.app.main:app"

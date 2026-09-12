@@ -1,8 +1,8 @@
-"""Endpoints /api/clusters*: resultados del clustering K-Prototypes."""
+﻿"""Endpoints /api/clusters*: resultados del clustering K-Prototypes."""
 
 from fastapi import APIRouter, HTTPException
 
-from app.config import cargar_json
+from ..config import cargar_json
 
 router = APIRouter(prefix="/api/clusters", tags=["clusters"])
 

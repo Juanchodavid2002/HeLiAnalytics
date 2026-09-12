@@ -1,8 +1,8 @@
-"""Endpoint /api/insights: hallazgos automáticos del análisis."""
+﻿"""Endpoint /api/insights: hallazgos automáticos del análisis."""
 
 from fastapi import APIRouter
 
-from app.config import cargar_json
+from ..config import cargar_json
 
 router = APIRouter(prefix="/api", tags=["insights"])
 

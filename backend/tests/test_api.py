@@ -5,7 +5,7 @@ Requiere: pip install pytest httpx  (httpx es necesario para TestClient de FastA
 """
 
 from fastapi.testclient import TestClient
-from app.main import app
+from app.main import app, WEB_DIR
 
 client = TestClient(app)
 
@@ -14,7 +14,10 @@ client = TestClient(app)
 def test_root():
     r = client.get("/")
     assert r.status_code == 200
-    assert r.json()["app"] == "HeLi Analytics API"
+    if (WEB_DIR / "index.html").is_file():
+        assert "text/html" in r.headers["content-type"]
+    else:
+        assert r.json()["app"] == "HeLi Analytics API"
 
 
 def test_health():

@@ -1,8 +1,8 @@
-"""Endpoint /api/textual: análisis textual de PQRS (marca: activado según data)."""
+﻿"""Endpoint /api/textual: análisis textual de PQRS (marca: activado según data)."""
 
 from fastapi import APIRouter
 
-from app.config import cargar_json
+from ..config import cargar_json
 
 router = APIRouter(prefix="/api", tags=["textual"])
 
