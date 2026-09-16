@@ -3,6 +3,7 @@ import { Component, computed, inject, signal } from '@angular/core';
 import { ApiService } from '../../core/services/api.service';
 import { FilterService } from '../../core/services/filter.service';
 import { ChartContainer } from '../../shared/chart-container/chart-container';
+import { InfoBox } from '../../shared/info-box/info-box';
 import { Loading } from '../../shared/loading/loading';
 import { Clusters, Cluster, ClusterVarPerfil } from '../../core/models/cluster.model';
 import { formatearDias, formatearNumero, formatearPorcentaje, titleCase } from '../../core/utils/formatters';
@@ -11,7 +12,7 @@ import { EChartsOption } from 'echarts';
 
 @Component({
   selector: 'app-segmentacion',
-  imports: [ChartContainer, Loading],
+  imports: [ChartContainer, InfoBox, Loading],
   templateUrl: './segmentacion.html',
   styleUrl: './segmentacion.scss',
 })

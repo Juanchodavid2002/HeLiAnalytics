@@ -4,6 +4,7 @@ import { combineLatest } from 'rxjs';
 import { ApiService } from '../../core/services/api.service';
 import { FilterService } from '../../core/services/filter.service';
 import { ChartContainer } from '../../shared/chart-container/chart-container';
+import { InfoBox } from '../../shared/info-box/info-box';
 import { Loading } from '../../shared/loading/loading';
 import { Cruce, Distribuciones, TiempoRespuesta } from '../../core/models/distribucion.model';
 import {
@@ -21,7 +22,7 @@ import {
 
 @Component({
   selector: 'app-areas',
-  imports: [ChartContainer, Loading],
+  imports: [ChartContainer, InfoBox, Loading],
   templateUrl: './areas.html',
   styleUrl: './areas.scss',
 })

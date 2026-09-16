@@ -3,6 +3,7 @@ import { Component, computed, inject, signal } from '@angular/core';
 import { ApiService } from '../../core/services/api.service';
 import { FilterService } from '../../core/services/filter.service';
 import { ChartContainer } from '../../shared/chart-container/chart-container';
+import { InfoBox } from '../../shared/info-box/info-box';
 import { Loading } from '../../shared/loading/loading';
 import { Textual, RegistroTextual, PalabraFrecuencia } from '../../core/models/insight.model';
 import { opcionBarrasHorizontal } from '../../core/utils/charts';
@@ -12,7 +13,7 @@ type VistaPalabras = 'global' | 'tipo' | 'ambito' | 'area_solicitud';
 
 @Component({
   selector: 'app-textual',
-  imports: [ChartContainer, Loading],
+  imports: [ChartContainer, InfoBox, Loading],
   templateUrl: './textual.html',
   styleUrl: './textual.scss',
 })

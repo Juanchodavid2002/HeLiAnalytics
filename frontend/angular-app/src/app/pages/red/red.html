@@ -4,6 +4,7 @@
     <p class="hel-page-subtitle">
       Distribución de PQRS por aseguradora, regional, tipo de usuario y estado de gestión (vencimiento), con análisis cruzado de aseguradora × tipo.
     </p>
+    <app-info-box contenido="Este módulo analiza a quién pertenece el usuario y cómo se gestionan sus PQRS: por aseguradora, regional, tipo de usuario (cotizante, beneficiario) y si la respuesta venció o no. Cambia la dimensión con los botones y las gráficas responden a los filtros globales." />
   </div>
 
   @if (hayError()) {
@@ -37,6 +38,7 @@
 
     <app-chart-container
       [titulo]="'Distribución por ' + dimension()"
+      explicacion="Según la dimensión elegida arriba, cada barra (aseguradora, regional) o porción del donut (tipo de usuario, gestión a tiempo) representa el número de PQRS de esa categoría. En el donut, la etiqueta central muestra el total analizado. Si eliges 'Gestión a tiempo', verás cuántas PQRS se respondieron antes de vencer frente a las que vencieron."
       [opciones]="opcionesDimension()"
       [cargando]="cargando()"
       altura="350px"
@@ -45,6 +47,7 @@
     <app-chart-container
       titulo="Aseguradora × Tipo de PQRS"
       subtitulo="Top 8 aseguradoras agrupadas por tipo de solicitud"
+      explicacion="Toma las 8 aseguradoras con más PQRS y descompone cada una por tipo de solicitud (reclamo, queja, petición, felicitación). Sirve para ver si ciertas aseguradoras concentran más reclamos o peticiones. Pasa el cursor sobre el donut para ver valores y porcentajes."
       [opciones]="opcionesAsegTipo()"
       [cargando]="cargando()"
       altura="350px"

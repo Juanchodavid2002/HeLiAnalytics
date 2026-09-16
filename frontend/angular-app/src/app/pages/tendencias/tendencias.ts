@@ -4,6 +4,7 @@ import { combineLatest } from 'rxjs';
 import { ApiService } from '../../core/services/api.service';
 import { FilterService } from '../../core/services/filter.service';
 import { ChartContainer } from '../../shared/chart-container/chart-container';
+import { InfoBox } from '../../shared/info-box/info-box';
 import { Loading } from '../../shared/loading/loading';
 import { Cruce } from '../../core/models/distribucion.model';
 import { filtrarCruce } from '../../core/utils/filtrar';
@@ -11,7 +12,7 @@ import { opcionHeatmap } from '../../core/utils/charts';
 
 @Component({
   selector: 'app-tendencias',
-  imports: [ChartContainer, Loading],
+  imports: [ChartContainer, InfoBox, Loading],
   templateUrl: './tendencias.html',
   styleUrl: './tendencias.scss',
 })

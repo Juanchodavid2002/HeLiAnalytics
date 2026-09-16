@@ -4,6 +4,7 @@
     <p class="hel-page-subtitle">
       Distribución de PQRS por ámbito de atención (PAD agudo/crónico, ambulatorio, hospitalización), su relación con el tipo de PQRS, la evolución temporal mensual y el tiempo mediano de respuesta.
     </p>
+    <app-info-box contenido="El ámbito de atención indica dónde se prestan los servicios (consulta ambulatoria, hospitalización o programa de atención domiciliaria PAD). Este módulo te muestra su volumen, la mezcla de tipos de PQRS y qué tan rápido se responden. Los cruces y gráficas responden a los filtros activos." />
   </div>
 
   @if (hayError()) {
@@ -19,6 +20,7 @@
     <app-chart-container
       titulo="Ranking por ámbito de atención"
       subtitulo="PAD agudo/crónico, ambulatorio y hospitalización"
+      explicacion="Cada barra representa el número total de PQRS radicadas en ese ámbito. Una barra más larga indica mayor volumen de solicitudes. Haz clic en una barra para filtrar el análisis a ese ámbito."
       [opciones]="opcionesRanking()"
       [cargando]="cargando()"
       [clicFiltro]="'ambitos'"
@@ -28,6 +30,7 @@
       <app-chart-container
         titulo="Ámbito × Tipo de PQRS"
         subtitulo="Barras agrupadas por tipo"
+        explicacion="Para cada ámbito, se desglosa la cantidad de PQRS por tipo (reclamo, queja, petición, felicitación). Compara la composición entre ámbitos: en cuáles predominan los reclamos frente a las peticiones. Haz clic en un ámbito para filtrar."
         [opciones]="opcionesTipoAmbito()"
         [cargando]="cargando()"
         altura="320px"
@@ -36,6 +39,7 @@
       <app-chart-container
         titulo="Evolución mensual por ámbito"
         subtitulo="Mapa de calor de cruce ámbito-mes"
+        explicacion="El color de cada celda indica cuántas PQRS de ese ámbito se radicaron en ese mes, permitiendo ver estacionalidad o picos de demanda. Haz clic en una celda para filtrar por ámbito."
         [opciones]="opcionesAmbitoMes()"
         [cargando]="cargando()"
         altura="320px"
@@ -46,6 +50,7 @@
     <app-chart-container
       titulo="Tiempo mediano de respuesta por ámbito"
       subtitulo="Mediana en días por categoría de ámbito"
+      explicacion="Indica cuántos días tardó la IPS, en la mitad (50%) de las PQRS de cada ámbito, en dar respuesta. Usa la mediana porque es más robusta que el promedio ante casos extremos: una barra corta significa resolución más rápida. Pasa el cursor para ver el total de registros."
       [opciones]="opcionesMedianaAmbito()"
       [cargando]="cargando()"
       altura="280px"

@@ -4,6 +4,7 @@
     <p class="hel-page-subtitle">
       Segmentos de comportamiento de las PQRS generados con el algoritmo {{ clusters()?.algoritmo ?? 'K-Prototypes' }}.
     </p>
+    <app-info-box contenido="El módulo agrupa las PQRS en segmentos según patrones compartidos (tipo de PQRS, ámbito, canal, área) usando K-Prototypes. Cada segmento reúne solicitudes similares entre sí y diferentes a las de otros grupos; su interpretación sugiere el perfil típico y qué gestionar primero." />
   </div>
 
   @if (hayError()) {
@@ -27,7 +28,7 @@
       </div>
     }
 
-    <app-chart-container titulo="Distribución de registros por segmento" subtitulo="Haz clic en un segmento para ver su perfil" [opciones]="opcionesVistaGeneral()" [cargando]="cargando()" altura="320px" />
+    <app-chart-container titulo="Distribución de registros por segmento" subtitulo="Haz clic en un segmento para ver su perfil" explicacion="Cada porción representa un segmento y su tamaño es la proporción de PQRS que contiene. Un segmento dominante concentra buena parte de la demanda y suele merecer análisis prioritario. Al hacer clic sobre él se despliega su perfil completo." [opciones]="opcionesVistaGeneral()" [cargando]="cargando()" altura="320px" />
 
     <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-5">
       @for (cl of clusters()!.clusters; track cl.id) {
@@ -76,6 +77,7 @@
             <app-chart-container
               [titulo]="variable.etiqueta + ' predominante: ' + titleCase(variable.perfil.moda)"
               [subtitulo]="formatearPorcentaje(variable.perfil.pct_moda) + ' de los registros del segmento'"
+              explicacion="Muestra cómo se distribuyen las PQRS del segmento entre las categorías de esta variable (tipo, ámbito, canal o área). El porcentaje de la moda indica qué tan homogéneo es el segmento: un valor alto significa que casi todas sus PQRS comparten esa misma característica."
               [opciones]="opcionesPerfilVariable(variable.nombre, variable.perfil)"
               altura="210px"
             />

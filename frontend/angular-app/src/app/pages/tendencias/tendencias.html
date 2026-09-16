@@ -4,6 +4,7 @@
     <p class="hel-page-subtitle">
       Análisis temporal cruzado: distribución de PQRS por tipo y ámbito a lo largo de los meses y relación áreas de solicitud × canal.
     </p>
+    <app-info-box contenido="Este módulo cruza dos variables para detectar patrones: el eje horizontal y el vertical de cada mapa de calor representan una categoría, y el color indica el número de PQRS. Las cifras responden a los filtros activos de la barra superior y verás vacíos en las combinaciones sin registros." />
   </div>
 
   @if (hayError()) {
@@ -20,6 +21,7 @@
       <app-chart-container
         titulo="Tipo de PQRS × Mes"
         subtitulo="Mapa de calor de cruce tipo-mes"
+        explicacion="Muestra cuántas PQRS de cada tipo (reclamo, queja, petición, felicitación) se radicaron en cada mes del periodo. Cuanto más intenso el color, mayor el volumen. Haz clic en una celda o en la leyenda para filtrar el resto del dashboard por esa combinación."
         [opciones]="opcionesTipoMes()"
         [cargando]="cargando()"
         altura="360px"
@@ -28,6 +30,7 @@
       <app-chart-container
         titulo="Ámbito × Mes"
         subtitulo="Mapa de calor de cruce ámbito-mes"
+        explicacion="Relaciona el ámbito de atención (ambulatorio, hospitalización, PAD agudo/crónico) con el mes de radicación. Sirve para ver en qué meses se concentra la demanda de cada ámbito. Haz clic en una celda para filtrar por ámbito."
         [opciones]="opcionesAmbitoMes()"
         [cargando]="cargando()"
         altura="360px"
@@ -38,6 +41,7 @@
     <app-chart-container
       titulo="Área de solicitud × Canal"
       subtitulo="Mapa de calor de combinaciones área-canal"
+      explicacion="Cruza el área de solicitud (o más de 30 dependencias) con el canal por el que se radica la PQRS (correo, web, presencial, etc.). Permite identificar qué canales concentran la demanda de cada área. Haz clic en una celda para filtrar por área."
       [opciones]="opcionesAreaCanal()"
       [cargando]="cargando()"
       altura="360px"

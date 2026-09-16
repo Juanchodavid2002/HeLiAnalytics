@@ -4,6 +4,7 @@
     <p class="hel-page-subtitle">
       Distribución de PQRS por área de solicitud y su relación con tipos de PQRS, ámbito de atención y el tiempo mediano de respuesta por área.
     </p>
+    <app-info-box contenido="Cada área de solicitud es la dependencia de HeLi Salud donde se radica la PQRS (facturación, consulta externa, urgencias, etc.). Este módulo te permite comparar el volumen de cada área, la mezcla de tipos de PQRS y su velocidad de respuesta. Las cifras responden a los filtros activos." />
   </div>
 
   @if (hayError()) {
@@ -19,6 +20,7 @@
     <app-chart-container
       titulo="Distribución por área de solicitud"
       subtitulo="Áreas con PQRS radicadas"
+      explicacion="Cada barra muestra cuántas PQRS se radicaron en esa área durante el periodo. Las áreas se ordenan de menor a mayor volumen para identificar de un vistazo los mayores focos de demanda. Haz clic en una barra para filtrar por esa área."
       [opciones]="opcionesRanking()"
       [cargando]="cargando()"
       [clicFiltro]="'areas'"
@@ -28,6 +30,7 @@
       <app-chart-container
         titulo="Área × Tipo de PQRS"
         subtitulo="Barras por tipo de PQRS"
+        explicacion="Desglosa para cada área el número de PQRS por tipo. Ayuda a ver si ciertas áreas reciben más reclamos o quejas que peticiones. Haz clic en una columna de área para filtrar."
         [opciones]="opcionesAreaTipo()"
         [cargando]="cargando()"
         altura="320px"
@@ -36,6 +39,7 @@
       <app-chart-container
         titulo="Área × Ámbito"
         subtitulo="Mapa de calor de área-ámbito"
+        explicacion="Cruza el área que radica la PQRS con el ámbito de atención del servicio. Si solo hay una celda coloreada por fila, ese área concentra sus solicitudes en un único ámbito. Haz clic en una celda para filtrar por área."
         [opciones]="opcionesAreaAmbito()"
         [cargando]="cargando()"
         altura="320px"
@@ -46,6 +50,7 @@
     <app-chart-container
       titulo="Tiempo mediano de respuesta por área"
       subtitulo="Mediana en días por área de solicitud"
+      explicacion="Muestra en cuántos días responde la IPS, en el 50% de las PQRS de cada área. La mediana es más confiable que el promedio ante casos atípicos; cuanto más corta la barra, más ágil es la respuesta de esa área. Pasa el cursor para ver el total de registros por área."
       [opciones]="opcionesMedianaArea()"
       [cargando]="cargando()"
       altura="500px"

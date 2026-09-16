@@ -5,6 +5,7 @@ import { ApiService } from '../../core/services/api.service';
 import { FilterService } from '../../core/services/filter.service';
 import { KpiCard, KpiColor } from '../../shared/kpi-card/kpi-card';
 import { ChartContainer } from '../../shared/chart-container/chart-container';
+import { InfoBox } from '../../shared/info-box/info-box';
 import { Loading } from '../../shared/loading/loading';
 import { Resumen } from '../../core/models/resumen.model';
 import { Distribuciones, Temporal } from '../../core/models/distribucion.model';
@@ -30,7 +31,7 @@ import {
 
 @Component({
   selector: 'app-dashboard',
-  imports: [KpiCard, ChartContainer, Loading],
+  imports: [KpiCard, ChartContainer, InfoBox, Loading],
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.scss',
 })

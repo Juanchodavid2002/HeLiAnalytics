@@ -2,6 +2,7 @@ import { Component, computed, inject, signal } from '@angular/core';
 
 import { ApiService } from '../../core/services/api.service';
 import { Insights, TipoInsight } from '../../core/models/insight.model';
+import { InfoBox } from '../../shared/info-box/info-box';
 import { Loading } from '../../shared/loading/loading';
 import { formatearNumero, formatearFecha } from '../../core/utils/formatters';
 
@@ -21,7 +22,7 @@ const ETIQUETAS_TIPO: Record<TipoInsight, string> = {
 
 @Component({
   selector: 'app-insights',
-  imports: [Loading],
+  imports: [InfoBox, Loading],
   templateUrl: './insights.html',
   styleUrl: './insights.scss',
 })

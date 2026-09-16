@@ -34,6 +34,8 @@
         </div>
       </section>
 
+      <app-info-box etiqueta="Cómo leer este panel" contenido="Los indicadores y gráficas de este panel se calculan sobre la totalidad de PQRS del II semestre 2025. Cuando activas filtros en la barra superior, los números se recalculan sobre el subconjunto filtrado (verás 'N global' si hay menos registros que el total). Las gráficas con cursor de mano permiten filtrar al hacer clic en una barra o segmento." />
+
       <!-- KPI GRID -->
       <section>
         <div class="section-label">Indicadores principales</div>
@@ -108,13 +110,13 @@
       <section>
         <div class="section-label">Análisis visual</div>
         <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
-          <app-chart-container titulo="Distribución por tipo de PQRS" [opciones]="opcionesTipo()" [cargando]="cargando()" altura="280px" [clicFiltro]="'tipos'" />
-          <app-chart-container titulo="Tendencia temporal por mes" [opciones]="opcionesTendencia()" [cargando]="cargando()" altura="280px" />
+          <app-chart-container titulo="Distribución por tipo de PQRS" explicacion="Muestra cuántas PQRS se radicaron por tipo (reclamo, queja, petición, felicitación). El tipo más alto marca el foco de gestión. Haz clic en una barra para filtrar todo el panel por ese tipo." [opciones]="opcionesTipo()" [cargando]="cargando()" altura="280px" [clicFiltro]="'tipos'" />
+          <app-chart-container titulo="Tendencia temporal por mes" explicacion="Indica el volumen total de PQRS radicadas en cada mes del II semestre 2025. Te permite ver si la demanda crece, cae o tiene picos estacionales (p. ej. al cierre de año)." [opciones]="opcionesTendencia()" [cargando]="cargando()" altura="280px" />
         </div>
 
         <div class="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-2">
-          <app-chart-container titulo="Tendencia por tipo de PQRS" [opciones]="opcionesTendenciaTipo()" [cargando]="cargando()" altura="300px" />
-          <app-chart-container titulo="Distribución por canal de ingreso" [opciones]="opcionesCanal()" [cargando]="cargando()" altura="300px" [clicFiltro]="'canales'" />
+          <app-chart-container titulo="Tendencia por tipo de PQRS" explicacion="Descompone la evolución mensual por tipo de PQRS: cada línea es un tipo. Permite ver si los reclamos y las quejas siguen el mismo ritmo que las peticiones o si un tipo crece de forma atípica en algún mes." [opciones]="opcionesTendenciaTipo()" [cargando]="cargando()" altura="300px" />
+          <app-chart-container titulo="Distribución por canal de ingreso" explicacion="Muestra por qué canal se radican las PQRS (correo, web, presencial, etc.). Conocer esto ayuda a priorizar canales de atención. Haz clic en un segmento del donut para filtrar por ese canal." [opciones]="opcionesCanal()" [cargando]="cargando()" altura="300px" [clicFiltro]="'canales'" />
         </div>
       </section>
     }

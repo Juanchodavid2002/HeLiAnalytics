@@ -4,6 +4,7 @@
     <p class="hel-page-subtitle">
       Exploración del lenguaje natural de las PQRS: palabras más frecuentes, filtrado por dimensión y buscador de casos por palabra clave.
     </p>
+    <app-info-box contenido="Este módulo analiza el texto libre de la columna 'Hechos' de cada PQRS para destapar la razón de fondo detrás de los números. Las palabras se normalizan (se ignoran conectores como 'de', 'y', 'el') y se muestra su frecuencia. Puedes segmentar el análisis por tipo, ámbito o área, y buscar casos por palabra clave." />
   </div>
 
   @if (hayError()) {
@@ -59,6 +60,7 @@
     <app-chart-container
       titulo="Palabras más frecuentes"
       [subtitulo]="vistaSeleccionada() === 'global' ? 'Análisis global del corpus' : 'Dimensión: ' + vistaSeleccionada()"
+      explicacion="Cada barra indica en cuántas PQRS aparece esa palabra en el campo 'Hechos'. Arriba eliges la vista: global (todas las PQRS) o segmentada por tipo, ámbito o área. Palabras frecuentes que sugieren motivo del trámite (p. ej. 'cita', 'factura', 'demora', 'cirugía') orientan los hallazgos del Insights."
       [opciones]="opcionesTopPalabras()"
       [cargando]="cargando()"
       altura="350px"
@@ -66,6 +68,11 @@
 
     <!-- Buscador -->
     <div class="card p-4 fade-in">
+      <div class="mb-3 flex items-start justify-between gap-2">
+        <div class="flex items-center gap-3">
+          <app-info-box etiqueta="¿Cómo usar el buscador?" contenido="Escribe una palabra clave (p. ej. 'cita', 'inconsistencia', 'farmacia') y la tabla muestra hasta 100 casos que la mencionan en su texto, respetando los filtros globales y la vista elegida. La columna 'Preview' es el fragmento del escrito y 'Vencimiento' indica si la respuesta superó el plazo legal de 15 días." />
+        </div>
+      </div>
       <div class="mb-3 flex items-center gap-3">
         <div class="relative flex-1">
           <svg xmlns="http://www.w3.org/2000/svg" class="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-text-muted" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">

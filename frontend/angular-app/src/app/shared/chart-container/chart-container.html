@@ -4,6 +4,9 @@
       <span class="dot"></span>
       <h3>{{ titulo() }}</h3>
     </div>
+    @if (explicacion()) {
+      <app-info-box [contenido]="explicacion()" />
+    }
   </div>
   @if (subtitulo()) {
     <p class="mb-4 text-[11px] text-[var(--text-muted)]">{{ subtitulo() }}</p>

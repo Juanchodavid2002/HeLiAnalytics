@@ -4,6 +4,7 @@ import { EChartsOption } from 'echarts';
 
 import { FilterService } from '../../core/services/filter.service';
 import { VariableFiltro } from '../../core/utils/filtrar';
+import { InfoBox } from '../info-box/info-box';
 
 interface ParamClic {
   name?: string;
@@ -14,7 +15,7 @@ interface ParamClic {
 
 @Component({
   selector: 'app-chart-container',
-  imports: [NgxEchartsDirective],
+  imports: [NgxEchartsDirective, InfoBox],
   templateUrl: './chart-container.html',
   styleUrl: './chart-container.scss',
 })
@@ -27,6 +28,7 @@ export class ChartContainer {
   readonly altura = input('250px');
   readonly cargando = input(false);
   readonly clicFiltro = input<VariableFiltro | null>(null);
+  readonly explicacion = input('');
 
   protected alClic(params: unknown): void {
     const clave = this.clicFiltro();

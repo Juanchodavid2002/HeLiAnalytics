@@ -4,6 +4,7 @@ import { combineLatest } from 'rxjs';
 import { ApiService } from '../../core/services/api.service';
 import { FilterService } from '../../core/services/filter.service';
 import { ChartContainer } from '../../shared/chart-container/chart-container';
+import { InfoBox } from '../../shared/info-box/info-box';
 import { Loading } from '../../shared/loading/loading';
 import { Cruce, Distribuciones } from '../../core/models/distribucion.model';
 import {
@@ -18,7 +19,7 @@ type Dimension = 'aseguradora' | 'regional' | 'tipo_usuario' | 'vencimiento';
 
 @Component({
   selector: 'app-red',
-  imports: [ChartContainer, Loading],
+  imports: [ChartContainer, InfoBox, Loading],
   templateUrl: './red.html',
   styleUrl: './red.scss',
 })
