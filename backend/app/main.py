@@ -13,6 +13,7 @@ from .routes import (
     insights,
     textual,
     filtros,
+    registros,
 )
 
 app = FastAPI(
@@ -36,6 +37,7 @@ app.include_router(clusters.router)
 app.include_router(insights.router)
 app.include_router(textual.router)
 app.include_router(filtros.router)
+app.include_router(registros.router)
 
 FRONTEND_DIR = Path(__file__).resolve().parents[2] / "public"
 

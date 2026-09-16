@@ -26,6 +26,7 @@ export class Sidebar {
     { ruta: '/tendencias', etiqueta: 'Tendencias', icono: 'trend', seccion: 'principal' },
     { ruta: '/ambito', etiqueta: 'Ámbito', icono: 'alert', seccion: 'principal' },
     { ruta: '/areas', etiqueta: 'Áreas de solicitud', icono: 'files', seccion: 'principal' },
+    { ruta: '/red', etiqueta: 'Red y Cobertura', icono: 'globe', seccion: 'analisis' },
     { ruta: '/segmentacion', etiqueta: 'Segmentación', icono: 'users', seccion: 'analisis' },
     { ruta: '/textual', etiqueta: 'Análisis Textual', icono: 'text', seccion: 'analisis' },
     { ruta: '/insights', etiqueta: 'Insights IA', icono: 'bulb', seccion: 'analisis', badge: 'NEW' },

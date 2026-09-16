@@ -15,10 +15,9 @@ import {
 import {
   opcionBarrasAgrupadas,
   opcionBarrasHorizontal,
-  opcionBarrasTiempo,
+  opcionBarrasMediana,
   opcionHeatmap,
 } from '../../core/utils/charts';
-import { formatearDias, formatearNumero, formatearPorcentaje } from '../../core/utils/formatters';
 
 @Component({
   selector: 'app-areas',
@@ -36,14 +35,15 @@ export class Areas {
   protected readonly tiempo = signal<TiempoRespuesta | null>(null);
   protected readonly hayError = signal(false);
 
-  protected readonly cargando = computed(() => this.distribuciones() === null && !this.hayError());
+  protected readonly cargando = computed(
+    () => this.distribuciones() === null && !this.hayError(),
+  );
 
   constructor() {
     this.cargarDatos();
   }
 
   protected reintentar(): void {
-    this.distribuciones.set(null);
     this.hayError.set(false);
     this.cargarDatos();
   }
@@ -66,37 +66,7 @@ export class Areas {
     });
   }
 
-  protected readonly indicadores = computed(() => {
-    const t = this.tiempo();
-    if (!t) {
-      return null;
-    }
-    const total = t.distribucion_bins.reduce((acc, b) => acc + b.frecuencia, 0);
-    return [
-      {
-        titulo: 'Media de respuesta',
-        valor: formatearDias(t.media),
-        detalle: `Desviación ${formatearDias(t.desviacion)}`,
-      },
-      {
-        titulo: 'Mediana de respuesta',
-        valor: formatearDias(t.mediana),
-        detalle: `P25 ${formatearDias(t.p25)} · P75 ${formatearDias(t.p75)}`,
-      },
-      {
-        titulo: 'Respondidas en ≤ 30 días',
-        valor: `${formatearNumero(t.n_menor_igual_30)} (${formatearPorcentaje(t.pct_menor_igual_30)})`,
-        detalle: 'Cumplimiento Circular 008/2018',
-      },
-      {
-        titulo: 'Total analizado',
-        valor: formatearNumero(total),
-        detalle: 'Registros con dato de respuesta',
-      },
-    ];
-  });
-
-  protected readonly opcionesAreas = computed(() => {
+  protected readonly opcionesRanking = computed(() => {
     const v = variableDe(this.distribuciones(), 'area_solicitud');
     if (!v) {
       return null;
@@ -121,15 +91,19 @@ export class Areas {
       return null;
     }
     const filtrado = filtrarCruce(cruce, this.filtrosSvc.filtros());
-    const conDatos = filtrado.tabla.filter((fila) => fila.valores.some((v) => v.frecuencia > 0));
+    const conDatos = filtrado.tabla.filter((f) => f.valores.some((v) => v.frecuencia > 0));
     return conDatos.length > 0 ? opcionHeatmap(filtrado) : null;
   });
 
-  protected readonly opcionesTiempoArea = computed(() => {
-    const t = this.tiempo();
-    if (!t) {
+  protected readonly opcionesMedianaArea = computed(() => {
+    const items = this.tiempo()?.por_area;
+    if (!items?.length) {
       return null;
     }
-    return opcionBarrasTiempo(t.distribucion_bins);
+    return opcionBarrasMediana(items.map((i) => ({
+      categoria: i.categoria,
+      mediana: i.mediana,
+      total: i.total,
+    })));
   });
 }

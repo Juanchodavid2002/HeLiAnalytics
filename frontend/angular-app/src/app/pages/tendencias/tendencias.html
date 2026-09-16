@@ -2,7 +2,7 @@
   <div>
     <h2 class="hel-page-title">Tendencias</h2>
     <p class="hel-page-subtitle">
-      Evolución temporal de las PQRS y comparación entre tipos, canales y áreas de solicitud.
+      Análisis temporal cruzado: distribución de PQRS por tipo y ámbito a lo largo de los meses y relación áreas de solicitud × canal.
     </p>
   </div>
 
@@ -17,15 +17,31 @@
     <app-loading />
   } @else {
     <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
-      <app-chart-container titulo="PQRS por mes" [opciones]="opcionesPorMes()" [cargando]="cargando()" />
-      <app-chart-container titulo="Tendencia por tipo de PQRS" [opciones]="opcionesPorTipo()" [cargando]="cargando()" />
+      <app-chart-container
+        titulo="Tipo de PQRS × Mes"
+        subtitulo="Mapa de calor de cruce tipo-mes"
+        [opciones]="opcionesTipoMes()"
+        [cargando]="cargando()"
+        altura="360px"
+        [clicFiltro]="'tipos'"
+      />
+      <app-chart-container
+        titulo="Ámbito × Mes"
+        subtitulo="Mapa de calor de cruce ámbito-mes"
+        [opciones]="opcionesAmbitoMes()"
+        [cargando]="cargando()"
+        altura="360px"
+        [clicFiltro]="'ambitos'"
+      />
     </div>
 
-    <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
-      <app-chart-container titulo="Distribución por canal de ingreso" [opciones]="opcionesCanal()" [cargando]="cargando()" altura="300px" />
-      <app-chart-container titulo="Frecuencia por canal" [opciones]="opcionesCanalBarras()" [cargando]="cargando()" altura="300px" />
-    </div>
-
-    <app-chart-container titulo="Área de solicitud × Canal" subtitulo="Mapa de calor de combinaciones área-canal" [opciones]="opcionesAreaCanal()" [cargando]="cargando()" altura="360px" />
+    <app-chart-container
+      titulo="Área de solicitud × Canal"
+      subtitulo="Mapa de calor de combinaciones área-canal"
+      [opciones]="opcionesAreaCanal()"
+      [cargando]="cargando()"
+      altura="360px"
+      [clicFiltro]="'areas'"
+    />
   }
 </div>

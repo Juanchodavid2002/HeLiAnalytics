@@ -6,7 +6,6 @@ export interface FiltrosActivos {
   canales: string[];
   areas: string[];
   meses: number[];
-  clusters: number[];
 }
 
 const FILTROS_VACIOS: FiltrosActivos = {
@@ -15,7 +14,6 @@ const FILTROS_VACIOS: FiltrosActivos = {
   canales: [],
   areas: [],
   meses: [],
-  clusters: [],
 };
 
 @Injectable({ providedIn: 'root' })
@@ -24,6 +22,14 @@ export class FilterService {
 
   actualizarFiltro(filtros: Partial<FiltrosActivos>): void {
     this.filtros.update((actuales) => ({ ...actuales, ...filtros }));
+  }
+
+  alternarCategoria(clave: keyof FiltrosActivos, valor: string | number): void {
+    const actuales = this.filtros()[clave] as (string | number)[];
+    const actualizados = actuales.includes(valor)
+      ? actuales.filter((v) => v !== valor)
+      : [...actuales, valor];
+    this.actualizarFiltro({ [clave]: actualizados } as Partial<FiltrosActivos>);
   }
 
   limpiarFiltros(): void {
@@ -37,8 +43,7 @@ export class FilterService {
       actuales.ambitos.length > 0 ||
       actuales.canales.length > 0 ||
       actuales.areas.length > 0 ||
-      actuales.meses.length > 0 ||
-      actuales.clusters.length > 0
+      actuales.meses.length > 0
     );
   }
 }

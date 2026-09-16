@@ -1,0 +1,53 @@
+<div class="space-y-6">
+  <div>
+    <h2 class="hel-page-title">Red y Cobertura</h2>
+    <p class="hel-page-subtitle">
+      Distribución de PQRS por aseguradora, regional, tipo de usuario y estado de gestión (vencimiento), con análisis cruzado de aseguradora × tipo.
+    </p>
+  </div>
+
+  @if (hayError()) {
+    <div class="hel-panel flex flex-col items-center justify-center py-16 text-center">
+      <p class="mb-4 text-sm font-medium text-text-primary">No se pudieron cargar los datos.</p>
+      <button type="button" class="rounded-lg bg-secondary px-4 py-2 text-xs font-medium text-white" (click)="reintentar()">
+        Reintentar
+      </button>
+    </div>
+  } @else if (cargando()) {
+    <app-loading />
+  } @else {
+    <!-- Selector de dimensión -->
+    <div class="card p-4 fade-in">
+      <div class="flex flex-wrap gap-1 rounded-lg bg-slate-100 p-1">
+        @for (dim of dimensiones; track dim.clave) {
+          <button
+            type="button"
+            class="rounded-md px-3 py-1.5 text-xs font-medium transition-colors"
+            [class.bg-white]="dimension() === dim.clave"
+            [class.text-primary]="dimension() === dim.clave"
+            [class.shadow-sm]="dimension() === dim.clave"
+            [class.text-text-secondary]="dimension() !== dim.clave"
+            (click)="dimension.set(dim.clave)"
+          >
+            {{ dim.etiqueta }}
+          </button>
+        }
+      </div>
+    </div>
+
+    <app-chart-container
+      [titulo]="'Distribución por ' + dimension()"
+      [opciones]="opcionesDimension()"
+      [cargando]="cargando()"
+      altura="350px"
+    />
+
+    <app-chart-container
+      titulo="Aseguradora × Tipo de PQRS"
+      subtitulo="Top 8 aseguradoras agrupadas por tipo de solicitud"
+      [opciones]="opcionesAsegTipo()"
+      [cargando]="cargando()"
+      altura="350px"
+    />
+  }
+</div>

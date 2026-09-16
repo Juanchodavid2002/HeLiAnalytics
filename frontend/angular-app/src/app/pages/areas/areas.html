@@ -2,7 +2,7 @@
   <div>
     <h2 class="hel-page-title">Áreas de solicitud</h2>
     <p class="hel-page-subtitle">
-      Distribución de PQRS por área de solicitud y su relación con tipos de PQRS, ámbito de atención y tiempos de respuesta.
+      Distribución de PQRS por área de solicitud y su relación con tipos de PQRS, ámbito de atención y el tiempo mediano de respuesta por área.
     </p>
   </div>
 
@@ -16,25 +16,39 @@
   } @else if (cargando()) {
     <app-loading />
   } @else {
-    @if (indicadores()) {
-      <div class="grid grid-cols-2 gap-3 lg:grid-cols-4">
-        @for (ind of indicadores()!; track ind.titulo) {
-          <div class="card p-4 fade-in">
-            <p class="text-xs font-medium uppercase tracking-wide text-[var(--text-muted)]">{{ ind.titulo }}</p>
-            <p class="mt-1 font-mono text-lg font-medium leading-tight text-[var(--text)]">{{ ind.valor }}</p>
-            <p class="mt-1 text-[11px] text-[var(--text-secondary)]">{{ ind.detalle }}</p>
-          </div>
-        }
-      </div>
-    }
-
-    <app-chart-container titulo="Distribución por área de solicitud" subtitulo="Áreas con PQRS radicadas" [opciones]="opcionesAreas()" [cargando]="cargando()" />
+    <app-chart-container
+      titulo="Distribución por área de solicitud"
+      subtitulo="Áreas con PQRS radicadas"
+      [opciones]="opcionesRanking()"
+      [cargando]="cargando()"
+      [clicFiltro]="'areas'"
+    />
 
     <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
-      <app-chart-container titulo="Área × Tipo de PQRS" subtitulo="Barras por tipo de PQRS" [opciones]="opcionesAreaTipo()" [cargando]="cargando()" altura="320px" />
-      <app-chart-container titulo="Área × Ámbito" subtitulo="Mapa de calor de área-ámbito" [opciones]="opcionesAreaAmbito()" [cargando]="cargando()" altura="320px" />
+      <app-chart-container
+        titulo="Área × Tipo de PQRS"
+        subtitulo="Barras por tipo de PQRS"
+        [opciones]="opcionesAreaTipo()"
+        [cargando]="cargando()"
+        altura="320px"
+        [clicFiltro]="'areas'"
+      />
+      <app-chart-container
+        titulo="Área × Ámbito"
+        subtitulo="Mapa de calor de área-ámbito"
+        [opciones]="opcionesAreaAmbito()"
+        [cargando]="cargando()"
+        altura="320px"
+        [clicFiltro]="'areas'"
+      />
     </div>
 
-    <app-chart-container titulo="Distribución del tiempo de respuesta" subtitulo="Rangos de días hasta el cierre" [opciones]="opcionesTiempoArea()" [cargando]="cargando()" altura="300px" />
+    <app-chart-container
+      titulo="Tiempo mediano de respuesta por área"
+      subtitulo="Mediana en días por área de solicitud"
+      [opciones]="opcionesMedianaArea()"
+      [cargando]="cargando()"
+      altura="500px"
+    />
   }
 </div>

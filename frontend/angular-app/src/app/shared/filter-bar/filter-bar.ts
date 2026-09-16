@@ -3,7 +3,7 @@ import { Component, inject, signal } from '@angular/core';
 import { ApiService } from '../../core/services/api.service';
 import { FilterService, FiltrosActivos } from '../../core/services/filter.service';
 import { Filtros } from '../../core/models/insight.model';
-import { formatearNumero, nombreMes } from '../../core/utils/formatters';
+import { nombreMes } from '../../core/utils/formatters';
 
 interface Opcion {
   valor: string | number;
@@ -65,8 +65,6 @@ export class FilterBar {
         return f.tipos.map((t) => ({ valor: t, etiqueta: t }));
       case 'canales':
         return f.canales.map((c) => ({ valor: c, etiqueta: c }));
-      case 'clusters':
-        return f.clusters.map((c) => ({ valor: c.id, etiqueta: `${c.letra} · ${c.nombre} (${formatearNumero(c.cantidad)})` }));
     }
   }
 

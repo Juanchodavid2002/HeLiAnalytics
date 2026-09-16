@@ -4819,6 +4819,1055 @@
           ]
         }
       ]
+    },
+    {
+      "variable_x": "tipo_pqrs_grupo",
+      "variable_y": "mes",
+      "tabla": [
+        {
+          "x": "FELICITACION",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 39
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 82
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 31
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 27
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 45
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 35
+            }
+          ]
+        },
+        {
+          "x": "PETICION",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 53
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 47
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 52
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 39
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 45
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 36
+            }
+          ]
+        },
+        {
+          "x": "QUEJA",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 9
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 4
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 4
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 7
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 7
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 6
+            }
+          ]
+        },
+        {
+          "x": "RECLAMO",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 310
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 233
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 339
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 205
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 345
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 251
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "variable_x": "ambito",
+      "variable_y": "mes",
+      "tabla": [
+        {
+          "x": "AMBULATORIO",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 99
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 34
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 77
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 35
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 94
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 76
+            }
+          ]
+        },
+        {
+          "x": "HOSPITALIZACIÓN",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 58
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 40
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 48
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 45
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 88
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 59
+            }
+          ]
+        },
+        {
+          "x": "PAD AGUDO",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 107
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 147
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 113
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 98
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 98
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 79
+            }
+          ]
+        },
+        {
+          "x": "PAD CRÓNICO",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 147
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 145
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 188
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 100
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 162
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 114
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "variable_x": "aseguradora",
+      "variable_y": "tipo_pqrs_grupo",
+      "tabla": [
+        {
+          "x": "ALIANSALUD EPS",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 0
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 1
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 0
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 3
+            }
+          ]
+        },
+        {
+          "x": "ALLIANZ SEGUROS DE VIDA S.A.",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 0
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 1
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 0
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 1
+            }
+          ]
+        },
+        {
+          "x": "ASMET SALUD EPS SAS",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 0
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 2
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 0
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 0
+            }
+          ]
+        },
+        {
+          "x": "ASOCIACION PROFAMILIA",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 0
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 0
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 0
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 4
+            }
+          ]
+        },
+        {
+          "x": "CAJA DE COMPENSACION FAMILIAR COMPENSAR",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 16
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 11
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 1
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 98
+            }
+          ]
+        },
+        {
+          "x": "CAJA DE COMPENSACION FAMILIAR DEL HUILA",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 0
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 0
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 0
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 1
+            }
+          ]
+        },
+        {
+          "x": "CAPITAL SALUD EPS",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 5
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 5
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 1
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 73
+            }
+          ]
+        },
+        {
+          "x": "CLINICA COLSANITAS S A",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 0
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 1
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 0
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 0
+            }
+          ]
+        },
+        {
+          "x": "COLMEDICA MEDICINA PREPAGADA SA",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 0
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 0
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 0
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 1
+            }
+          ]
+        },
+        {
+          "x": "COLMENA SEGUROS DE VIDA S.A.",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 0
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 0
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 0
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 1
+            }
+          ]
+        },
+        {
+          "x": "COLMENA SEGUROS RIESGOS LABORALES S.A.",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 0
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 0
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 0
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 1
+            }
+          ]
+        },
+        {
+          "x": "COMPAÑIA DE MEDICINA PREPAGADA COLSANITAS S A",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 0
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 0
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 0
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 3
+            }
+          ]
+        },
+        {
+          "x": "COOSALUD EPS SA",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 14
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 3
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 3
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 7
+            }
+          ]
+        },
+        {
+          "x": "EMSSANAR SAS",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 1
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 3
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 0
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 3
+            }
+          ]
+        },
+        {
+          "x": "ENTIDAD PROMOTORA DE SALUD MALLAMÁS EPS INDÍGENA",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 0
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 1
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 0
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 1
+            }
+          ]
+        },
+        {
+          "x": "ENTIDAD PROMOTORA DE SALUD SANITAS S.A.S.",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 91
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 119
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 9
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 944
+            }
+          ]
+        },
+        {
+          "x": "EPS SURAMERICANA S.A.",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 0
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 1
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 0
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 3
+            }
+          ]
+        },
+        {
+          "x": "FAMISANAR EPS SAS",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 28
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 31
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 3
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 185
+            }
+          ]
+        },
+        {
+          "x": "FIDEICOMISOS PATRIMONIOS AUTÓNOMOS FIDUCIARIA LA PREVISORA S.A",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 7
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 8
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 0
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 37
+            }
+          ]
+        },
+        {
+          "x": "HEALTH & LIFE IPS SAS",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 3
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 4
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 0
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 14
+            }
+          ]
+        },
+        {
+          "x": "MEDISANITAS SA",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 0
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 0
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 0
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 1
+            }
+          ]
+        },
+        {
+          "x": "NUEVA EPS SA",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 44
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 45
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 11
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 164
+            }
+          ]
+        },
+        {
+          "x": "PARTICULAR",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 0
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 1
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 1
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 1
+            }
+          ]
+        },
+        {
+          "x": "PIJAOS SALUD EPS",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 1
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 0
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 0
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 16
+            }
+          ]
+        },
+        {
+          "x": "PROTEGER EPS S.A.S.",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 0
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 5
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 1
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 9
+            }
+          ]
+        },
+        {
+          "x": "REGIONAL DE ASEGURAMIENTO EN SALUD N°1",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 0
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 0
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 0
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 1
+            }
+          ]
+        },
+        {
+          "x": "SALUD OCUPACIONAL COLSANITAS",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 0
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 2
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 0
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 1
+            }
+          ]
+        },
+        {
+          "x": "SALUD OCUPACIONAL SANITAS SAS",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 4
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 6
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 3
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 7
+            }
+          ]
+        },
+        {
+          "x": "SALUD TOTAL EPS SA",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 44
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 21
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 4
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 94
+            }
+          ]
+        },
+        {
+          "x": "SEGUROS DE VIDA SURAMERICANA S.A.",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 0
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 1
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 0
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 1
+            }
+          ]
+        },
+        {
+          "x": "SOCIEDAD CLINICA EMCOSALUD S.A.",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 0
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 0
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 0
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 3
+            }
+          ]
+        },
+        {
+          "x": "UNION TEMPORAL MEDISALUD",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 0
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 0
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 0
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 1
+            }
+          ]
+        },
+        {
+          "x": "UNION TEMPORAL SERVISALUD SAN JOSE",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 0
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 0
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 0
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 1
+            }
+          ]
+        },
+        {
+          "x": "UNIVERSIDAD NACIONAL DE COLOMBIA",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 1
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 0
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 0
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 1
+            }
+          ]
+        },
+        {
+          "x": "UNIVERSIDAD PEDAGÓGICA Y TECNOLÓGICA DE COLOMBIA",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 0
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 0
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 0
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "variable_x": "vencimiento",
+      "variable_y": "mes",
+      "tabla": [
+        {
+          "x": "NO VENCIDA",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 186
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 207
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 169
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 154
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 253
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 182
+            }
+          ]
+        },
+        {
+          "x": "VENCIDA",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 225
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 159
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 257
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 124
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 189
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 146
+            }
+          ]
+        }
+      ]
     }
   ]
 }

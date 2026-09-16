@@ -14,7 +14,7 @@
       <div class="h-8 w-8 animate-spin rounded-full border-4 border-slate-200 border-t-[var(--primary)]"></div>
     </div>
   } @else if (opciones() !== null) {
-    <div echarts [options]="opciones()!" class="w-full" [style.height]="altura()" [autoResize]="true"></div>
+    <div echarts [options]="opciones()!" class="w-full" [style.height]="altura()" [autoResize]="true" (chartClick)="alClic($event)" [style.cursor]="clicFiltro() ? 'pointer' : 'default'"></div>
   } @else {
     <div class="flex flex-col items-center justify-center rounded-lg bg-[var(--bg-soft)] text-center" [style.height]="altura()">
       <svg xmlns="http://www.w3.org/2000/svg" class="mb-2 h-10 w-10 text-slate-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">

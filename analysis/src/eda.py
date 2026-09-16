@@ -9,6 +9,8 @@ Genera los archivos JSON consumibles por la API FastAPI:
 """
 
 import json
+import re
+from collections import Counter
 from datetime import date
 from pathlib import Path
 
@@ -34,6 +36,35 @@ CATEGORICAS = [
     "aseguradora",
     "mes",
 ]
+
+# Análisis textual: stopwords en español + términos de cabecera del formato PQRS
+# (se excluyen para que las nubes de palabras revelen el contenido real).
+STOPWORDS = {
+    "a", "al", "algo", "algún", "algunos", "ante", "antes", "aqui", "así", "aun",
+    "aunque", "bajo", "bien", "cada", "casi", "como", "con", "contra", "cual",
+    "cuales", "cualquier", "cuando", "cuanto", "da", "dan", "de", "del", "desde",
+    "despues", "debe", "deben", "dice", "dicho", "donde", "dos", "el", "ella",
+    "ellas", "ellos", "en", "entre", "era", "eran", "es", "esa", "esas", "ese",
+    "eso", "esos", "esta", "estaba", "estar", "este", "esto", "estos", "etc", "fue",
+    "fueron", "gustaria", "ha", "habia", "han", "hace", "hacer", "hacia", "hasta",
+    "hay", "hecho", "hizo", "la", "las", "le", "les", "lo", "los", "mas", "me",
+    "media", "mejor", "mes", "mientras", "mi", "mis", "mucho", "muy", "na", "nada",
+    "ni", "no", "nos", "nosotros", "nuestra", "o", "otra", "otro", "para", "pero",
+    "poca", "poco", "podria", "puede", "pueden", "que", "quien", "quiere", "se",
+    "sea", "segun", "ser", "si", "sin", "sobre", "solo", "son", "su", "sus",
+    "tal", "tambien", "tanto", "te", "tener", "tiene", "tienen", "todo", "todos",
+    "tras", "tu", "un", "una", "uno", "unos", "usted", "va", "van", "veces", "ver",
+    "vez", "y", "ya", "yo",
+    "pqrs", "solicitud", "solicitudes", "radicado", "radicada", "reclamo", "queja",
+    "peticion", "peticiones", "felicitacion", "felicitaciones", "reclamaciones",
+    "usuario", "usuaria", "usuarios", "paciente", "pacientes", "señor", "señora",
+    "doctor", "licenciada", "envia", "envian", "informa", "manifiesta", "manifiestan",
+    "ips", "eps", "health", "life", "sas", "ltda", "saludocupacional",
+}
+
+TOKEN_RE = re.compile(r"[^a-záéíóúüñ0-9]+", re.IGNORECASE)
+
+STOPWORDS_SET = {palabra.upper() for palabra in STOPWORDS}
 
 
 def distribucion(df: pd.DataFrame, col: str) -> dict:
@@ -67,6 +98,42 @@ def cruce(df: pd.DataFrame, x: str, y: str) -> dict:
             }
         )
     return {"variable_x": x, "variable_y": y, "tabla": filas}
+
+
+def tokenizar(texto: str) -> list[str]:
+    """Tokeniza y filtra términos útiles para el análisis textual."""
+    texto = texto.upper()
+    tokens = TOKEN_RE.split(texto)
+    return [t for t in tokens if len(t) >= 4 and t not in STOPWORDS_SET and not t.isdigit()]
+
+
+def top_palabras(textos: list[str], n: int = 20) -> list[dict]:
+    """Top n palabras más frecuentes de una lista de textos."""
+    cont = Counter()
+    for texto in textos:
+        cont.update(tokenizar(texto))
+    return [
+        {"palabra": palabra, "frecuencia": freq}
+        for palabra, freq in cont.most_common(n)
+    ]
+
+
+def tiempo_por_categoria(df: pd.DataFrame, col: str) -> list[dict]:
+    """Estadísticas de tiempo de respuesta por categoría (mediana/media/% ≤ 30)."""
+    filas = []
+    for cat, sub in df.groupby(col):
+        dias = sub["dias_respuesta"]
+        filas.append(
+            {
+                "categoria": cat,
+                "total": int(len(sub)),
+                "media": round(float(dias.mean()), 1),
+                "mediana": round(float(dias.median()), 1),
+                "pct_menor_igual_30": round(float((dias <= 30).mean() * 100), 1),
+            }
+        )
+    filas.sort(key=lambda r: r["total"], reverse=True)
+    return filas
 
 
 def eda(df: pd.DataFrame) -> dict:
@@ -136,7 +203,70 @@ def eda(df: pd.DataFrame) -> dict:
             {"rango": "61-90 días", "frecuencia": int(((dias > 60) & (dias <= 90)).sum())},
             {"rango": "más de 90 días", "frecuencia": int((dias > 90).sum())},
         ],
+        # Tiempo por categoría: alimenta Ámbito/Áreas sin repetir el gráfico global.
+        "por_ambito": tiempo_por_categoria(df, "ambito"),
+        "por_area": tiempo_por_categoria(df, "area_solicitud"),
     }
+
+    # --- REGISTROS ANALÍTICOS (KPIs filtrables cliente-side, sin texto libre) ---
+    registros = []
+    cols_registro = [
+        "fecha_reporte", "mes", "mes_num", "tipo_pqrs", "tipo_pqrs_grupo", "canal",
+        "area_solicitud", "ambito", "tipo_usuario", "aseguradora", "regional",
+        "vencimiento", "dias_respuesta",
+    ]
+    for i, (_, r) in enumerate(df[cols_registro].iterrows()):
+        reg = {"id": i + 1}
+        for col in cols_registro:
+            v = r[col]
+            if col == "fecha_reporte":
+                v = str(pd.Timestamp(v).date())
+            elif isinstance(v, float) and np.isnan(v):
+                v = None
+            reg[col] = v
+        registros.append(reg)
+    results["registros"] = {"registros": registros}
+
+    # --- TEXTUAL (precomputado: sin exponer el texto crudo en el repositorio) ---
+    textos = df["Hechos"].fillna("").astype(str).tolist()
+    textual = {
+        "disponible": True,
+        "fecha_generacion": str(date.today()),
+        "total_registros_con_texto": int((df["Hechos"].fillna("").astype(str) != "").sum()),
+        "top_palabras": {
+            "global": top_palabras(textos),
+            "tipo": {
+                str(g): top_palabras(sub["Hechos"].fillna("").astype(str).tolist())
+                for g, sub in df.groupby("tipo_pqrs_grupo")
+            },
+            "ambito": {
+                str(g): top_palabras(sub["Hechos"].fillna("").astype(str).tolist())
+                for g, sub in df.groupby("ambito")
+            },
+            "area_solicitud": {
+                str(g): top_palabras(sub["Hechos"].fillna("").astype(str).tolist())
+                for g, sub in df.groupby("area_solicitud")
+            },
+        },
+        "registros": [
+            {
+                "id": i + 1,
+                "fecha_reporte": str(pd.Timestamp(r["fecha_reporte"]).date()),
+                "mes": r["mes"],
+                "mes_num": int(r["mes_num"]),
+                "tipo_pqrs_grupo": r["tipo_pqrs_grupo"],
+                "canal": r["canal"],
+                "ambito": r["ambito"],
+                "area_solicitud": r["area_solicitud"],
+                "aseguradora": r["aseguradora"],
+                "vencimiento": r["vencimiento"],
+                "keywords": tokenizar(textos[i])[:12],
+                "texto_preview": textos[i].strip().replace("\n", " ")[:90],
+            }
+            for i in range(len(df))
+        ],
+    }
+    results["textual"] = textual
 
 # --- CRUCES ---
     # Conjunto canónico de la reconfiguración (D16): solo variables disponibles.
@@ -154,6 +284,11 @@ def eda(df: pd.DataFrame) -> dict:
         ("ambito", "canal"),
         ("canal", "mes"),
         ("tipo_usuario", "mes"),
+        # Nuevos cruces (reconfiguración D17): temporal y cobertura.
+        ("tipo_pqrs_grupo", "mes"),
+        ("ambito", "mes"),
+        ("aseguradora", "tipo_pqrs_grupo"),
+        ("vencimiento", "mes"),
     ]
     results["cruces"] = {"cruces": [cruce(df, x, y) for x, y in cruces]}
 
@@ -346,7 +481,9 @@ def exportar(df: pd.DataFrame) -> None:
         "cruces.json": results["cruces"],
         "temporal.json": results["temporal"],
         "tiempo_respuesta.json": results["tiempo_respuesta"],
+        "registros.json": results["registros"],
         "insights.json": results["insights"],
+        "textual.json": results["textual"],
     }
     for nombre, data in archivos.items():
         (OUT_DIR / nombre).write_text(

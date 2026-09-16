@@ -2,7 +2,7 @@ import { EChartsOption } from 'echarts';
 
 import { Cruce, TemporalMes, TemporalMesTipo } from '../models/distribucion.model';
 import { Item } from './filtrar';
-import { formatearNumero } from './formatters';
+import { formatearDias, formatearNumero } from './formatters';
 
 export const PALETA = [
   '#2563EB',
@@ -512,6 +512,66 @@ export function opcionBarrasPorcentaje(
           fontSize: 11,
           formatter: (p: unknown) =>
             `${(p as { value: number }).value.toLocaleString('es-CO', { maximumFractionDigits: 1 })}%`,
+        },
+      },
+    ],
+  };
+}
+
+export function opcionBarrasMediana(
+  items: { categoria: string; mediana: number; total: number }[],
+): EChartsOption {
+  const ordenados = [...items].sort((a, b) => a.mediana - b.mediana);
+  return {
+    ...baseConAxis(),
+    tooltip: {
+      ...OPCIONES_BASE.tooltip,
+      trigger: 'item',
+      formatter: (params: unknown) => {
+        const p = params as { dataIndex: number };
+        const el = ordenados[p.dataIndex];
+        return `<strong>${el.categoria}</strong><br/>Mediana: ${formatearDias(el.mediana)}<br/>Total: ${formatearNumero(el.total)} PQRS`;
+      },
+    },
+    grid: { ...OPCIONES_BASE.grid, left: 8, right: 50 },
+    xAxis: {
+      type: 'value',
+      splitLine: { lineStyle: { color: '#f1f5f9' } },
+      axisLabel: { color: '#64748B', fontSize: 11, formatter: '{value}d' },
+    },
+    yAxis: {
+      type: 'category',
+      data: ordenados.map((i) => i.categoria),
+      axisLine: { lineStyle: { color: '#e2e8f0' } },
+      axisLabel: { color: '#475569', fontSize: 11 },
+    },
+    series: [
+      {
+        data: ordenados.map((i) => i.mediana),
+        type: 'bar',
+        barMaxWidth: 22,
+        showBackground: true,
+        backgroundStyle: { color: '#f8fafc', borderRadius: 4 },
+        itemStyle: {
+          color: {
+            type: 'linear',
+            x: 0,
+            y: 0,
+            x2: 1,
+            y2: 0,
+            colorStops: [
+              { offset: 0, color: '#0D9488' },
+              { offset: 1, color: '#14B8A6' },
+            ],
+          },
+          borderRadius: [0, 4, 4, 0],
+        },
+        label: {
+          show: true,
+          position: 'right',
+          color: '#64748B',
+          fontSize: 11,
+          formatter: (p: unknown) => `${(p as { value: number }).value}d`,
         },
       },
     ],

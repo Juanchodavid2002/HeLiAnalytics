@@ -8,7 +8,6 @@ router = APIRouter(prefix="/api", tags=["filtros"])
 
 _distribuciones = cargar_json("distribuciones.json")
 _temporal = cargar_json("temporal.json")
-_clusters = cargar_json("clusters.json")
 
 
 def _categorias(variable: str) -> list[str]:
@@ -21,15 +20,11 @@ def _categorias(variable: str) -> list[str]:
 @router.get("/filtros")
 def obtener_filtros() -> dict:
     return {
-        "tipos": _categorias("tipo_pqrs"),
+        "tipos": _categorias("tipo_pqrs_grupo"),
         "ambitos": _categorias("ambito"),
         "canales": _categorias("canal"),
         "areas": _categorias("area_solicitud"),
         "meses": [
             {m["mes_num"]: m["mes"]} for m in _temporal["por_mes"]
-        ],
-        "clusters": [
-            {"id": c["id"], "letra": c["letra"], "nombre": c["nombre"], "cantidad": c["cantidad"]}
-            for c in _clusters["clusters"]
         ],
     }

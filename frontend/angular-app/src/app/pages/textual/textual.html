@@ -2,7 +2,7 @@
   <div>
     <h2 class="hel-page-title">Análisis Textual</h2>
     <p class="hel-page-subtitle">
-      Exploración del lenguaje natural utilizado en los campos de texto de las PQRS (Hechos, Respuesta).
+      Exploración del lenguaje natural de las PQRS: palabras más frecuentes, filtrado por dimensión y buscador de casos por palabra clave.
     </p>
   </div>
 
@@ -17,26 +17,122 @@
     <app-loading />
   } @else if (textual()?.disponible === false) {
     <div class="hel-panel flex flex-col items-center justify-center py-16 text-center">
-      <span class="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-slate-100">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 4h12M6 8h12m-12 4h12m-12 4h7" />
-        </svg>
-      </span>
-      <h3 class="mb-2 text-base font-bold text-text-primary">Análisis textual pendiente</h3>
-      <p class="max-w-md text-sm text-text-secondary">
-        {{ textual()?.detalle ?? 'El análisis de lenguaje natural aún no está disponible.' }}
-      </p>
-      <div class="mt-6 w-full max-w-md rounded-xl bg-slate-50 p-4 text-left">
-        <p class="text-xs font-semibold uppercase tracking-wide text-text-secondary">Estado de los datos</p>
-        <p class="mt-2 text-sm text-text-primary">
-          Los campos de texto (Hechos, Respuesta, Respuesta de Involucrados) están disponibles en el dataset analítico
-          para un futuro procesamiento NLP.
-        </p>
-      </div>
+      <p class="text-sm font-medium text-text-primary">Análisis textual pendiente de ejecución.</p>
     </div>
   } @else {
-    <div class="hel-panel">
-      <p class="text-sm text-text-primary">Análisis textual disponible: {{ totalPalabras() }} términos extraídos.</p>
+    <!-- Filtros de vista -->
+    <div class="card p-4 fade-in">
+      <div class="flex flex-wrap items-center gap-4">
+        <div class="flex gap-1 rounded-lg bg-slate-100 p-1">
+          @for (dim of dimKeys; track dim.clave) {
+            <button
+              type="button"
+              class="rounded-md px-3 py-1.5 text-xs font-medium transition-colors"
+              [class.bg-white]="vistaSeleccionada() === dim.clave"
+              [class.text-primary]="vistaSeleccionada() === dim.clave"
+              [class.shadow-sm]="vistaSeleccionada() === dim.clave"
+              [class.text-text-secondary]="vistaSeleccionada() !== dim.clave"
+              (click)="cambiarVista(dim.clave)"
+            >
+              {{ dim.etiqueta }}
+            </button>
+          }
+        </div>
+
+        @if (vistaSeleccionada() !== 'global' && dimOpciones().length > 0) {
+          <select
+            class="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-xs font-medium text-text-primary shadow-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+            [value]="claveDim()"
+            (change)="claveDim.set($any($event.target).value)"
+          >
+            @for (opt of dimOpciones(); track opt) {
+              <option [value]="opt">{{ opt }}</option>
+            }
+          </select>
+        }
+
+        <div class="flex-1"></div>
+        <span class="text-xs text-text-muted">{{ totalRegistros() }} de {{ totalGlobal() }} registros</span>
+      </div>
+    </div>
+
+    <app-chart-container
+      titulo="Palabras más frecuentes"
+      [subtitulo]="vistaSeleccionada() === 'global' ? 'Análisis global del corpus' : 'Dimensión: ' + vistaSeleccionada()"
+      [opciones]="opcionesTopPalabras()"
+      [cargando]="cargando()"
+      altura="350px"
+    />
+
+    <!-- Buscador -->
+    <div class="card p-4 fade-in">
+      <div class="mb-3 flex items-center gap-3">
+        <div class="relative flex-1">
+          <svg xmlns="http://www.w3.org/2000/svg" class="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-text-muted" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+          </svg>
+          <input
+            type="text"
+            class="w-full rounded-lg border border-slate-200 bg-white py-2 pl-9 pr-3 text-sm text-text-primary placeholder:text-text-muted focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+            placeholder="Buscar por palabra clave..."
+            [value]="busqueda()"
+            (input)="busqueda.set($any($event.target).value)"
+          />
+        </div>
+        @if (busqueda()) {
+          <button type="button" class="text-xs text-primary underline" (click)="busqueda.set('')">Limpiar</button>
+        }
+      </div>
+
+      @if (registrosFiltrados().length === 0) {
+        <p class="py-8 text-center text-sm text-text-muted">Sin resultados que coincidan con la búsqueda.</p>
+      } @else {
+        <div class="max-h-[500px] overflow-y-auto">
+          <table class="w-full text-left text-xs">
+            <thead class="sticky top-0 bg-white">
+              <tr class="border-b border-slate-100 text-text-muted">
+                <th class="px-2 py-2 font-medium">Fecha</th>
+                <th class="px-2 py-2 font-medium">Tipo</th>
+                <th class="px-2 py-2 font-medium">Ámbito</th>
+                <th class="px-2 py-2 font-medium">Área</th>
+                <th class="px-2 py-2 font-medium">Vencimiento</th>
+                <th class="px-2 py-2 font-medium">Preview</th>
+              </tr>
+            </thead>
+            <tbody>
+              @for (r of registrosFiltrados().slice(0, 100); track r.id) {
+                <tr class="border-b border-slate-50 hover:bg-slate-50">
+                  <td class="px-2 py-1.5 whitespace-nowrap text-text-secondary">{{ r.fecha_reporte }}</td>
+                  <td class="px-2 py-1.5">
+                    <span class="rounded-full px-2 py-0.5 text-[10px] font-medium"
+                      [class.bg-rose-50]="r.tipo_pqrs_grupo === 'RECLAMO'"
+                      [class.text-rose-700]="r.tipo_pqrs_grupo === 'RECLAMO'"
+                      [class.bg-amber-50]="r.tipo_pqrs_grupo === 'QUEJA'"
+                      [class.text-amber-700]="r.tipo_pqrs_grupo === 'QUEJA'"
+                      [class.bg-blue-50]="r.tipo_pqrs_grupo === 'PETICION'"
+                      [class.text-blue-700]="r.tipo_pqrs_grupo === 'PETICION'"
+                      [class.bg-emerald-50]="r.tipo_pqrs_grupo === 'FELICITACION'"
+                      [class.text-emerald-700]="r.tipo_pqrs_grupo === 'FELICITACION'"
+                    >{{ r.tipo_pqrs_grupo }}</span>
+                  </td>
+                  <td class="px-2 py-1.5 text-text-secondary">{{ r.ambito }}</td>
+                  <td class="px-2 py-1.5 text-text-secondary">{{ r.area_solicitud }}</td>
+                  <td class="px-2 py-1.5">
+                    <span class="text-[10px] font-medium"
+                      [class.text-rose-600]="r.vencimiento === 'VENCIDA'"
+                      [class.text-emerald-600]="r.vencimiento === 'NO VENCIDA'"
+                    >{{ r.vencimiento }}</span>
+                  </td>
+                  <td class="max-w-[200px] truncate px-2 py-1.5 text-text-muted">{{ r.texto_preview }}</td>
+                </tr>
+              }
+            </tbody>
+          </table>
+          @if (registrosFiltrados().length > 100) {
+            <p class="py-2 text-center text-[11px] text-text-muted">Mostrando 100 de {{ registrosFiltrados().length }} resultados</p>
+          }
+        </div>
+      }
     </div>
   }
 </div>

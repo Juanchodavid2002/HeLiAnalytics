@@ -16,21 +16,38 @@ export interface Insights {
   periodo: string;
 }
 
+export interface PalabraFrecuencia {
+  palabra: string;
+  frecuencia: number;
+}
+
+export interface RegistroTextual {
+  id: number;
+  fecha_reporte: string;
+  mes: string;
+  mes_num: number;
+  tipo_pqrs_grupo: string;
+  canal: string;
+  ambito: string;
+  area_solicitud: string;
+  aseguradora: string;
+  vencimiento: string;
+  keywords: string[];
+  texto_preview: string;
+}
+
 export interface Textual {
   disponible: boolean;
   detalle?: string;
+  fecha_generacion?: string;
+  total_registros_con_texto?: number;
   top_palabras?: {
-    palabra: string;
-    frecuencia: number;
-  }[];
-  lang?: string;
-}
-
-export interface FiltroCluster {
-  id: number;
-  letra: string;
-  nombre: string;
-  cantidad: number;
+    global: PalabraFrecuencia[];
+    tipo: Record<string, PalabraFrecuencia[]>;
+    ambito: Record<string, PalabraFrecuencia[]>;
+    area_solicitud: Record<string, PalabraFrecuencia[]>;
+  };
+  registros?: RegistroTextual[];
 }
 
 export interface Filtros {
@@ -39,5 +56,4 @@ export interface Filtros {
   canales: string[];
   areas: string[];
   meses: Record<number, string>[];
-  clusters: FiltroCluster[];
 }

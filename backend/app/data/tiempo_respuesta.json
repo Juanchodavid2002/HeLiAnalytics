@@ -37,5 +37,247 @@
       "rango": "más de 90 días",
       "frecuencia": 0
     }
+  ],
+  "por_ambito": [
+    {
+      "categoria": "PAD CRÓNICO",
+      "total": 856,
+      "media": 9.7,
+      "mediana": 6.0,
+      "pct_menor_igual_30": 100.0
+    },
+    {
+      "categoria": "PAD AGUDO",
+      "total": 642,
+      "media": 6.3,
+      "mediana": 3.0,
+      "pct_menor_igual_30": 100.0
+    },
+    {
+      "categoria": "AMBULATORIO",
+      "total": 415,
+      "media": 3.4,
+      "mediana": 2.0,
+      "pct_menor_igual_30": 100.0
+    },
+    {
+      "categoria": "HOSPITALIZACIÓN",
+      "total": 338,
+      "media": 3.9,
+      "mediana": 2.0,
+      "pct_menor_igual_30": 100.0
+    }
+  ],
+  "por_area": [
+    {
+      "categoria": "MÚLTIPLES SERVICIOS",
+      "total": 764,
+      "media": 6.7,
+      "mediana": 4.0,
+      "pct_menor_igual_30": 100.0
+    },
+    {
+      "categoria": "ENFERMERIA",
+      "total": 302,
+      "media": 12.7,
+      "mediana": 9.0,
+      "pct_menor_igual_30": 100.0
+    },
+    {
+      "categoria": "MEDICINA GENERAL",
+      "total": 208,
+      "media": 6.8,
+      "mediana": 5.0,
+      "pct_menor_igual_30": 100.0
+    },
+    {
+      "categoria": "APLICACIÓN DE MEDICAMENTO",
+      "total": 198,
+      "media": 2.3,
+      "mediana": 1.0,
+      "pct_menor_igual_30": 100.0
+    },
+    {
+      "categoria": "TERAPIA FISICA",
+      "total": 182,
+      "media": 4.6,
+      "mediana": 3.0,
+      "pct_menor_igual_30": 100.0
+    },
+    {
+      "categoria": "CUIDADOR",
+      "total": 101,
+      "media": 12.1,
+      "mediana": 8.0,
+      "pct_menor_igual_30": 100.0
+    },
+    {
+      "categoria": "INSTITUCIONALIZACIÓN EN UNIDAD DE SALUD MENTAL",
+      "total": 77,
+      "media": 0.9,
+      "mediana": 0.0,
+      "pct_menor_igual_30": 100.0
+    },
+    {
+      "categoria": "ENVÍO DE DOCUMENTACION",
+      "total": 73,
+      "media": 5.7,
+      "mediana": 3.0,
+      "pct_menor_igual_30": 100.0
+    },
+    {
+      "categoria": "REHABILITACIÓN FUNCIONAL",
+      "total": 47,
+      "media": 2.5,
+      "mediana": 2.0,
+      "pct_menor_igual_30": 100.0
+    },
+    {
+      "categoria": "TERAPIA DEL LENGUAJE",
+      "total": 43,
+      "media": 6.3,
+      "mediana": 3.0,
+      "pct_menor_igual_30": 100.0
+    },
+    {
+      "categoria": "TERAPIA OCUPACIONAL",
+      "total": 40,
+      "media": 7.1,
+      "mediana": 4.0,
+      "pct_menor_igual_30": 100.0
+    },
+    {
+      "categoria": "TRATO HUMANIZADO",
+      "total": 39,
+      "media": 4.5,
+      "mediana": 2.0,
+      "pct_menor_igual_30": 100.0
+    },
+    {
+      "categoria": "RECOLECCIÓN DE RESIDUOS",
+      "total": 33,
+      "media": 4.6,
+      "mediana": 3.0,
+      "pct_menor_igual_30": 100.0
+    },
+    {
+      "categoria": "FISIATRIA",
+      "total": 23,
+      "media": 2.6,
+      "mediana": 3.0,
+      "pct_menor_igual_30": 100.0
+    },
+    {
+      "categoria": "INSUMOS O MEDICAMENTOS",
+      "total": 19,
+      "media": 6.2,
+      "mediana": 3.0,
+      "pct_menor_igual_30": 100.0
+    },
+    {
+      "categoria": "LABORATORIOS",
+      "total": 15,
+      "media": 5.1,
+      "mediana": 2.0,
+      "pct_menor_igual_30": 100.0
+    },
+    {
+      "categoria": "CLINICA DE HERIDAS",
+      "total": 11,
+      "media": 8.5,
+      "mediana": 6.0,
+      "pct_menor_igual_30": 100.0
+    },
+    {
+      "categoria": "TERAPIA RESPIRATORIA",
+      "total": 11,
+      "media": 8.2,
+      "mediana": 6.0,
+      "pct_menor_igual_30": 100.0
+    },
+    {
+      "categoria": "NUTRICIÓN Y DIETETICA",
+      "total": 10,
+      "media": 6.8,
+      "mediana": 6.5,
+      "pct_menor_igual_30": 100.0
+    },
+    {
+      "categoria": "PSIQUIATRIA PEDIATRICO",
+      "total": 10,
+      "media": 2.2,
+      "mediana": 2.0,
+      "pct_menor_igual_30": 100.0
+    },
+    {
+      "categoria": "CALLCENTER",
+      "total": 9,
+      "media": 2.4,
+      "mediana": 2.0,
+      "pct_menor_igual_30": 100.0
+    },
+    {
+      "categoria": "PSICOLOGIA ADULTO",
+      "total": 8,
+      "media": 2.0,
+      "mediana": 1.5,
+      "pct_menor_igual_30": 100.0
+    },
+    {
+      "categoria": "PSIQUIATRIA ADULTO",
+      "total": 6,
+      "media": 3.7,
+      "mediana": 1.5,
+      "pct_menor_igual_30": 100.0
+    },
+    {
+      "categoria": "DIETAS HOSPITALARIAS",
+      "total": 4,
+      "media": 8.2,
+      "mediana": 5.5,
+      "pct_menor_igual_30": 100.0
+    },
+    {
+      "categoria": "PERDIDA DE OBJETOS PERSONALES",
+      "total": 4,
+      "media": 4.8,
+      "mediana": 5.5,
+      "pct_menor_igual_30": 100.0
+    },
+    {
+      "categoria": "PSICOLOGIA PEDIATRICO",
+      "total": 4,
+      "media": 1.0,
+      "mediana": 1.0,
+      "pct_menor_igual_30": 100.0
+    },
+    {
+      "categoria": "INFRAESTRUCTURA",
+      "total": 3,
+      "media": 8.3,
+      "mediana": 7.0,
+      "pct_menor_igual_30": 100.0
+    },
+    {
+      "categoria": "MEDICINA INTERNA",
+      "total": 3,
+      "media": 5.3,
+      "mediana": 1.0,
+      "pct_menor_igual_30": 100.0
+    },
+    {
+      "categoria": "DEMORA EN GENERACIÓN DE MIPRES",
+      "total": 2,
+      "media": 2.0,
+      "mediana": 2.0,
+      "pct_menor_igual_30": 100.0
+    },
+    {
+      "categoria": "TRABAJO SOCIAL",
+      "total": 2,
+      "media": 1.5,
+      "mediana": 1.5,
+      "pct_menor_igual_30": 100.0
+    }
   ]
 }

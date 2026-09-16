@@ -67,12 +67,14 @@ def test_tiempo_respuesta():
     data = client.get("/api/distribuciones/tiempo-respuesta").json()
     assert data["media"] > 0
     assert len(data["distribucion_bins"]) >= 5
+    assert len(data["por_ambito"]) >= 3
+    assert len(data["por_area"]) >= 5
 
 
 # ── Cruces ────────────────────────────────────────────────────────
 def test_cruces():
     data = client.get("/api/cruces").json()
-    assert len(data["cruces"]) >= 8
+    assert len(data["cruces"]) >= 16
 
 
 def test_cruce_por_variables():
@@ -115,15 +117,29 @@ def test_insights():
 # ── Textual ───────────────────────────────────────────────────────
 def test_textual():
     data = client.get("/api/textual").json()
-    assert "disponible" in data
-    assert data["disponible"] is False  # pendiente
+    assert data["disponible"] is True
+    assert "global" in data["top_palabras"]
+    assert len(data["top_palabras"]["global"]) >= 10
+    assert len(data["registros"]) >= 100
 
 
 # ── Filtros ───────────────────────────────────────────────────────
 def test_filtros():
     data = client.get("/api/filtros").json()
+
     assert len(data["tipos"]) >= 3
+    assert {"RECLAMO", "PETICION", "QUEJA", "FELICITACION"} <= set(data["tipos"])
     assert len(data["ambitos"]) >= 3
     assert len(data["canales"]) >= 3
     assert len(data["areas"]) >= 5
-    assert len(data["clusters"]) == 5
+    assert "clusters" not in data
+
+
+# ── Registros ─────────────────────────────────────────────────────
+def test_registros():
+    data = client.get("/api/registros").json()
+    assert len(data["registros"]) >= 2200
+    r = data["registros"][0]
+    assert "id" in r
+    assert "tipo_pqrs_grupo" in r
+    assert "dias_respuesta" in r

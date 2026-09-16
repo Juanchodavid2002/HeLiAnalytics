@@ -108,17 +108,13 @@
       <section>
         <div class="section-label">Análisis visual</div>
         <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
-          <app-chart-container titulo="Distribución por tipo de PQRS" [opciones]="opcionesTipo()" [cargando]="cargando()" altura="280px" />
+          <app-chart-container titulo="Distribución por tipo de PQRS" [opciones]="opcionesTipo()" [cargando]="cargando()" altura="280px" [clicFiltro]="'tipos'" />
           <app-chart-container titulo="Tendencia temporal por mes" [opciones]="opcionesTendencia()" [cargando]="cargando()" altura="280px" />
         </div>
 
         <div class="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-2">
-          <app-chart-container titulo="Áreas de solicitud más frecuentes" [opciones]="opcionesAreas()" [cargando]="cargando()" altura="300px" />
           <app-chart-container titulo="Tendencia por tipo de PQRS" [opciones]="opcionesTendenciaTipo()" [cargando]="cargando()" altura="300px" />
-        </div>
-
-        <div class="mt-4">
-          <app-chart-container titulo="Distribución por canal de ingreso" [opciones]="opcionesCanal()" [cargando]="cargando()" altura="320px" />
+          <app-chart-container titulo="Distribución por canal de ingreso" [opciones]="opcionesCanal()" [cargando]="cargando()" altura="300px" [clicFiltro]="'canales'" />
         </div>
       </section>
     }

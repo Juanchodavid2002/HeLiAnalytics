@@ -8,6 +8,7 @@ import { ChartContainer } from '../../shared/chart-container/chart-container';
 import { Loading } from '../../shared/loading/loading';
 import { Resumen } from '../../core/models/resumen.model';
 import { Distribuciones, Temporal } from '../../core/models/distribucion.model';
+import { RegistroAnalitico } from '../../core/models/registro.model';
 import {
   aItems,
   filtrarFrecuencias,
@@ -21,7 +22,6 @@ import {
   titleCase,
 } from '../../core/utils/formatters';
 import {
-  opcionBarrasHorizontal,
   opcionBarrasVertical,
   opcionDonut,
   opcionLineasPorMes,
@@ -41,6 +41,7 @@ export class Dashboard {
   protected readonly resumen = signal<Resumen | null>(null);
   protected readonly distribuciones = signal<Distribuciones | null>(null);
   protected readonly temporal = signal<Temporal | null>(null);
+  protected readonly registros = signal<RegistroAnalitico[]>([]);
   protected readonly hayError = signal(false);
 
   protected readonly cargando = computed(
@@ -63,19 +64,37 @@ export class Dashboard {
       this.api.getResumen(),
       this.api.getDistribuciones(),
       this.api.getTemporal(),
+      this.api.getRegistros(),
     ]).subscribe({
-      next: ([resumen, distribuciones, temporal]) => {
+      next: ([resumen, distribuciones, temporal, registros]) => {
         this.resumen.set(resumen);
         this.distribuciones.set(distribuciones);
         this.temporal.set(temporal);
+        this.registros.set(registros.registros);
         this.hayError.set(false);
       },
       error: () => this.hayError.set(true),
     });
   }
 
-  protected readonly totalPqrs = computed(() => formatearNumero(this.resumen()?.total_pqrs));
   protected readonly periodo = computed(() => this.resumen()?.periodo);
+
+  protected readonly filtrados = computed(() => {
+    const regs = this.registros();
+    if (!regs?.length) {
+      return [];
+    }
+    const f = this.filtrosSvc.filtros();
+    return regs.filter((r) =>
+      (f.tipos.length === 0 || f.tipos.includes(r.tipo_pqrs_grupo)) &&
+      (f.ambitos.length === 0 || f.ambitos.includes(r.ambito)) &&
+      (f.canales.length === 0 || f.canales.includes(r.canal)) &&
+      (f.areas.length === 0 || f.areas.includes(r.area_solicitud)) &&
+      (f.meses.length === 0 || f.meses.includes(r.mes_num))
+    );
+  });
+
+  protected readonly totalPqrs = computed(() => this.filtrados().length);
 
   protected readonly kpis = computed<{
     titulo: string;
@@ -84,59 +103,77 @@ export class Dashboard {
     icono: string;
     color: KpiColor;
   }[]>(() => {
-    const r = this.resumen();
-    if (!r) {
+    const regs = this.filtrados();
+    const total = regs.length;
+    if (total === 0) {
       return [];
     }
-    const total = r.total_pqrs;
-    const grupo = r.distribucion_tipo_grupo ?? {};
-    const etiquetas: { clave: string; etiqueta: string; icono: string; color: KpiColor }[] = [
-      { clave: 'RECLAMO', etiqueta: 'Reclamos', icono: 'doc', color: 'error' },
-      { clave: 'QUEJA', etiqueta: 'Quejas', icono: 'alert', color: 'alerta' },
-      { clave: 'PETICION', etiqueta: 'Peticiones', icono: 'doc', color: 'secondary' },
-      { clave: 'FELICITACION', etiqueta: 'Felicitaciones', icono: 'chart', color: 'accent' },
-    ];
-    const detalles = etiquetas.map((e) => ({
-      titulo: e.etiqueta,
-      valor: formatearNumero(grupo[e.clave] ?? 0),
-      subtexto: `${formatearPorcentaje(total > 0 ? ((grupo[e.clave] ?? 0) / total) * 100 : 0)} del total`,
-      icono: e.icono,
-      color: e.color,
-    }));
+    const grupo: Record<string, number> = {};
+    const counts: Record<string, Record<string, number>> = { ambito: {}, canal: {}, area: {} };
+    for (const r of regs) {
+      grupo[r.tipo_pqrs_grupo] = (grupo[r.tipo_pqrs_grupo] ?? 0) + 1;
+      counts['ambito'][r.ambito] = (counts['ambito'][r.ambito] ?? 0) + 1;
+      counts['canal'][r.canal] = (counts['canal'][r.canal] ?? 0) + 1;
+      counts['area'][r.area_solicitud] = (counts['area'][r.area_solicitud] ?? 0) + 1;
+    }
+    const media = regs.reduce((s, r) => s + r.dias_respuesta, 0) / total;
+    const sorted = regs.map((r) => r.dias_respuesta).sort((a, b) => a - b);
+    const mediana = total % 2 === 1
+      ? sorted[(total - 1) / 2]
+      : (sorted[total / 2 - 1] + sorted[total / 2]) / 2;
+    const top = (obj: Record<string, number>) => {
+      const [cat, freq] = Object.entries(obj).sort((a, b) => b[1] - a[1])[0] ?? ['-', 0];
+      return { categoria: cat, frecuencia: freq };
+    };
+    const ambitoTop = top(counts['ambito']);
+    const canalTop = top(counts['canal']);
+    const areaTop = top(counts['area']);
+
     return [
       {
         titulo: 'Total PQRS analizadas',
         valor: formatearNumero(total),
-        subtexto: 'II semestre 2025',
+        subtexto: total !== (this.resumen()?.total_pqrs ?? 0) ? `${formatearNumero(this.resumen()?.total_pqrs ?? 0)} global` : 'II semestre 2025',
         icono: 'chart',
         color: 'primary',
       },
-      ...detalles,
+      ...([
+        { clave: 'RECLAMO', etiqueta: 'Reclamos', icono: 'doc', color: 'error' },
+        { clave: 'QUEJA', etiqueta: 'Quejas', icono: 'alert', color: 'alerta' },
+        { clave: 'PETICION', etiqueta: 'Peticiones', icono: 'doc', color: 'secondary' },
+        { clave: 'FELICITACION', etiqueta: 'Felicitaciones', icono: 'chart', color: 'accent' },
+      ] as const).map((e) => ({
+        titulo: e.etiqueta,
+        valor: formatearNumero(grupo[e.clave] ?? 0),
+        subtexto: `${formatearPorcentaje(total > 0 ? ((grupo[e.clave] ?? 0) / total) * 100 : 0)} del total`,
+        icono: e.icono,
+        color: e.color,
+      })),
       {
         titulo: 'Tiempo promedio de respuesta',
-        valor: formatearDias(r.tiempo_promedio_respuesta_dias),
-        subtexto: `Mediana ${formatearDias(r.tiempo_mediana_respuesta_dias)}`,
+        valor: formatearDias(media),
+        subtexto: `Mediana ${formatearDias(mediana)}`,
         icono: 'clock',
         color: 'secondary',
       },
       {
         titulo: 'Ámbito más frecuente',
-        valor: titleCase(r.ambito_mas_frecuente?.categoria),
-        subtexto: `${formatearNumero(r.ambito_mas_frecuente?.frecuencia)} registros`,
+        valor: titleCase(ambitoTop.categoria),
+        subtexto: `${formatearNumero(ambitoTop.frecuencia)} registros`,
         icono: 'alert',
         color: 'alerta',
       },
       {
         titulo: 'Canal más utilizado',
-        valor: titleCase(r.canal_mas_utilizado?.categoria),
-        subtexto: `${formatearNumero(r.canal_mas_utilizado?.frecuencia)} radicaciones`,
+        valor: titleCase(canalTop.categoria),
+        subtexto: `${formatearNumero(canalTop.frecuencia)} radicaciones`,
         icono: 'mail',
         color: 'primary',
       },
       {
         titulo: 'Área con más PQRS',
-        valor: titleCase(r.area_mas_frecuente?.categoria),
-        subtexto: `${formatearNumero(r.area_mas_frecuente?.frecuencia)} registros`,
+        valor: titleCase(areaTop.categoria),
+        subtexto: `${formatearNumero(areaTop.frecuencia)} registros`,
         icono: 'hosp',
         color: 'accent',
       },
@@ -144,7 +181,7 @@ export class Dashboard {
   });
 
   protected readonly opcionesTipo = computed(() => {
-    const v = variableDe(this.distribuciones(), 'tipo_pqrs');
+    const v = variableDe(this.distribuciones(), 'tipo_pqrs_grupo');
     if (!v) {
       return null;
     }
@@ -177,16 +214,6 @@ export class Dashboard {
     return opcionLineasPorTipo(meses);
   });
 
-  protected readonly opcionesAreas = computed(() => {
-    const v = variableDe(this.distribuciones(), 'area_solicitud');
-    if (!v) {
-      return null;
-    }
-    const items = filtrarFrecuencias(v.frecuencias, 'areas', this.filtrosSvc.filtros());
-    const convertidos = aItems(items);
-    return convertidos.length > 0 ? opcionBarrasHorizontal(convertidos) : null;
-  });
-
   protected readonly opcionesCanal = computed(() => {
     const v = variableDe(this.distribuciones(), 'canal');
     if (!v) {
@@ -198,8 +225,11 @@ export class Dashboard {
   });
 
   protected anchoProgresoTiempo(): number {
-    const media = this.resumen()?.tiempo_promedio_respuesta_dias ?? 0;
-    return Math.min(100, media * 10);
+    const regs = this.filtrados();
+    if (!regs.length) {
+      return 0;
+    }
+    return Math.min(100, (regs.reduce((s, r) => s + r.dias_respuesta, 0) / regs.length) * 10);
   }
 
   protected accentSoft(color: KpiColor): Record<string, string> {

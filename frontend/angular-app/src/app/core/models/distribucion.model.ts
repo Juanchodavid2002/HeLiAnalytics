@@ -53,6 +53,14 @@ export interface BinTiempo {
   frecuencia: number;
 }
 
+export interface TiempoPorCategoria {
+  categoria: string;
+  total: number;
+  media: number;
+  mediana: number;
+  pct_menor_igual_30: number;
+}
+
 export interface TiempoRespuesta {
   media: number;
   mediana: number;
@@ -64,4 +72,6 @@ export interface TiempoRespuesta {
   n_menor_igual_30: number;
   pct_menor_igual_30: number;
   distribucion_bins: BinTiempo[];
+  por_ambito: TiempoPorCategoria[];
+  por_area: TiempoPorCategoria[];
 }

@@ -12,6 +12,7 @@ import {
 } from '../models/distribucion.model';
 import { Cluster, Clusters } from '../models/cluster.model';
 import { Filtros, Insights, Textual } from '../models/insight.model';
+import { Registros } from '../models/registro.model';
 
 const API_URL = '/api';
 
@@ -59,6 +60,10 @@ export class ApiService {
 
   getTextual(): Observable<Textual> {
     return this.http.get<Textual>(`${API_URL}/textual`);
+  }
+
+  getRegistros(): Observable<Registros> {
+    return this.http.get<Registros>(`${API_URL}/registros`);
   }
 
   getFiltros(): Observable<Filtros> {
