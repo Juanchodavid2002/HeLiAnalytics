@@ -19,9 +19,9 @@ interface ConfigFiltro {
 
 const CONFIG_FILTROS: ConfigFiltro[] = [
   { clave: 'meses', etiqueta: 'Periodo' },
-  { clave: 'servicios', etiqueta: 'Servicio' },
+  { clave: 'areas', etiqueta: 'Área de solicitud' },
   { clave: 'tipos', etiqueta: 'Tipo de PQRS' },
-  { clave: 'causas', etiqueta: 'Causa' },
+  { clave: 'ambitos', etiqueta: 'Ámbito' },
   { clave: 'canales', etiqueta: 'Canal' },
 ];
 
@@ -57,12 +57,12 @@ export class FilterBar {
           const num = Number(Object.keys(m)[0]);
           return { valor: num, etiqueta: nombreMes(num) };
         });
-      case 'servicios':
-        return f.servicios.map((s) => ({ valor: s, etiqueta: s }));
+      case 'areas':
+        return f.areas.map((a) => ({ valor: a, etiqueta: a }));
+      case 'ambitos':
+        return f.ambitos.map((a) => ({ valor: a, etiqueta: a }));
       case 'tipos':
         return f.tipos.map((t) => ({ valor: t, etiqueta: t }));
-      case 'causas':
-        return f.causas.map((c) => ({ valor: c, etiqueta: c }));
       case 'canales':
         return f.canales.map((c) => ({ valor: c, etiqueta: c }));
       case 'clusters':
@@ -95,9 +95,9 @@ export class FilterBar {
     const actuales = this.filterSvc.filtros();
     return (
       actuales.tipos.length +
-      actuales.causas.length +
+      actuales.ambitos.length +
       actuales.canales.length +
-      actuales.servicios.length +
+      actuales.areas.length +
       actuales.meses.length
     );
   }

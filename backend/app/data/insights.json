@@ -3,32 +3,32 @@
     {
       "tipo": "hallazgo",
       "titulo": "Predominancia de Reclamo",
-      "descripcion": "Las PQRS de tipo Reclamo representan el 74.7% de los registros analizados (1683 de 2252), siendo la categoría predominante en el período.",
-      "metrica": "74.7%",
+      "descripcion": "Las PQRS de tipo Reclamo representan el 74.8% de los registros analizados (1683 de 2251), siendo la categoría predominante en el período.",
+      "metrica": "74.8%",
       "valor": "Reclamo",
       "orden": 1
     },
     {
       "tipo": "prioridad",
-      "titulo": "Causa crítica: Continuidad",
-      "descripcion": "La causa 'Continuidad' concentra el 68.0% de las PQRS (1532 registros). Es la principal fuente de inconformidad reportada por los usuarios.",
-      "metrica": "68.0%",
-      "valor": "Continuidad",
+      "titulo": "Ámbito predominante: Pad Crónico",
+      "descripcion": "El ámbito 'Pad Crónico' concentra el 38.0% de las PQRS (856 registros). Es la principal línea de servicio en la que se concentra la inconformidad reportada por los usuarios.",
+      "metrica": "38.0%",
+      "valor": "Pad Crónico",
       "orden": 2
     },
     {
       "tipo": "hallazgo",
-      "titulo": "Concentración de causas",
-      "descripcion": "Las 3 causas más frecuentes (Continuidad, No Aplica, Oportunidad) concentran el 89.7% de las PQRS analizadas.",
-      "metrica": "89.7%",
-      "valor": "Top 3 causas",
+      "titulo": "Concentración de ámbitos",
+      "descripcion": "Los 3 ámbitos más frecuentes (Pad Crónico, Pad Agudo, Ambulatorio) concentran el 85.0% de las PQRS analizadas.",
+      "metrica": "85.0%",
+      "valor": "Top 3 ámbitos",
       "orden": 3
     },
     {
       "tipo": "hallazgo",
       "titulo": "Canal de ingreso preferente: Correo Electronico",
-      "descripcion": "El canal 'Correo Electronico' concentra el 54.5% de las radicaciones, indicando que la institución debe priorizar la atención y gestión de este canal.",
-      "metrica": "54.5%",
+      "descripcion": "El canal 'Correo Electronico' concentra el 54.6% de las radicaciones, indicando que la institución debe priorizar la atención y gestión de este canal.",
+      "metrica": "54.6%",
       "valor": "Correo Electronico",
       "orden": 4
     },
@@ -42,10 +42,10 @@
     },
     {
       "tipo": "oportunidad",
-      "titulo": "Servicio con mayor carga de PQRS: No Ventilado",
-      "descripcion": "El servicio 'No Ventilado' acumula el 36.5% de las PQRS (822 registros), siendo el principal foco de atención para gestiones de mejora.",
-      "metrica": "36.5%",
-      "valor": "No Ventilado",
+      "titulo": "Área con mayor carga de PQRS: Múltiples Servicios",
+      "descripcion": "El área de solicitud 'Múltiples Servicios' acumula el 33.9% de las PQRS (764 registros), siendo el principal foco de atención para gestiones de mejora.",
+      "metrica": "33.9%",
+      "valor": "Múltiples Servicios",
       "orden": 6
     },
     {
@@ -65,7 +65,7 @@
       "orden": 8
     }
   ],
-  "fecha_generacion": "2025-09-11",
-  "total_registros_analizados": 2252,
+  "fecha_generacion": "2026-09-15",
+  "total_registros_analizados": 2251,
   "periodo": "II semestre 2025"
 }

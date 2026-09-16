@@ -1,5 +1,5 @@
 {
-  "total_pqrs": 2252,
+  "total_pqrs": 2251,
   "periodo": {
     "inicio": "2025-07-01",
     "fin": "2025-12-31"
@@ -8,32 +8,32 @@
     "RECLAMO RIESGO SIMPLE": 848,
     "RECLAMO RIESGO PRIORIZADO": 832,
     "PETICIÓN": 272,
-    "FELICITACIÓN": 260,
+    "FELICITACIÓN": 259,
     "QUEJA": 37,
     "RECLAMO RIESGO VITAL": 3
   },
   "distribucion_tipo_grupo": {
     "RECLAMO": 1683,
     "PETICION": 272,
-    "FELICITACION": 260,
+    "FELICITACION": 259,
     "QUEJA": 37
   },
-  "causa_mas_frecuente": {
-    "categoria": "CONTINUIDAD",
-    "frecuencia": 1532
+  "ambito_mas_frecuente": {
+    "categoria": "PAD CRÓNICO",
+    "frecuencia": 856
   },
   "canal_mas_utilizado": {
     "categoria": "CORREO ELECTRONICO",
     "frecuencia": 1228
   },
-  "servicio_mas_pqrs": {
-    "categoria": "NO VENTILADO",
-    "frecuencia": 822
+  "area_mas_frecuente": {
+    "categoria": "MÚLTIPLES SERVICIOS",
+    "frecuencia": 764
   },
   "tiempo_promedio_respuesta_dias": 6.7,
   "tiempo_mediana_respuesta_dias": 4.0,
   "tipo_usuario_mas_frecuente": {
     "categoria": "USUARIO EN MANEJO POR LA IPS",
-    "frecuencia": 1238
+    "frecuencia": 1237
   }
 }

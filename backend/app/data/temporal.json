@@ -28,7 +28,7 @@
     {
       "mes": "Diciembre",
       "mes_num": 12,
-      "cantidad": 367
+      "cantidad": 366
     }
   ],
   "por_mes_tipo": [
@@ -86,111 +86,10 @@
       "mes": "Diciembre",
       "mes_num": 12,
       "tipos": {
-        "FELICITACION": 83,
+        "FELICITACION": 82,
         "PETICION": 47,
         "QUEJA": 4,
         "RECLAMO": 233
-      }
-    }
-  ],
-  "por_programa_mes": [
-    {
-      "mes": "Julio",
-      "mes_num": 7,
-      "programas": {
-        "NO VENTILADO": 176,
-        "UNIDAD DE REHABILITACIÓN": 72,
-        "APLICACIÓN DE MEDICAMENTO": 53,
-        "PUNTUAL": 53,
-        "UNIDAD DE SALUD MENTAL": 28,
-        "HOSPITALIZACIÓN GENERAL": 14,
-        "VENTILADO": 11,
-        "UNIDAD DE CUIDADO CRÓNICO": 6,
-        "SANITAS PREMIUM": 5,
-        "DOMICILIARIO": 5,
-        "NEW PALEX": 3
-      }
-    },
-    {
-      "mes": "Agosto",
-      "mes_num": 8,
-      "programas": {
-        "NO VENTILADO": 138,
-        "UNIDAD DE REHABILITACIÓN": 95,
-        "APLICACIÓN DE MEDICAMENTO": 66,
-        "PUNTUAL": 37,
-        "UNIDAD DE SALUD MENTAL": 28,
-        "UNIDAD DE CUIDADO CRÓNICO": 16,
-        "HOSPITALIZACIÓN GENERAL": 14,
-        "VENTILADO": 8,
-        "DOMICILIARIO": 4,
-        "SANITAS PREMIUM": 2,
-        "NEW PALEX": 1,
-        "APLICACIÓN DE BIOLOGICO": 1,
-        "VENTILADO NO INVASIVO": 1
-      }
-    },
-    {
-      "mes": "Septiembre",
-      "mes_num": 9,
-      "programas": {
-        "NO VENTILADO": 113,
-        "UNIDAD DE REHABILITACIÓN": 71,
-        "PUNTUAL": 44,
-        "APLICACIÓN DE MEDICAMENTO": 35,
-        "UNIDAD DE SALUD MENTAL": 27,
-        "UNIDAD DE CUIDADO CRÓNICO": 19,
-        "VENTILADO": 8,
-        "HOSPITALIZACIÓN GENERAL": 6,
-        "DOMICILIARIO": 3,
-        "APLICACIÓN DE BIOLOGICO": 1,
-        "VENTILADO NO INVASIVO": 1
-      }
-    },
-    {
-      "mes": "Octubre",
-      "mes_num": 10,
-      "programas": {
-        "NO VENTILADO": 168,
-        "UNIDAD DE REHABILITACIÓN": 85,
-        "PUNTUAL": 70,
-        "UNIDAD DE SALUD MENTAL": 47,
-        "APLICACIÓN DE MEDICAMENTO": 28,
-        "UNIDAD DE CUIDADO CRÓNICO": 23,
-        "HOSPITALIZACIÓN GENERAL": 8,
-        "DOMICILIARIO": 7,
-        "VENTILADO": 5,
-        "UNIDAD DE CUIDADO COGNITIVO": 1
-      }
-    },
-    {
-      "mes": "Noviembre",
-      "mes_num": 11,
-      "programas": {
-        "NO VENTILADO": 93,
-        "PUNTUAL": 68,
-        "UNIDAD DE REHABILITACIÓN": 35,
-        "APLICACIÓN DE MEDICAMENTO": 30,
-        "UNIDAD DE SALUD MENTAL": 26,
-        "UNIDAD DE CUIDADO CRÓNICO": 13,
-        "VENTILADO": 7,
-        "HOSPITALIZACIÓN GENERAL": 5,
-        "VENTILADO NO INVASIVO": 1
-      }
-    },
-    {
-      "mes": "Diciembre",
-      "mes_num": 12,
-      "programas": {
-        "NO VENTILADO": 134,
-        "APLICACIÓN DE MEDICAMENTO": 97,
-        "PUNTUAL": 49,
-        "UNIDAD DE REHABILITACIÓN": 34,
-        "UNIDAD DE SALUD MENTAL": 20,
-        "UNIDAD DE CUIDADO CRÓNICO": 14,
-        "VENTILADO": 11,
-        "HOSPITALIZACIÓN GENERAL": 6,
-        "SANITAS PREMIUM": 2
       }
     }
   ]

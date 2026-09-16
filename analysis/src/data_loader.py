@@ -13,7 +13,8 @@ def load_raw() -> pd.DataFrame:
     """Carga el dataset original de PQRS.
 
     Returns:
-        pd.DataFrame con los 2,261 registros de PQRS del II semestre 2025.
+        pd.DataFrame con los 2,261 registros de PQRS del II semestre 2025
+        (12 columnas tras la reducción documentada en docs/00 — D15).
     """
     if not RAW_PATH.exists():
         raise FileNotFoundError(

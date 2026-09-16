@@ -8,9 +8,14 @@ Decisión de diseño:
 - El servicio está dado por "Programa" (el campo "Servicios" está vacío: solo
   contiene "SIN SERVICIOS" y "PRUEBA DE TIPO", columna de prueba a descartar).
 - El tiempo de respuesta se calcula como (Fecha de Cierre - Fecha del Reporte) en días.
-- Columnas con datos personales se ELIMINAN del dataset analítico (anonimización
-  según Ley 1581/2012). Los textos libres (Hechos, Respuesta) se conservan
-  porque solo alimentan agregados de NLP, nunca se exponen los datos crudos.
+
+Esquema de entrada (BASE.xlsx reducido a 12 columnas, ver docs/00 D15):
+- Se ELIMINARON las columnas "Código" y "Estado" por nula utilidad analítica
+  (Estado era constante, Código era identificador interno).
+- Las columnas "Programa", "Sede" y "Clasificación" ya no existen en la fuente,
+  por lo que las variables derivadas programa/sede/causa se retiraron del
+  dataset analítico. Pendiente: reconfigurar clustering.py y los JSON del
+  backend con las variables disponibles.
 
 Etapas de limpieza COMPLETA (v2) agregadas sobre la v1:
 1. Deduplicación: se eliminan registros duplicados exactos (iguales en todas las
@@ -45,9 +50,10 @@ COLUMNAS_SENSIBLES = [
 ]
 
 # Columnas operativas/internas sin valor analítico directo
+# (ya no existen en la fuente reducida a 12 columnas; se conservan por seguridad)
 COLUMNAS_DESCARTADAS = [
     "ID",            # Identificador secuencial interno
-    "Código",        # Código interno de radicación
+    "Código",        # Código interno de radicación (eliminado del Excel, D15)
     "Servicios",     # Columna de prueba (SIN SERVICIOS / PRUEBA DE TIPO)
     "Fecha del Hecho",  # Fecha del hecho (no clave para el análisis; ya está la de reporte)
 ]
@@ -62,6 +68,7 @@ COLUMNAS_TEXTO = [
 ]
 
 # Renombres de columnas a nombres canónicos (ASCII para el stack de datos)
+# Nota: Programa, Sede y Clasificación ya no existen en la fuente (D15).
 RENAME = {
     "Fecha del Reporte": "fecha_reporte",
     "Mes": "mes",
@@ -69,15 +76,11 @@ RENAME = {
     "Tipo de Solicitud": "tipo_pqrs",
     "Tipo de Usuario": "tipo_usuario",
     "Ámbito": "ambito",
-    "Programa": "programa",
     "Aseguradora": "aseguradora",
     "Regional": "regional",
-    "Sede": "sede",
     "Vencimiento": "vencimiento",
-    "Clasificación": "causa",
     "Área de Solicitud": "area_solicitud",
     "Medio de Transmisión": "canal",
-    "Estado": "estado",
 }
 
 # Orden final del dataset analítico (antes de agregar columnas de trazabilidad)
@@ -88,18 +91,14 @@ ORDEN_FINAL = [
     "semana",
     "fecha_cierre",
     "dias_respuesta",
-    "estado",
     "tipo_pqrs",
     "tipo_pqrs_grupo",
-    "causa",
     "canal",
     "area_solicitud",
-    "programa",
     "ambito",
     "tipo_usuario",
     "aseguradora",
     "regional",
-    "sede",
     "vencimiento",
     "tiene_texto",
     "len_texto",
@@ -130,11 +129,11 @@ TIPO_GRUPO = {
 
 # Unificación de categorías con errores de tildes/capitalización (v2)
 UNIFICAR_CATEGORIAS = {
-    "sede": {"CUCUTA": "CÚCUTA"},
+    "area_solicitud": {"APLIACION DE MEDICAMENTO": "APLICACIÓN DE MEDICAMENTO"},
 }
 
 # Columnas categóricas con nulos que se imputarán con la moda (v2)
-COLUMNAS_IMPUTAR_MODA = ["programa", "ambito", "aseguradora", "regional", "sede"]
+COLUMNAS_IMPUTAR_MODA = ["ambito", "aseguradora", "regional"]
 
 # Columnas de texto que se rellenan con "" (sin NaN) para NLP (v2)
 COLUMNAS_TEXTO_NLP = ["Hechos", "Respuesta", "Respuesta de Involucrados"]
@@ -246,7 +245,7 @@ def main() -> None:
     print(f"Original: {raw.shape[0]} filas × {raw.shape[1]} columnas")
 
     analitico = clean(raw)
-    r: dict = analitico.clean_report  # type: ignore[attr-defined]
+    r: dict = analitico.attrs["clean_report"]
     print(f"Analítico: {analitico.shape[0]} filas × {analitico.shape[1]} columnas")
 
     print("\n=== Informe de limpieza (v2) ===")

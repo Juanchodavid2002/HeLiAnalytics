@@ -5,11 +5,17 @@ import { ApiService } from '../../core/services/api.service';
 import { FilterService } from '../../core/services/filter.service';
 import { ChartContainer } from '../../shared/chart-container/chart-container';
 import { Loading } from '../../shared/loading/loading';
-import { Cruce, Distribuciones, TiempoRespuesta } from '../../core/models/distribucion.model';
+import {
+  Cruce,
+  Distribuciones,
+  Temporal,
+  TiempoRespuesta,
+} from '../../core/models/distribucion.model';
 import {
   aItems,
   filtrarCruce,
   filtrarFrecuencias,
+  filtrarMeses,
   variableDe,
 } from '../../core/utils/filtrar';
 import {
@@ -17,23 +23,25 @@ import {
   opcionBarrasHorizontal,
   opcionBarrasTiempo,
   opcionHeatmap,
+  opcionLineasPorMes,
 } from '../../core/utils/charts';
 import { formatearDias, formatearNumero, formatearPorcentaje } from '../../core/utils/formatters';
 
 @Component({
-  selector: 'app-servicios',
+  selector: 'app-ambito',
   imports: [ChartContainer, Loading],
-  templateUrl: './servicios.html',
-  styleUrl: './servicios.scss',
+  templateUrl: './ambito.html',
+  styleUrl: './ambito.scss',
 })
-export class Servicios {
+export class Ambito {
   private readonly api = inject(ApiService);
   protected readonly filtrosSvc = inject(FilterService);
 
   protected readonly distribuciones = signal<Distribuciones | null>(null);
-  protected readonly cruceProgramaTipo = signal<Cruce | null>(null);
-  protected readonly cruceCausaPrograma = signal<Cruce | null>(null);
+  protected readonly cruceTipoAmbito = signal<Cruce | null>(null);
+  protected readonly cruceAmbitoArea = signal<Cruce | null>(null);
   protected readonly tiempo = signal<TiempoRespuesta | null>(null);
+  protected readonly temporal = signal<Temporal | null>(null);
   protected readonly hayError = signal(false);
 
   protected readonly cargando = computed(() => this.distribuciones() === null && !this.hayError());
@@ -51,15 +59,17 @@ export class Servicios {
   private cargarDatos(): void {
     combineLatest([
       this.api.getDistribuciones(),
-      this.api.getCruces('programa,tipo_pqrs_grupo'),
-      this.api.getCruces('causa,programa'),
+      this.api.getCruces('tipo_pqrs_grupo,ambito'),
+      this.api.getCruces('ambito,area_solicitud'),
       this.api.getTiempoRespuesta(),
+      this.api.getTemporal(),
     ]).subscribe({
-      next: ([distribuciones, programaTipo, causaPrograma, tiempo]) => {
+      next: ([distribuciones, tipoAmbito, ambitoArea, tiempo, temporal]) => {
         this.distribuciones.set(distribuciones);
-        this.cruceProgramaTipo.set(programaTipo.cruces[0] ?? null);
-        this.cruceCausaPrograma.set(causaPrograma.cruces[0] ?? null);
+        this.cruceTipoAmbito.set(tipoAmbito.cruces[0] ?? null);
+        this.cruceAmbitoArea.set(ambitoArea.cruces[0] ?? null);
         this.tiempo.set(tiempo);
+        this.temporal.set(temporal);
         this.hayError.set(false);
       },
       error: () => this.hayError.set(true),
@@ -89,6 +99,11 @@ export class Servicios {
         detalle: 'Cumplimiento Circular 008/2018',
       },
       {
+        titulo: 'Rango de respuesta',
+        valor: `${formatearDias(t.min)} — ${formatearDias(t.max)}`,
+        detalle: 'Mínimo — máximo',
+      },
+      {
         titulo: 'Total analizado',
         valor: formatearNumero(total),
         detalle: 'Registros con dato de respuesta',
@@ -96,18 +111,18 @@ export class Servicios {
     ];
   });
 
-  protected readonly opcionesServicios = computed(() => {
-    const v = variableDe(this.distribuciones(), 'programa');
+  protected readonly opcionesRanking = computed(() => {
+    const v = variableDe(this.distribuciones(), 'ambito');
     if (!v) {
       return null;
     }
-    const items = filtrarFrecuencias(v.frecuencias, 'servicios', this.filtrosSvc.filtros());
+    const items = filtrarFrecuencias(v.frecuencias, 'ambitos', this.filtrosSvc.filtros());
     const convertidos = aItems(items);
     return convertidos.length > 0 ? opcionBarrasHorizontal(convertidos) : null;
   });
 
-  protected readonly opcionesServicioTipo = computed(() => {
-    const cruce = this.cruceProgramaTipo();
+  protected readonly opcionesTipoAmbito = computed(() => {
+    const cruce = this.cruceTipoAmbito();
     if (!cruce) {
       return null;
     }
@@ -115,8 +130,8 @@ export class Servicios {
     return filtrado.tabla.length > 0 ? opcionBarrasAgrupadas(filtrado) : null;
   });
 
-  protected readonly opcionesServicioCausa = computed(() => {
-    const cruce = this.cruceCausaPrograma();
+  protected readonly opcionesAmbitoArea = computed(() => {
+    const cruce = this.cruceAmbitoArea();
     if (!cruce) {
       return null;
     }
@@ -125,11 +140,20 @@ export class Servicios {
     return conDatos.length > 0 ? opcionHeatmap(filtrado) : null;
   });
 
-  protected readonly opcionesTiempoServicio = computed(() => {
+  protected readonly opcionesTiempo = computed(() => {
     const t = this.tiempo();
     if (!t) {
       return null;
     }
     return opcionBarrasTiempo(t.distribucion_bins);
+  });
+
+  protected readonly opcionesPorMes = computed(() => {
+    const t = this.temporal();
+    if (!t) {
+      return null;
+    }
+    const meses = filtrarMeses(t.por_mes, this.filtrosSvc.filtros());
+    return meses.length > 0 ? opcionLineasPorMes(meses) : null;
   });
 }

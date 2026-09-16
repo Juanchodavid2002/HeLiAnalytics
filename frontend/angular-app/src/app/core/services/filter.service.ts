@@ -2,18 +2,18 @@ import { Injectable, signal } from '@angular/core';
 
 export interface FiltrosActivos {
   tipos: string[];
-  causas: string[];
+  ambitos: string[];
   canales: string[];
-  servicios: string[];
+  areas: string[];
   meses: number[];
   clusters: number[];
 }
 
 const FILTROS_VACIOS: FiltrosActivos = {
   tipos: [],
-  causas: [],
+  ambitos: [],
   canales: [],
-  servicios: [],
+  areas: [],
   meses: [],
   clusters: [],
 };
@@ -34,9 +34,9 @@ export class FilterService {
     const actuales = this.filtros();
     return (
       actuales.tipos.length > 0 ||
-      actuales.causas.length > 0 ||
+      actuales.ambitos.length > 0 ||
       actuales.canales.length > 0 ||
-      actuales.servicios.length > 0 ||
+      actuales.areas.length > 0 ||
       actuales.meses.length > 0 ||
       actuales.clusters.length > 0
     );

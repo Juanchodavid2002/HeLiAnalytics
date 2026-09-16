@@ -24,8 +24,8 @@ export class Sidebar {
   readonly items: ItemNav[] = [
     { ruta: '/dashboard', etiqueta: 'Dashboard', icono: 'squares', seccion: 'principal' },
     { ruta: '/tendencias', etiqueta: 'Tendencias', icono: 'trend', seccion: 'principal' },
-    { ruta: '/causas', etiqueta: 'Causas', icono: 'alert', seccion: 'principal' },
-    { ruta: '/servicios', etiqueta: 'Servicios', icono: 'files', seccion: 'principal' },
+    { ruta: '/ambito', etiqueta: 'Ámbito', icono: 'alert', seccion: 'principal' },
+    { ruta: '/areas', etiqueta: 'Áreas de solicitud', icono: 'files', seccion: 'principal' },
     { ruta: '/segmentacion', etiqueta: 'Segmentación', icono: 'users', seccion: 'analisis' },
     { ruta: '/textual', etiqueta: 'Análisis Textual', icono: 'text', seccion: 'analisis' },
     { ruta: '/insights', etiqueta: 'Insights IA', icono: 'bulb', seccion: 'analisis', badge: 'NEW' },

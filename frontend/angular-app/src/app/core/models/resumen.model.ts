@@ -6,7 +6,7 @@ export interface Resumen {
   };
   distribucion_tipo: Record<string, number>;
   distribucion_tipo_grupo: Record<string, number>;
-  causa_mas_frecuente: {
+  ambito_mas_frecuente: {
     categoria: string;
     frecuencia: number;
   };
@@ -14,7 +14,7 @@ export interface Resumen {
     categoria: string;
     frecuencia: number;
   };
-  servicio_mas_pqrs: {
+  area_mas_frecuente: {
     categoria: string;
     frecuencia: number;
   };

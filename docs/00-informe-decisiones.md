@@ -24,6 +24,8 @@ Documento generado en la transición entre la FASE 5 (documentación) y la FASE 
 | D12 | **Imputación de nulos categóricos con la moda** | `programa` (25), `ambito` (5), `aseguradora` (68), `regional` (7), `sede` (7). La moda es estable en estas columnas (NO VENTILADO, EPS SANITAS, MONTEVIDEO, BOGOTÁ) y no introduce sesgo relevante. Textos (Respuesta de Involucrados: 325) se rellenan con `""` para NLP. |
 | D13 | **Winsorización de outliers en dias_respuesta (techo Q3 + 3·IQR ≈ 29 días)** | P75=8, IQR=7 → techo 29 días. 150 registros >29 días (máx. 263) se truncaron para no inflar la media (8.7 → 6.7 días). Valores originales en `dias_respuesta_original` + flag `es_outlier_respuesta` para trazabilidad. |
 | D14 | **Unificación de categorías con errores de tilde** | `CUCUTA` → `CÚCUTA` (1 registro). Categorías de cola minoritarias (aseguradoras, sedes) se conservan por ser catálogos legítimos. |
+| D15 | **Reducción de `BASE.xlsx` de 14 a 12 columnas** | Se eliminan `Código` (identificador interno, único por fila, sin valor analítico) y `Estado` (1 solo valor: "CERRADA", varianza cero). Esto revierte parcialmente D10 (nunca modificar BASE.xlsx): la fuente oficial se sobrescribe con el esquema reducido. Consecuencia: `causa`, `programa` y `sede` (provenientes de `Clasificación`, `Programa` y `Sede`) dejan de generarse; `clustering.py` y los JSON del backend se reconfiguraron con las variables disponibles (D16 → cierra P6). |
+| D16 | **Reconfiguración del análisis/dashboard con las variables disponibles tras D15** | `causa` → **`ambito`** (4 categorías: PAD AGUDO/PAD CRÓNICO/AMBULATORIO/HOSPITALIZACIÓN) y `programa` → **`area_solicitud`** (30 categorías) como nuevas dimensiones centrales de dashboard, filtros, insights y segmentación. Se actualizan: `eda.py` (CATEGORICAS, resumen `ambito_mas_frecuente`/`area_mas_frecuente`, 12 cruces canónicos, temporal sin `por_programa_mes`, insights en ámbito/área), `clustering.py` (cat_vars: `tipo_pqrs_grupo, canal, area_solicitud, ambito` + `dias_respuesta`), `filtros.py` (claves `ambitos`/`areas`), frontend (página Causas→Ámbito, Servicios→Áreas de solicitud, filtros renombrados, KPIs/templates) y tests (`total_pqrs=2251`). Se elimina el tipo `TemporalMesPrograma`/`filtrarTemporal` (sin uso). |
 
 ---
 
@@ -36,6 +38,7 @@ Documento generado en la transición entre la FASE 5 (documentación) y la FASE 
 | P3 | Confirmar qué constituye "tiempo de respuesta" (¿Fecha de Cierre - Fecha del Reporte?) | [ ] | Equipo |
 | P4 | Validar la clasificación de columnas textuales (Guardían, Respuesta, Involucrados) | [ ] | Equipo |
 | P5 | Decidir tratamiento de nulos tras el perfilamiento | [x] | Equipo |
+| P6 | Reconfigurar clustering.py y JSON del backend tras retirar causa/programa/sede (D15) | [x] | Equipo |
 
 ---
 

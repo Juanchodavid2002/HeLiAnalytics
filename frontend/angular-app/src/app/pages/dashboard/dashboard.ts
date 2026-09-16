@@ -120,9 +120,9 @@ export class Dashboard {
         color: 'secondary',
       },
       {
-        titulo: 'Causa más frecuente',
-        valor: titleCase(r.causa_mas_frecuente?.categoria),
-        subtexto: `${formatearNumero(r.causa_mas_frecuente?.frecuencia)} registros`,
+        titulo: 'Ámbito más frecuente',
+        valor: titleCase(r.ambito_mas_frecuente?.categoria),
+        subtexto: `${formatearNumero(r.ambito_mas_frecuente?.frecuencia)} registros`,
         icono: 'alert',
         color: 'alerta',
       },
@@ -134,9 +134,9 @@ export class Dashboard {
         color: 'primary',
       },
       {
-        titulo: 'Servicio con más PQRS',
-        valor: titleCase(r.servicio_mas_pqrs?.categoria),
-        subtexto: `${formatearNumero(r.servicio_mas_pqrs?.frecuencia)} registros`,
+        titulo: 'Área con más PQRS',
+        valor: titleCase(r.area_mas_frecuente?.categoria),
+        subtexto: `${formatearNumero(r.area_mas_frecuente?.frecuencia)} registros`,
         icono: 'hosp',
         color: 'accent',
       },
@@ -177,12 +177,12 @@ export class Dashboard {
     return opcionLineasPorTipo(meses);
   });
 
-  protected readonly opcionesCausas = computed(() => {
-    const v = variableDe(this.distribuciones(), 'causa');
+  protected readonly opcionesAreas = computed(() => {
+    const v = variableDe(this.distribuciones(), 'area_solicitud');
     if (!v) {
       return null;
     }
-    const items = filtrarFrecuencias(v.frecuencias, 'causas', this.filtrosSvc.filtros());
+    const items = filtrarFrecuencias(v.frecuencias, 'areas', this.filtrosSvc.filtros());
     const convertidos = aItems(items);
     return convertidos.length > 0 ? opcionBarrasHorizontal(convertidos) : null;
   });

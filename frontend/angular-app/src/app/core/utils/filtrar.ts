@@ -5,17 +5,15 @@ import {
   DistribucionVariable,
   Frecuencia,
   TemporalMes,
-  TemporalMesTipo,
-  TemporalMesPrograma,
 } from '../models/distribucion.model';
 
-export type VariableFiltro = 'tipos' | 'causas' | 'canales' | 'servicios';
+export type VariableFiltro = 'tipos' | 'ambitos' | 'canales' | 'areas';
 
 const MAPA_VARIABLE: Record<VariableFiltro, string> = {
   tipos: 'tipo_pqrs',
-  causas: 'causa',
+  ambitos: 'ambito',
   canales: 'canal',
-  servicios: 'programa',
+  areas: 'area_solicitud',
 };
 
 export function filtrarFrecuencias(
@@ -40,32 +38,19 @@ export function filtrarMeses<T extends TemporalMes>(
   return items.filter((m) => filtros.meses.includes(m.mes_num));
 }
 
-export function filtrarTemporal(
-  porMes: TemporalMes[],
-  porMesTipo: TemporalMesTipo[],
-  porProgramaMes: TemporalMesPrograma[],
-  filtros: FiltrosActivos,
-): { por_mes: TemporalMes[]; por_mes_tipo: TemporalMesTipo[]; por_programa_mes: TemporalMesPrograma[] } {
-  return {
-    por_mes: filtrarMeses(porMes || [], filtros),
-    por_mes_tipo: filtrarMeses(porMesTipo || [], filtros),
-    por_programa_mes: filtrarMeses(porProgramaMes || [], filtros),
-  };
-}
-
 export function filtrarCruce(
   cruce: Cruce,
   filtros: FiltrosActivos,
 ): Cruce {
-  const filtroX = cruce.variable_x === 'causa' ? filtros.causas
+  const filtroX = cruce.variable_x === 'ambito' ? filtros.ambitos
     : cruce.variable_x === 'tipo_pqrs_grupo' ? filtros.tipos
     : cruce.variable_x === 'canal' ? filtros.canales
-    : cruce.variable_x === 'programa' ? filtros.servicios
+    : cruce.variable_x === 'area_solicitud' ? filtros.areas
     : [];
-  const filtroY = cruce.variable_y === 'causa' ? filtros.causas
+  const filtroY = cruce.variable_y === 'ambito' ? filtros.ambitos
     : cruce.variable_y === 'tipo_pqrs_grupo' ? filtros.tipos
     : cruce.variable_y === 'canal' ? filtros.canales
-    : cruce.variable_y === 'programa' ? filtros.servicios
+    : cruce.variable_y === 'area_solicitud' ? filtros.areas
     : [];
 
   return {

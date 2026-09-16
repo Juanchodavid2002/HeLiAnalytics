@@ -115,9 +115,9 @@ export class Segmentacion {
     const variables: { nombre: string; etiqueta: string; perfil: ClusterVarPerfil }[] = [];
     const claves: [string, string][] = [
       ['tipo_pqrs_grupo', 'Tipo de PQRS'],
-      ['causa', 'Causa'],
+      ['ambito', 'Ámbito'],
       ['canal', 'Canal'],
-      ['programa', 'Servicio'],
+      ['area_solicitud', 'Área de solicitud'],
     ];
     for (const [clave, etiqueta] of claves) {
       const perfil = cl.perfil[clave as keyof Cluster['perfil']] as ClusterVarPerfil | undefined;

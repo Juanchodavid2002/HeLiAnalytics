@@ -6,7 +6,7 @@
   "max": 29,
   "p25": 1.0,
   "p75": 8.0,
-  "n_menor_igual_30": 2252,
+  "n_menor_igual_30": 2251,
   "pct_menor_igual_30": 100.0,
   "distribucion_bins": [
     {
@@ -15,7 +15,7 @@
     },
     {
       "rango": "2-7 días",
-      "frecuencia": 1003
+      "frecuencia": 1002
     },
     {
       "rango": "8-15 días",

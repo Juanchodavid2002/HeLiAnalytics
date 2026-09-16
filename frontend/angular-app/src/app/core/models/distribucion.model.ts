@@ -25,14 +25,9 @@ export interface TemporalMesTipo extends TemporalMes {
   tipos: Record<string, number>;
 }
 
-export interface TemporalMesPrograma extends TemporalMes {
-  programas: Record<string, number>;
-}
-
 export interface Temporal {
   por_mes: TemporalMes[];
   por_mes_tipo: TemporalMesTipo[];
-  por_programa_mes: TemporalMesPrograma[];
 }
 
 export interface CruceValor {

@@ -2,7 +2,7 @@
 
 Procedimiento (documentado para el informe académico):
   1. Selección de variables.
-     - Categóricas (4): tipo_pqrs_grupo, causa, canal, programa.
+     - Categóricas (4): tipo_pqrs_grupo, canal, area_solicitud, ambito.
      - Numérica (1): dias_respuesta (se escaló min-max a [0,1]).
   2. Algoritmo: K-Prototypes (Huang) con gamma=1.0, init='Cao', n_init=5.
      - K-Means estándar se descarta: codificar las categóricas con one-hot +
@@ -16,10 +16,10 @@ Procedimiento (documentado para el informe académico):
        k=5 (13% costo), luego la ganancia marginal se reduce (~9.5%).
      - A k=5 los cinco segmentos son balanceados (12%–28%) y cada uno tiene
        un perfil dominante distinto (tipo de PQRS, canal y servicio).
-     - El coeficiente de silueta (Hamming) en espacio puramente categórico
-       es negativo por el efecto de modas dominantes (causa=CONTINUIDAD 68%),
-       situación conocida en datos categóricos sesgados; se reporta como
-       limitación, no se usa como criterio excluyente.
+- El coeficiente de silueta (Hamming) en espacio puramente categórico
+        es negativo por el efecto de modas dominantes de las variables
+        categóricas; situación conocida en datos categóricos sesgados; se
+        reporta como limitación, no se usa como criterio excluyente.
   4. Interpretación: perfil por segmento (modas + top-5 + media/mediana de
      dias_respuesta) y nombre descriptivo generado.
 
@@ -40,7 +40,7 @@ ANALYTIC_PATH = ROOT / "data" / "processed" / "pqrs_analitico_v2.csv"
 OUT_DIR = ROOT / "backend" / "app" / "data"
 CLUSTERED_PATH = ROOT / "data" / "processed" / "pqrs_cluster_v2.csv"
 
-cat_vars = ["tipo_pqrs_grupo", "causa", "canal", "programa"]
+cat_vars = ["tipo_pqrs_grupo", "canal", "area_solicitud", "ambito"]
 num_vars = ["dias_respuesta"]
 K_ELEGIDO = 5
 
@@ -158,17 +158,17 @@ def asignar_nombres(clusters: list[dict], df: pd.DataFrame, labels: np.ndarray) 
         sub = dfc[dfc["cluster"] == cid]
         p = c["perfil"]
         tipo = p["tipo_pqrs_grupo"]["moda"].title()
-        causa = p["causa"]["moda"].title()
+        ambito = p["ambito"]["moda"].title()
         canal = p["canal"]["moda"].title()
-        progra = p["programa"]["moda"].title()
+        area = p["area_solicitud"]["moda"].title()
         med = p["dias_respuesta"]["mediana"]
         c["letra"] = letras[cid]
-        c["nombre"] = f"{tipo} · {causa} · {canal}"
+        c["nombre"] = f"{tipo} · {ambito} · {canal}"
         c["interpretacion"] = (
             f"Segmento dominado por {tipo.lower()}s ({p['tipo_pqrs_grupo']['pct_moda']}%), "
-            f"causa {causa.lower()} ({p['causa']['pct_moda']}%), canal {canal.lower()} "
-            f"({p['canal']['pct_moda']}%) y servicio {progra.lower()} "
-            f"({p['programa']['pct_moda']}%). Representa {c['participacion_pct']}% de las PQRS "
+            f"ámbito {ambito.lower()} ({p['ambito']['pct_moda']}%), canal {canal.lower()} "
+            f"({p['canal']['pct_moda']}%) y área de solicitud {area.lower()} "
+            f"({p['area_solicitud']['pct_moda']}%). Representa {c['participacion_pct']}% de las PQRS "
             f"({c['cantidad']} registros); respuesta mediana de {med} días."
         )
     return clusters

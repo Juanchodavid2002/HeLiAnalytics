@@ -9,6 +9,7 @@ Genera los archivos JSON consumibles por la API FastAPI:
 """
 
 import json
+from datetime import date
 from pathlib import Path
 
 import numpy as np
@@ -19,17 +20,16 @@ ANALYTIC_PATH = ROOT / "data" / "processed" / "pqrs_analitico_v2.csv"
 OUT_DIR = ROOT / "backend" / "app" / "data"
 
 # Variables categóricas de interés para distribuciones
+# (sin causa/programa/sede: sus fuentes Clasificación/Programa/Sede ya no
+# existen en BASE.xlsx tras la reducción documentada en docs/00 — D15/D16)
 CATEGORICAS = [
     "tipo_pqrs",
     "tipo_pqrs_grupo",
-    "causa",
     "canal",
-    "programa",
-    "ambito",
     "area_solicitud",
+    "ambito",
     "tipo_usuario",
     "regional",
-    "sede",
     "vencimiento",
     "aseguradora",
     "mes",
@@ -72,11 +72,11 @@ def cruce(df: pd.DataFrame, x: str, y: str) -> dict:
 def eda(df: pd.DataFrame) -> dict:
     results = {}
 
-    # --- RESUMEN ---
+# --- RESUMEN ---
     dist_tipo = {d["categoria"]: d["frecuencia"] for d in distribucion(df, "tipo_pqrs")["frecuencias"]}
-    causa_top = df["causa"].value_counts().idxmax()
+    ambito_top = df["ambito"].value_counts().idxmax()
     canal_top = df["canal"].value_counts().idxmax()
-    servicio_top = df["programa"].value_counts().idxmax()
+    area_top = df["area_solicitud"].value_counts().idxmax()
     tipo_usuario_bins = df["tipo_usuario"].value_counts().idxmax()
 
     results["resumen"] = {
@@ -90,17 +90,17 @@ def eda(df: pd.DataFrame) -> dict:
             d["categoria"]: d["frecuencia"]
             for d in distribucion(df, "tipo_pqrs_grupo")["frecuencias"]
         },
-        "causa_mas_frecuente": {
-            "categoria": causa_top,
-            "frecuencia": int(df["causa"].value_counts().max()),
+        "ambito_mas_frecuente": {
+            "categoria": ambito_top,
+            "frecuencia": int(df["ambito"].value_counts().max()),
         },
         "canal_mas_utilizado": {
             "categoria": canal_top,
             "frecuencia": int(df["canal"].value_counts().max()),
         },
-        "servicio_mas_pqrs": {
-            "categoria": servicio_top,
-            "frecuencia": int(df["programa"].value_counts().max()),
+        "area_mas_frecuente": {
+            "categoria": area_top,
+            "frecuencia": int(df["area_solicitud"].value_counts().max()),
         },
         "tiempo_promedio_respuesta_dias": round(float(df["dias_respuesta"].mean()), 1),
         "tiempo_mediana_respuesta_dias": round(float(df["dias_respuesta"].median()), 1),
@@ -138,18 +138,22 @@ def eda(df: pd.DataFrame) -> dict:
         ],
     }
 
-    # --- CRUCES ---
+# --- CRUCES ---
+    # Conjunto canónico de la reconfiguración (D16): solo variables disponibles.
+    # Se incluyen pares en ambos órdenes porque /api/cruces iguala (x,y) exacto.
     cruces = [
-        ("tipo_pqrs_grupo", "causa"),
-        ("tipo_pqrs_grupo", "programa"),
-        ("causa", "programa"),
-        ("causa", "canal"),
-        ("programa", "canal"),
-        ("programa", "tipo_pqrs_grupo"),
+        ("tipo_pqrs_grupo", "area_solicitud"),
+        ("area_solicitud", "tipo_pqrs_grupo"),
+        ("tipo_pqrs_grupo", "ambito"),
+        ("ambito", "tipo_pqrs_grupo"),
+        ("area_solicitud", "ambito"),
+        ("ambito", "area_solicitud"),
+        ("area_solicitud", "canal"),
         ("tipo_pqrs_grupo", "canal"),
-        ("causa", "mes"),
-        ("programa", "mes"),
+        ("area_solicitud", "mes"),
+        ("ambito", "canal"),
         ("canal", "mes"),
+        ("tipo_usuario", "mes"),
     ]
     results["cruces"] = {"cruces": [cruce(df, x, y) for x, y in cruces]}
 
@@ -170,17 +174,6 @@ def eda(df: pd.DataFrame) -> dict:
                 },
             }
             for i in por_mes_ext.index
-        ],
-        "por_programa_mes": [
-            {
-                "mes": nombres[int(i)],
-                "mes_num": int(i),
-                "programas": {
-                    str(col): int(v)
-                    for col, v in df[df["mes_num"] == i]["programa"].value_counts().items()
-                },
-            }
-            for i in sorted(df["mes_num"].unique())
         ],
     }
 
@@ -212,37 +205,37 @@ def generar_insights(df: pd.DataFrame, res: dict) -> list:
         }
     )
 
-    # 2. Causa más frecuente
-    causa = df["causa"].value_counts(normalize=True)
-    causa_top, causa_pct = causa.index[0], causa.iloc[0] * 100
+# 2. Ámbito más frecuente
+    ambito = df["ambito"].value_counts(normalize=True)
+    ambito_top, ambito_pct = ambito.index[0], ambito.iloc[0] * 100
     insights.append(
         {
             "tipo": "prioridad",
-            "titulo": f"Causa crítica: {causa_top.title()}",
+            "titulo": f"Ámbito predominante: {ambito_top.title()}",
             "descripcion": (
-                f"La causa '{causa_top.title()}' concentra el {causa_pct:.1f}% de las PQRS "
-                f"({int(causa.iloc[0] * len(df))} registros). Es la principal fuente "
-                "de inconformidad reportada por los usuarios."
+                f"El ámbito '{ambito_top.title()}' concentra el {ambito_pct:.1f}% de las PQRS "
+                f"({int(ambito.iloc[0] * len(df))} registros). Es la principal línea de servicio "
+                "en la que se concentra la inconformidad reportada por los usuarios."
             ),
-            "metrica": f"{causa_pct:.1f}%",
-            "valor": causa_top.title(),
+            "metrica": f"{ambito_pct:.1f}%",
+            "valor": ambito_top.title(),
             "orden": 2,
         }
     )
 
-    # 3. Top 3 causas
-    causa3 = causa.head(3)
-    suma3 = causa3.sum() * 100
+    # 3. Top 3 ámbitos
+    ambito3 = ambito.head(3)
+    suma3 = ambito3.sum() * 100
     insights.append(
         {
             "tipo": "hallazgo",
-            "titulo": "Concentración de causas",
+            "titulo": "Concentración de ámbitos",
             "descripcion": (
-                f"Las 3 causas más frecuentes ({', '.join(c.title() for c in causa3.index)}) "
+                f"Los 3 ámbitos más frecuentes ({', '.join(c.title() for c in ambito3.index)}) "
                 f"concentran el {suma3:.1f}% de las PQRS analizadas."
             ),
             "metrica": f"{suma3:.1f}%",
-            "valor": "Top 3 causas",
+            "valor": "Top 3 ámbitos",
             "orden": 3,
         }
     )
@@ -282,20 +275,20 @@ def generar_insights(df: pd.DataFrame, res: dict) -> list:
         }
     )
 
-    # 6. Servicio/programa con más PQRS
-    prog = df["programa"].value_counts(normalize=True)
-    prog_top, prog_pct = prog.index[0], prog.iloc[0] * 100
+# 6. Área de solicitud con mayor carga de PQRS
+    area = df["area_solicitud"].value_counts(normalize=True)
+    area_top6, area_pct = area.index[0], area.iloc[0] * 100
     insights.append(
         {
             "tipo": "oportunidad",
-            "titulo": f"Servicio con mayor carga de PQRS: {prog_top.title()}",
+            "titulo": f"Área con mayor carga de PQRS: {area_top6.title()}",
             "descripcion": (
-                f"El servicio '{prog_top.title()}' acumula el {prog_pct:.1f}% de las PQRS "
-                f"({int(prog.iloc[0] * len(df))} registros), siendo el principal foco "
+                f"El área de solicitud '{area_top6.title()}' acumula el {area_pct:.1f}% de las PQRS "
+                f"({int(area.iloc[0] * len(df))} registros), siendo el principal foco "
                 "de atención para gestiones de mejora."
             ),
-            "metrica": f"{prog_pct:.1f}%",
-            "valor": prog_top.title(),
+            "metrica": f"{area_pct:.1f}%",
+            "valor": area_top6.title(),
             "orden": 6,
         }
     )
@@ -341,7 +334,7 @@ def exportar(df: pd.DataFrame) -> None:
     results = eda(df)
     results["insights"] = {
         "insights": generar_insights(df, results),
-        "fecha_generacion": "2025-09-11",
+        "fecha_generacion": str(date.today()),
         "total_registros_analizados": int(len(df)),
         "periodo": "II semestre 2025",
     }

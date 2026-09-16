@@ -29,7 +29,7 @@ def test_health():
 # ── Resumen ───────────────────────────────────────────────────────
 def test_resumen_total():
     data = client.get("/api/resumen").json()
-    assert data["total_pqrs"] == 2252
+    assert data["total_pqrs"] == 2251
     assert data["periodo"]["inicio"] == "2025-07-01"
     assert data["periodo"]["fin"] == "2025-12-31"
 
@@ -48,7 +48,7 @@ def test_distribuciones_todas():
 
 
 def test_distribucion_variable():
-    data = client.get("/api/distribuciones/causa").json()
+    data = client.get("/api/distribuciones/ambito").json()
     assert "frecuencias" in data
     assert len(data["frecuencias"]) >= 4
 
@@ -76,12 +76,12 @@ def test_cruces():
 
 
 def test_cruce_por_variables():
-    data = client.get("/api/cruces?variables=causa,canal").json()
+    data = client.get("/api/cruces?variables=area_solicitud,canal").json()
     assert len(data["cruces"]) == 1
 
 
 def test_cruce_inexistente():
-    r = client.get("/api/cruces?variables=causa,regional")
+    r = client.get("/api/cruces?variables=area_solicitud,regional")
     assert r.status_code == 404
 
 
@@ -123,7 +123,7 @@ def test_textual():
 def test_filtros():
     data = client.get("/api/filtros").json()
     assert len(data["tipos"]) >= 3
-    assert len(data["causas"]) >= 3
+    assert len(data["ambitos"]) >= 3
     assert len(data["canales"]) >= 3
-    assert len(data["servicios"]) >= 5
+    assert len(data["areas"]) >= 5
     assert len(data["clusters"]) == 5

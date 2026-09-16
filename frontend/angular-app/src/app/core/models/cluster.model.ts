@@ -16,9 +16,9 @@ export interface ClusterDiasRespuesta {
 
 export interface ClusterPerfil {
   tipo_pqrs_grupo: ClusterVarPerfil;
-  causa: ClusterVarPerfil;
   canal: ClusterVarPerfil;
-  programa: ClusterVarPerfil;
+  area_solicitud: ClusterVarPerfil;
+  ambito: ClusterVarPerfil;
   dias_respuesta: ClusterDiasRespuesta;
 }
 

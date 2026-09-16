@@ -1,8 +1,8 @@
 <div class="space-y-6">
   <div>
-    <h2 class="hel-page-title">Causas</h2>
+    <h2 class="hel-page-title">Ámbito</h2>
     <p class="hel-page-subtitle">
-      Análisis de las causas de inconformidad reportadas y su relación con tipo, servicio y tiempo de respuesta.
+      Distribución de PQRS por ámbito de atención (PAD agudo/crónico, ambulatorio, hospitalización) y su relación con el tipo de PQRS, el área de solicitud y el tiempo de respuesta.
     </p>
   </div>
 
@@ -28,16 +28,16 @@
       </div>
     }
 
-    <app-chart-container titulo="Ranking de causas" subtitulo="Las 3 primeras concentran el 89.7% de las PQRS" [opciones]="opcionesRanking()" [cargando]="cargando()" />
+    <app-chart-container titulo="Ranking por ámbito de atención" subtitulo="PAD agudo/crónico, ambulatorio y hospitalización" [opciones]="opcionesRanking()" [cargando]="cargando()" />
 
     <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
-      <app-chart-container titulo="Causa × Tipo de PQRS" subtitulo="Barras por tipo de PQRS" [opciones]="opcionesTipoCausa()" [cargando]="cargando()" altura="320px" />
-      <app-chart-container titulo="Causa × Servicio" subtitulo="Mapa de calor de causa-servicio" [opciones]="opcionesCausaServicio()" [cargando]="cargando()" altura="320px" />
+      <app-chart-container titulo="Ámbito × Tipo de PQRS" subtitulo="Barras por tipo de PQRS" [opciones]="opcionesTipoAmbito()" [cargando]="cargando()" altura="320px" />
+      <app-chart-container titulo="Ámbito × Área de solicitud" subtitulo="Mapa de calor de ámbito-área" [opciones]="opcionesAmbitoArea()" [cargando]="cargando()" altura="320px" />
     </div>
 
     <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
       <app-chart-container titulo="Distribución del tiempo de respuesta" subtitulo="Rangos de días hasta el cierre" [opciones]="opcionesTiempo()" [cargando]="cargando()" altura="320px" />
-      <app-chart-container titulo="PQRS por mes" [opciones]="opcionesCausaMes()" [cargando]="cargando()" altura="320px" />
+      <app-chart-container titulo="PQRS por mes" [opciones]="opcionesPorMes()" [cargando]="cargando()" altura="320px" />
     </div>
   }
 </div>

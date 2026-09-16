@@ -1,8 +1,8 @@
 <div class="space-y-6">
   <div>
-    <h2 class="hel-page-title">Servicios</h2>
+    <h2 class="hel-page-title">Áreas de solicitud</h2>
     <p class="hel-page-subtitle">
-      Distribución de PQRS por programa o servicio y su relación con tipos de PQRS, causas y tiempos de respuesta.
+      Distribución de PQRS por área de solicitud y su relación con tipos de PQRS, ámbito de atención y tiempos de respuesta.
     </p>
   </div>
 
@@ -28,13 +28,13 @@
       </div>
     }
 
-    <app-chart-container titulo="Distribución por servicio" subtitulo="Programas o servicios con PQRS radicadas" [opciones]="opcionesServicios()" [cargando]="cargando()" />
+    <app-chart-container titulo="Distribución por área de solicitud" subtitulo="Áreas con PQRS radicadas" [opciones]="opcionesAreas()" [cargando]="cargando()" />
 
     <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
-      <app-chart-container titulo="Servicio × Tipo de PQRS" subtitulo="Barras por tipo de PQRS" [opciones]="opcionesServicioTipo()" [cargando]="cargando()" altura="320px" />
-      <app-chart-container titulo="Servicio × Causa" subtitulo="Mapa de calor de servicio-causa" [opciones]="opcionesServicioCausa()" [cargando]="cargando()" altura="320px" />
+      <app-chart-container titulo="Área × Tipo de PQRS" subtitulo="Barras por tipo de PQRS" [opciones]="opcionesAreaTipo()" [cargando]="cargando()" altura="320px" />
+      <app-chart-container titulo="Área × Ámbito" subtitulo="Mapa de calor de área-ámbito" [opciones]="opcionesAreaAmbito()" [cargando]="cargando()" altura="320px" />
     </div>
 
-    <app-chart-container titulo="Distribución del tiempo de respuesta" subtitulo="Rangos de días hasta el cierre" [opciones]="opcionesTiempoServicio()" [cargando]="cargando()" altura="300px" />
+    <app-chart-container titulo="Distribución del tiempo de respuesta" subtitulo="Rangos de días hasta el cierre" [opciones]="opcionesTiempoArea()" [cargando]="cargando()" altura="300px" />
   }
 </div>

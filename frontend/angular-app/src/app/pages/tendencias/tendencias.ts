@@ -33,7 +33,7 @@ export class Tendencias {
 
   protected readonly temporal = signal<Temporal | null>(null);
   protected readonly distribuciones = signal<Distribuciones | null>(null);
-  protected readonly cruceCausaCanal = signal<Cruce | null>(null);
+  protected readonly cruceAreaCanal = signal<Cruce | null>(null);
   protected readonly hayError = signal(false);
 
   protected readonly cargando = computed(() => this.temporal() === null && !this.hayError());
@@ -52,12 +52,12 @@ export class Tendencias {
     combineLatest([
       this.api.getTemporal(),
       this.api.getDistribuciones(),
-      this.api.getCruces('causa,canal'),
+      this.api.getCruces('area_solicitud,canal'),
     ]).subscribe({
       next: ([temporal, distribuciones, cruces]) => {
         this.temporal.set(temporal);
         this.distribuciones.set(distribuciones);
-        this.cruceCausaCanal.set(cruces.cruces[0] ?? null);
+        this.cruceAreaCanal.set(cruces.cruces[0] ?? null);
         this.hayError.set(false);
       },
       error: () => this.hayError.set(true),
@@ -102,8 +102,8 @@ export class Tendencias {
     return convertidos.length > 0 ? opcionBarrasVertical(convertidos) : null;
   });
 
-  protected readonly opcionesCausaCanal = computed(() => {
-    const cruce = this.cruceCausaCanal();
+  protected readonly opcionesAreaCanal = computed(() => {
+    const cruce = this.cruceAreaCanal();
     if (!cruce) {
       return null;
     }

@@ -22,9 +22,9 @@ def _categorias(variable: str) -> list[str]:
 def obtener_filtros() -> dict:
     return {
         "tipos": _categorias("tipo_pqrs"),
-        "causas": _categorias("causa"),
+        "ambitos": _categorias("ambito"),
         "canales": _categorias("canal"),
-        "servicios": _categorias("programa"),
+        "areas": _categorias("area_solicitud"),
         "meses": [
             {m["mes_num"]: m["mes"]} for m in _temporal["por_mes"]
         ],

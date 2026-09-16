@@ -2,7 +2,7 @@
   <div>
     <h2 class="hel-page-title">Tendencias</h2>
     <p class="hel-page-subtitle">
-      Evolución temporal de las PQRS y comparación entre tipos, canales y causas.
+      Evolución temporal de las PQRS y comparación entre tipos, canales y áreas de solicitud.
     </p>
   </div>
 
@@ -26,6 +26,6 @@
       <app-chart-container titulo="Frecuencia por canal" [opciones]="opcionesCanalBarras()" [cargando]="cargando()" altura="300px" />
     </div>
 
-    <app-chart-container titulo="Causa × Canal" subtitulo="Mapa de calor de combinaciones causa-canal" [opciones]="opcionesCausaCanal()" [cargando]="cargando()" altura="360px" />
+    <app-chart-container titulo="Área de solicitud × Canal" subtitulo="Mapa de calor de combinaciones área-canal" [opciones]="opcionesAreaCanal()" [cargando]="cargando()" altura="360px" />
   }
 </div>

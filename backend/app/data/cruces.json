@@ -2,34 +2,130 @@
   "cruces": [
     {
       "variable_x": "tipo_pqrs_grupo",
-      "variable_y": "causa",
+      "variable_y": "area_solicitud",
       "tabla": [
         {
           "x": "FELICITACION",
           "valores": [
             {
-              "y": "ACCESIBILIDAD",
-              "frecuencia": 5
+              "y": "APLICACIÓN DE MEDICAMENTO",
+              "frecuencia": 88
             },
             {
-              "y": "CONTINUIDAD",
-              "frecuencia": 43
+              "y": "CALLCENTER",
+              "frecuencia": 2
             },
             {
-              "y": "NO APLICA",
-              "frecuencia": 207
-            },
-            {
-              "y": "OPORTUNIDAD",
+              "y": "CLINICA DE HERIDAS",
               "frecuencia": 1
             },
             {
-              "y": "PERTINENCIA",
-              "frecuencia": 2
+              "y": "CUIDADOR",
+              "frecuencia": 0
             },
             {
-              "y": "SEGURIDAD",
-              "frecuencia": 2
+              "y": "DEMORA EN GENERACIÓN DE MIPRES",
+              "frecuencia": 0
+            },
+            {
+              "y": "DIETAS HOSPITALARIAS",
+              "frecuencia": 0
+            },
+            {
+              "y": "ENFERMERIA",
+              "frecuencia": 4
+            },
+            {
+              "y": "ENVÍO DE DOCUMENTACION",
+              "frecuencia": 1
+            },
+            {
+              "y": "FISIATRIA",
+              "frecuencia": 0
+            },
+            {
+              "y": "INFRAESTRUCTURA",
+              "frecuencia": 0
+            },
+            {
+              "y": "INSTITUCIONALIZACIÓN EN UNIDAD DE SALUD MENTAL",
+              "frecuencia": 64
+            },
+            {
+              "y": "INSUMOS O MEDICAMENTOS",
+              "frecuencia": 0
+            },
+            {
+              "y": "LABORATORIOS",
+              "frecuencia": 0
+            },
+            {
+              "y": "MEDICINA GENERAL",
+              "frecuencia": 1
+            },
+            {
+              "y": "MEDICINA INTERNA",
+              "frecuencia": 0
+            },
+            {
+              "y": "MÚLTIPLES SERVICIOS",
+              "frecuencia": 69
+            },
+            {
+              "y": "NUTRICIÓN Y DIETETICA",
+              "frecuencia": 0
+            },
+            {
+              "y": "PERDIDA DE OBJETOS PERSONALES",
+              "frecuencia": 0
+            },
+            {
+              "y": "PSICOLOGIA ADULTO",
+              "frecuencia": 0
+            },
+            {
+              "y": "PSICOLOGIA PEDIATRICO",
+              "frecuencia": 0
+            },
+            {
+              "y": "PSIQUIATRIA ADULTO",
+              "frecuencia": 0
+            },
+            {
+              "y": "PSIQUIATRIA PEDIATRICO",
+              "frecuencia": 0
+            },
+            {
+              "y": "RECOLECCIÓN DE RESIDUOS",
+              "frecuencia": 0
+            },
+            {
+              "y": "REHABILITACIÓN FUNCIONAL",
+              "frecuencia": 1
+            },
+            {
+              "y": "TERAPIA DEL LENGUAJE",
+              "frecuencia": 4
+            },
+            {
+              "y": "TERAPIA FISICA",
+              "frecuencia": 10
+            },
+            {
+              "y": "TERAPIA OCUPACIONAL",
+              "frecuencia": 0
+            },
+            {
+              "y": "TERAPIA RESPIRATORIA",
+              "frecuencia": 0
+            },
+            {
+              "y": "TRABAJO SOCIAL",
+              "frecuencia": 1
+            },
+            {
+              "y": "TRATO HUMANIZADO",
+              "frecuencia": 13
             }
           ]
         },
@@ -37,28 +133,124 @@
           "x": "PETICION",
           "valores": [
             {
-              "y": "ACCESIBILIDAD",
+              "y": "APLICACIÓN DE MEDICAMENTO",
+              "frecuencia": 6
+            },
+            {
+              "y": "CALLCENTER",
+              "frecuencia": 1
+            },
+            {
+              "y": "CLINICA DE HERIDAS",
+              "frecuencia": 2
+            },
+            {
+              "y": "CUIDADOR",
+              "frecuencia": 16
+            },
+            {
+              "y": "DEMORA EN GENERACIÓN DE MIPRES",
+              "frecuencia": 0
+            },
+            {
+              "y": "DIETAS HOSPITALARIAS",
+              "frecuencia": 0
+            },
+            {
+              "y": "ENFERMERIA",
+              "frecuencia": 28
+            },
+            {
+              "y": "ENVÍO DE DOCUMENTACION",
+              "frecuencia": 49
+            },
+            {
+              "y": "FISIATRIA",
+              "frecuencia": 1
+            },
+            {
+              "y": "INFRAESTRUCTURA",
+              "frecuencia": 1
+            },
+            {
+              "y": "INSTITUCIONALIZACIÓN EN UNIDAD DE SALUD MENTAL",
+              "frecuencia": 7
+            },
+            {
+              "y": "INSUMOS O MEDICAMENTOS",
+              "frecuencia": 3
+            },
+            {
+              "y": "LABORATORIOS",
+              "frecuencia": 0
+            },
+            {
+              "y": "MEDICINA GENERAL",
               "frecuencia": 12
             },
             {
-              "y": "CONTINUIDAD",
-              "frecuencia": 148
+              "y": "MEDICINA INTERNA",
+              "frecuencia": 0
             },
             {
-              "y": "NO APLICA",
-              "frecuencia": 33
+              "y": "MÚLTIPLES SERVICIOS",
+              "frecuencia": 110
             },
             {
-              "y": "OPORTUNIDAD",
-              "frecuencia": 31
+              "y": "NUTRICIÓN Y DIETETICA",
+              "frecuencia": 1
             },
             {
-              "y": "PERTINENCIA",
-              "frecuencia": 38
+              "y": "PERDIDA DE OBJETOS PERSONALES",
+              "frecuencia": 1
             },
             {
-              "y": "SEGURIDAD",
-              "frecuencia": 10
+              "y": "PSICOLOGIA ADULTO",
+              "frecuencia": 0
+            },
+            {
+              "y": "PSICOLOGIA PEDIATRICO",
+              "frecuencia": 0
+            },
+            {
+              "y": "PSIQUIATRIA ADULTO",
+              "frecuencia": 3
+            },
+            {
+              "y": "PSIQUIATRIA PEDIATRICO",
+              "frecuencia": 2
+            },
+            {
+              "y": "RECOLECCIÓN DE RESIDUOS",
+              "frecuencia": 0
+            },
+            {
+              "y": "REHABILITACIÓN FUNCIONAL",
+              "frecuencia": 3
+            },
+            {
+              "y": "TERAPIA DEL LENGUAJE",
+              "frecuencia": 4
+            },
+            {
+              "y": "TERAPIA FISICA",
+              "frecuencia": 18
+            },
+            {
+              "y": "TERAPIA OCUPACIONAL",
+              "frecuencia": 0
+            },
+            {
+              "y": "TERAPIA RESPIRATORIA",
+              "frecuencia": 0
+            },
+            {
+              "y": "TRABAJO SOCIAL",
+              "frecuencia": 0
+            },
+            {
+              "y": "TRATO HUMANIZADO",
+              "frecuencia": 4
             }
           ]
         },
@@ -66,28 +258,124 @@
           "x": "QUEJA",
           "valores": [
             {
-              "y": "ACCESIBILIDAD",
+              "y": "APLICACIÓN DE MEDICAMENTO",
               "frecuencia": 1
             },
             {
-              "y": "CONTINUIDAD",
-              "frecuencia": 12
+              "y": "CALLCENTER",
+              "frecuencia": 0
             },
             {
-              "y": "NO APLICA",
-              "frecuencia": 6
+              "y": "CLINICA DE HERIDAS",
+              "frecuencia": 0
             },
             {
-              "y": "OPORTUNIDAD",
+              "y": "CUIDADOR",
+              "frecuencia": 1
+            },
+            {
+              "y": "DEMORA EN GENERACIÓN DE MIPRES",
+              "frecuencia": 0
+            },
+            {
+              "y": "DIETAS HOSPITALARIAS",
+              "frecuencia": 0
+            },
+            {
+              "y": "ENFERMERIA",
               "frecuencia": 5
             },
             {
-              "y": "PERTINENCIA",
-              "frecuencia": 5
+              "y": "ENVÍO DE DOCUMENTACION",
+              "frecuencia": 0
             },
             {
-              "y": "SEGURIDAD",
-              "frecuencia": 8
+              "y": "FISIATRIA",
+              "frecuencia": 0
+            },
+            {
+              "y": "INFRAESTRUCTURA",
+              "frecuencia": 0
+            },
+            {
+              "y": "INSTITUCIONALIZACIÓN EN UNIDAD DE SALUD MENTAL",
+              "frecuencia": 1
+            },
+            {
+              "y": "INSUMOS O MEDICAMENTOS",
+              "frecuencia": 0
+            },
+            {
+              "y": "LABORATORIOS",
+              "frecuencia": 0
+            },
+            {
+              "y": "MEDICINA GENERAL",
+              "frecuencia": 3
+            },
+            {
+              "y": "MEDICINA INTERNA",
+              "frecuencia": 0
+            },
+            {
+              "y": "MÚLTIPLES SERVICIOS",
+              "frecuencia": 9
+            },
+            {
+              "y": "NUTRICIÓN Y DIETETICA",
+              "frecuencia": 0
+            },
+            {
+              "y": "PERDIDA DE OBJETOS PERSONALES",
+              "frecuencia": 0
+            },
+            {
+              "y": "PSICOLOGIA ADULTO",
+              "frecuencia": 0
+            },
+            {
+              "y": "PSICOLOGIA PEDIATRICO",
+              "frecuencia": 0
+            },
+            {
+              "y": "PSIQUIATRIA ADULTO",
+              "frecuencia": 0
+            },
+            {
+              "y": "PSIQUIATRIA PEDIATRICO",
+              "frecuencia": 0
+            },
+            {
+              "y": "RECOLECCIÓN DE RESIDUOS",
+              "frecuencia": 0
+            },
+            {
+              "y": "REHABILITACIÓN FUNCIONAL",
+              "frecuencia": 0
+            },
+            {
+              "y": "TERAPIA DEL LENGUAJE",
+              "frecuencia": 0
+            },
+            {
+              "y": "TERAPIA FISICA",
+              "frecuencia": 1
+            },
+            {
+              "y": "TERAPIA OCUPACIONAL",
+              "frecuencia": 1
+            },
+            {
+              "y": "TERAPIA RESPIRATORIA",
+              "frecuencia": 0
+            },
+            {
+              "y": "TRABAJO SOCIAL",
+              "frecuencia": 0
+            },
+            {
+              "y": "TRATO HUMANIZADO",
+              "frecuencia": 15
             }
           ]
         },
@@ -95,28 +383,760 @@
           "x": "RECLAMO",
           "valores": [
             {
-              "y": "ACCESIBILIDAD",
+              "y": "APLICACIÓN DE MEDICAMENTO",
+              "frecuencia": 103
+            },
+            {
+              "y": "CALLCENTER",
+              "frecuencia": 6
+            },
+            {
+              "y": "CLINICA DE HERIDAS",
+              "frecuencia": 8
+            },
+            {
+              "y": "CUIDADOR",
+              "frecuencia": 84
+            },
+            {
+              "y": "DEMORA EN GENERACIÓN DE MIPRES",
+              "frecuencia": 2
+            },
+            {
+              "y": "DIETAS HOSPITALARIAS",
+              "frecuencia": 4
+            },
+            {
+              "y": "ENFERMERIA",
+              "frecuencia": 265
+            },
+            {
+              "y": "ENVÍO DE DOCUMENTACION",
+              "frecuencia": 23
+            },
+            {
+              "y": "FISIATRIA",
+              "frecuencia": 22
+            },
+            {
+              "y": "INFRAESTRUCTURA",
+              "frecuencia": 2
+            },
+            {
+              "y": "INSTITUCIONALIZACIÓN EN UNIDAD DE SALUD MENTAL",
+              "frecuencia": 5
+            },
+            {
+              "y": "INSUMOS O MEDICAMENTOS",
+              "frecuencia": 16
+            },
+            {
+              "y": "LABORATORIOS",
+              "frecuencia": 15
+            },
+            {
+              "y": "MEDICINA GENERAL",
+              "frecuencia": 192
+            },
+            {
+              "y": "MEDICINA INTERNA",
+              "frecuencia": 3
+            },
+            {
+              "y": "MÚLTIPLES SERVICIOS",
+              "frecuencia": 576
+            },
+            {
+              "y": "NUTRICIÓN Y DIETETICA",
+              "frecuencia": 9
+            },
+            {
+              "y": "PERDIDA DE OBJETOS PERSONALES",
+              "frecuencia": 3
+            },
+            {
+              "y": "PSICOLOGIA ADULTO",
+              "frecuencia": 8
+            },
+            {
+              "y": "PSICOLOGIA PEDIATRICO",
+              "frecuencia": 4
+            },
+            {
+              "y": "PSIQUIATRIA ADULTO",
+              "frecuencia": 3
+            },
+            {
+              "y": "PSIQUIATRIA PEDIATRICO",
+              "frecuencia": 8
+            },
+            {
+              "y": "RECOLECCIÓN DE RESIDUOS",
+              "frecuencia": 33
+            },
+            {
+              "y": "REHABILITACIÓN FUNCIONAL",
               "frecuencia": 43
             },
             {
-              "y": "CONTINUIDAD",
-              "frecuencia": 1329
+              "y": "TERAPIA DEL LENGUAJE",
+              "frecuencia": 35
             },
             {
-              "y": "NO APLICA",
-              "frecuencia": 52
+              "y": "TERAPIA FISICA",
+              "frecuencia": 153
             },
             {
-              "y": "OPORTUNIDAD",
-              "frecuencia": 152
+              "y": "TERAPIA OCUPACIONAL",
+              "frecuencia": 39
             },
             {
-              "y": "PERTINENCIA",
-              "frecuencia": 45
+              "y": "TERAPIA RESPIRATORIA",
+              "frecuencia": 11
             },
             {
-              "y": "SEGURIDAD",
-              "frecuencia": 62
+              "y": "TRABAJO SOCIAL",
+              "frecuencia": 1
+            },
+            {
+              "y": "TRATO HUMANIZADO",
+              "frecuencia": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "variable_x": "area_solicitud",
+      "variable_y": "tipo_pqrs_grupo",
+      "tabla": [
+        {
+          "x": "APLICACIÓN DE MEDICAMENTO",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 88
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 6
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 1
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 103
+            }
+          ]
+        },
+        {
+          "x": "CALLCENTER",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 2
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 1
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 0
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 6
+            }
+          ]
+        },
+        {
+          "x": "CLINICA DE HERIDAS",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 1
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 2
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 0
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 8
+            }
+          ]
+        },
+        {
+          "x": "CUIDADOR",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 0
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 16
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 1
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 84
+            }
+          ]
+        },
+        {
+          "x": "DEMORA EN GENERACIÓN DE MIPRES",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 0
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 0
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 0
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 2
+            }
+          ]
+        },
+        {
+          "x": "DIETAS HOSPITALARIAS",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 0
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 0
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 0
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 4
+            }
+          ]
+        },
+        {
+          "x": "ENFERMERIA",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 4
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 28
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 5
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 265
+            }
+          ]
+        },
+        {
+          "x": "ENVÍO DE DOCUMENTACION",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 1
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 49
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 0
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 23
+            }
+          ]
+        },
+        {
+          "x": "FISIATRIA",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 0
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 1
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 0
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 22
+            }
+          ]
+        },
+        {
+          "x": "INFRAESTRUCTURA",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 0
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 1
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 0
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 2
+            }
+          ]
+        },
+        {
+          "x": "INSTITUCIONALIZACIÓN EN UNIDAD DE SALUD MENTAL",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 64
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 7
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 1
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 5
+            }
+          ]
+        },
+        {
+          "x": "INSUMOS O MEDICAMENTOS",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 0
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 3
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 0
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 16
+            }
+          ]
+        },
+        {
+          "x": "LABORATORIOS",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 0
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 0
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 0
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 15
+            }
+          ]
+        },
+        {
+          "x": "MEDICINA GENERAL",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 1
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 12
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 3
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 192
+            }
+          ]
+        },
+        {
+          "x": "MEDICINA INTERNA",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 0
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 0
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 0
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 3
+            }
+          ]
+        },
+        {
+          "x": "MÚLTIPLES SERVICIOS",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 69
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 110
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 9
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 576
+            }
+          ]
+        },
+        {
+          "x": "NUTRICIÓN Y DIETETICA",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 0
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 1
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 0
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 9
+            }
+          ]
+        },
+        {
+          "x": "PERDIDA DE OBJETOS PERSONALES",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 0
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 1
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 0
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 3
+            }
+          ]
+        },
+        {
+          "x": "PSICOLOGIA ADULTO",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 0
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 0
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 0
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 8
+            }
+          ]
+        },
+        {
+          "x": "PSICOLOGIA PEDIATRICO",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 0
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 0
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 0
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 4
+            }
+          ]
+        },
+        {
+          "x": "PSIQUIATRIA ADULTO",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 0
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 3
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 0
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 3
+            }
+          ]
+        },
+        {
+          "x": "PSIQUIATRIA PEDIATRICO",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 0
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 2
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 0
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 8
+            }
+          ]
+        },
+        {
+          "x": "RECOLECCIÓN DE RESIDUOS",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 0
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 0
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 0
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 33
+            }
+          ]
+        },
+        {
+          "x": "REHABILITACIÓN FUNCIONAL",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 1
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 3
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 0
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 43
+            }
+          ]
+        },
+        {
+          "x": "TERAPIA DEL LENGUAJE",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 4
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 4
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 0
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 35
+            }
+          ]
+        },
+        {
+          "x": "TERAPIA FISICA",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 10
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 18
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 1
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 153
+            }
+          ]
+        },
+        {
+          "x": "TERAPIA OCUPACIONAL",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 0
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 0
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 1
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 39
+            }
+          ]
+        },
+        {
+          "x": "TERAPIA RESPIRATORIA",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 0
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 0
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 0
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 11
+            }
+          ]
+        },
+        {
+          "x": "TRABAJO SOCIAL",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 1
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 0
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 0
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 1
+            }
+          ]
+        },
+        {
+          "x": "TRATO HUMANIZADO",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 13
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 4
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 15
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 7
             }
           ]
         }
@@ -124,66 +1144,26 @@
     },
     {
       "variable_x": "tipo_pqrs_grupo",
-      "variable_y": "programa",
+      "variable_y": "ambito",
       "tabla": [
         {
           "x": "FELICITACION",
           "valores": [
             {
-              "y": "APLICACIÓN DE BIOLOGICO",
-              "frecuencia": 0
+              "y": "AMBULATORIO",
+              "frecuencia": 30
             },
             {
-              "y": "APLICACIÓN DE MEDICAMENTO",
-              "frecuencia": 90
+              "y": "HOSPITALIZACIÓN",
+              "frecuencia": 130
             },
             {
-              "y": "DOMICILIARIO",
-              "frecuencia": 0
+              "y": "PAD AGUDO",
+              "frecuencia": 92
             },
             {
-              "y": "HOSPITALIZACIÓN GENERAL",
-              "frecuencia": 20
-            },
-            {
-              "y": "NEW PALEX",
-              "frecuencia": 0
-            },
-            {
-              "y": "NO VENTILADO",
-              "frecuencia": 20
-            },
-            {
-              "y": "PUNTUAL",
-              "frecuencia": 3
-            },
-            {
-              "y": "SANITAS PREMIUM",
-              "frecuencia": 0
-            },
-            {
-              "y": "UNIDAD DE CUIDADO COGNITIVO",
-              "frecuencia": 1
-            },
-            {
-              "y": "UNIDAD DE CUIDADO CRÓNICO",
-              "frecuencia": 26
-            },
-            {
-              "y": "UNIDAD DE REHABILITACIÓN",
-              "frecuencia": 29
-            },
-            {
-              "y": "UNIDAD DE SALUD MENTAL",
-              "frecuencia": 69
-            },
-            {
-              "y": "VENTILADO",
-              "frecuencia": 2
-            },
-            {
-              "y": "VENTILADO NO INVASIVO",
-              "frecuencia": 0
+              "y": "PAD CRÓNICO",
+              "frecuencia": 7
             }
           ]
         },
@@ -191,60 +1171,20 @@
           "x": "PETICION",
           "valores": [
             {
-              "y": "APLICACIÓN DE BIOLOGICO",
-              "frecuencia": 0
+              "y": "AMBULATORIO",
+              "frecuencia": 47
             },
             {
-              "y": "APLICACIÓN DE MEDICAMENTO",
-              "frecuencia": 8
+              "y": "HOSPITALIZACIÓN",
+              "frecuencia": 75
             },
             {
-              "y": "DOMICILIARIO",
-              "frecuencia": 3
+              "y": "PAD AGUDO",
+              "frecuencia": 49
             },
             {
-              "y": "HOSPITALIZACIÓN GENERAL",
-              "frecuencia": 5
-            },
-            {
-              "y": "NEW PALEX",
-              "frecuencia": 0
-            },
-            {
-              "y": "NO VENTILADO",
-              "frecuencia": 97
-            },
-            {
-              "y": "PUNTUAL",
-              "frecuencia": 39
-            },
-            {
-              "y": "SANITAS PREMIUM",
-              "frecuencia": 2
-            },
-            {
-              "y": "UNIDAD DE CUIDADO COGNITIVO",
-              "frecuencia": 0
-            },
-            {
-              "y": "UNIDAD DE CUIDADO CRÓNICO",
-              "frecuencia": 24
-            },
-            {
-              "y": "UNIDAD DE REHABILITACIÓN",
-              "frecuencia": 44
-            },
-            {
-              "y": "UNIDAD DE SALUD MENTAL",
-              "frecuencia": 44
-            },
-            {
-              "y": "VENTILADO",
-              "frecuencia": 6
-            },
-            {
-              "y": "VENTILADO NO INVASIVO",
-              "frecuencia": 0
+              "y": "PAD CRÓNICO",
+              "frecuencia": 101
             }
           ]
         },
@@ -252,60 +1192,20 @@
           "x": "QUEJA",
           "valores": [
             {
-              "y": "APLICACIÓN DE BIOLOGICO",
+              "y": "AMBULATORIO",
+              "frecuencia": 6
+            },
+            {
+              "y": "HOSPITALIZACIÓN",
+              "frecuencia": 23
+            },
+            {
+              "y": "PAD AGUDO",
               "frecuencia": 0
             },
             {
-              "y": "APLICACIÓN DE MEDICAMENTO",
-              "frecuencia": 0
-            },
-            {
-              "y": "DOMICILIARIO",
-              "frecuencia": 1
-            },
-            {
-              "y": "HOSPITALIZACIÓN GENERAL",
-              "frecuencia": 3
-            },
-            {
-              "y": "NEW PALEX",
-              "frecuencia": 0
-            },
-            {
-              "y": "NO VENTILADO",
+              "y": "PAD CRÓNICO",
               "frecuencia": 8
-            },
-            {
-              "y": "PUNTUAL",
-              "frecuencia": 0
-            },
-            {
-              "y": "SANITAS PREMIUM",
-              "frecuencia": 0
-            },
-            {
-              "y": "UNIDAD DE CUIDADO COGNITIVO",
-              "frecuencia": 0
-            },
-            {
-              "y": "UNIDAD DE CUIDADO CRÓNICO",
-              "frecuencia": 8
-            },
-            {
-              "y": "UNIDAD DE REHABILITACIÓN",
-              "frecuencia": 5
-            },
-            {
-              "y": "UNIDAD DE SALUD MENTAL",
-              "frecuencia": 12
-            },
-            {
-              "y": "VENTILADO",
-              "frecuencia": 0
-            },
-            {
-              "y": "VENTILADO NO INVASIVO",
-              "frecuencia": 0
             }
           ]
         },
@@ -313,1043 +1213,81 @@
           "x": "RECLAMO",
           "valores": [
             {
-              "y": "APLICACIÓN DE BIOLOGICO",
-              "frecuencia": 2
+              "y": "AMBULATORIO",
+              "frecuencia": 332
             },
             {
-              "y": "APLICACIÓN DE MEDICAMENTO",
-              "frecuencia": 211
+              "y": "HOSPITALIZACIÓN",
+              "frecuencia": 110
             },
             {
-              "y": "DOMICILIARIO",
-              "frecuencia": 15
+              "y": "PAD AGUDO",
+              "frecuencia": 501
             },
             {
-              "y": "HOSPITALIZACIÓN GENERAL",
-              "frecuencia": 25
-            },
-            {
-              "y": "NEW PALEX",
-              "frecuencia": 4
-            },
-            {
-              "y": "NO VENTILADO",
-              "frecuencia": 697
-            },
-            {
-              "y": "PUNTUAL",
-              "frecuencia": 279
-            },
-            {
-              "y": "SANITAS PREMIUM",
-              "frecuencia": 7
-            },
-            {
-              "y": "UNIDAD DE CUIDADO COGNITIVO",
-              "frecuencia": 0
-            },
-            {
-              "y": "UNIDAD DE CUIDADO CRÓNICO",
-              "frecuencia": 33
-            },
-            {
-              "y": "UNIDAD DE REHABILITACIÓN",
-              "frecuencia": 314
-            },
-            {
-              "y": "UNIDAD DE SALUD MENTAL",
-              "frecuencia": 51
-            },
-            {
-              "y": "VENTILADO",
-              "frecuencia": 42
-            },
-            {
-              "y": "VENTILADO NO INVASIVO",
-              "frecuencia": 3
+              "y": "PAD CRÓNICO",
+              "frecuencia": 740
             }
           ]
         }
       ]
     },
     {
-      "variable_x": "causa",
-      "variable_y": "programa",
-      "tabla": [
-        {
-          "x": "ACCESIBILIDAD",
-          "valores": [
-            {
-              "y": "APLICACIÓN DE BIOLOGICO",
-              "frecuencia": 0
-            },
-            {
-              "y": "APLICACIÓN DE MEDICAMENTO",
-              "frecuencia": 3
-            },
-            {
-              "y": "DOMICILIARIO",
-              "frecuencia": 1
-            },
-            {
-              "y": "HOSPITALIZACIÓN GENERAL",
-              "frecuencia": 0
-            },
-            {
-              "y": "NEW PALEX",
-              "frecuencia": 0
-            },
-            {
-              "y": "NO VENTILADO",
-              "frecuencia": 23
-            },
-            {
-              "y": "PUNTUAL",
-              "frecuencia": 7
-            },
-            {
-              "y": "SANITAS PREMIUM",
-              "frecuencia": 0
-            },
-            {
-              "y": "UNIDAD DE CUIDADO COGNITIVO",
-              "frecuencia": 0
-            },
-            {
-              "y": "UNIDAD DE CUIDADO CRÓNICO",
-              "frecuencia": 2
-            },
-            {
-              "y": "UNIDAD DE REHABILITACIÓN",
-              "frecuencia": 24
-            },
-            {
-              "y": "UNIDAD DE SALUD MENTAL",
-              "frecuencia": 1
-            },
-            {
-              "y": "VENTILADO",
-              "frecuencia": 0
-            },
-            {
-              "y": "VENTILADO NO INVASIVO",
-              "frecuencia": 0
-            }
-          ]
-        },
-        {
-          "x": "CONTINUIDAD",
-          "valores": [
-            {
-              "y": "APLICACIÓN DE BIOLOGICO",
-              "frecuencia": 2
-            },
-            {
-              "y": "APLICACIÓN DE MEDICAMENTO",
-              "frecuencia": 166
-            },
-            {
-              "y": "DOMICILIARIO",
-              "frecuencia": 16
-            },
-            {
-              "y": "HOSPITALIZACIÓN GENERAL",
-              "frecuencia": 15
-            },
-            {
-              "y": "NEW PALEX",
-              "frecuencia": 3
-            },
-            {
-              "y": "NO VENTILADO",
-              "frecuencia": 687
-            },
-            {
-              "y": "PUNTUAL",
-              "frecuencia": 269
-            },
-            {
-              "y": "SANITAS PREMIUM",
-              "frecuencia": 6
-            },
-            {
-              "y": "UNIDAD DE CUIDADO COGNITIVO",
-              "frecuencia": 1
-            },
-            {
-              "y": "UNIDAD DE CUIDADO CRÓNICO",
-              "frecuencia": 26
-            },
-            {
-              "y": "UNIDAD DE REHABILITACIÓN",
-              "frecuencia": 234
-            },
-            {
-              "y": "UNIDAD DE SALUD MENTAL",
-              "frecuencia": 60
-            },
-            {
-              "y": "VENTILADO",
-              "frecuencia": 44
-            },
-            {
-              "y": "VENTILADO NO INVASIVO",
-              "frecuencia": 3
-            }
-          ]
-        },
-        {
-          "x": "NO APLICA",
-          "valores": [
-            {
-              "y": "APLICACIÓN DE BIOLOGICO",
-              "frecuencia": 0
-            },
-            {
-              "y": "APLICACIÓN DE MEDICAMENTO",
-              "frecuencia": 92
-            },
-            {
-              "y": "DOMICILIARIO",
-              "frecuencia": 0
-            },
-            {
-              "y": "HOSPITALIZACIÓN GENERAL",
-              "frecuencia": 21
-            },
-            {
-              "y": "NEW PALEX",
-              "frecuencia": 0
-            },
-            {
-              "y": "NO VENTILADO",
-              "frecuencia": 39
-            },
-            {
-              "y": "PUNTUAL",
-              "frecuencia": 12
-            },
-            {
-              "y": "SANITAS PREMIUM",
-              "frecuencia": 0
-            },
-            {
-              "y": "UNIDAD DE CUIDADO COGNITIVO",
-              "frecuencia": 0
-            },
-            {
-              "y": "UNIDAD DE CUIDADO CRÓNICO",
-              "frecuencia": 33
-            },
-            {
-              "y": "UNIDAD DE REHABILITACIÓN",
-              "frecuencia": 36
-            },
-            {
-              "y": "UNIDAD DE SALUD MENTAL",
-              "frecuencia": 62
-            },
-            {
-              "y": "VENTILADO",
-              "frecuencia": 3
-            },
-            {
-              "y": "VENTILADO NO INVASIVO",
-              "frecuencia": 0
-            }
-          ]
-        },
-        {
-          "x": "OPORTUNIDAD",
-          "valores": [
-            {
-              "y": "APLICACIÓN DE BIOLOGICO",
-              "frecuencia": 0
-            },
-            {
-              "y": "APLICACIÓN DE MEDICAMENTO",
-              "frecuencia": 17
-            },
-            {
-              "y": "DOMICILIARIO",
-              "frecuencia": 1
-            },
-            {
-              "y": "HOSPITALIZACIÓN GENERAL",
-              "frecuencia": 6
-            },
-            {
-              "y": "NEW PALEX",
-              "frecuencia": 1
-            },
-            {
-              "y": "NO VENTILADO",
-              "frecuencia": 46
-            },
-            {
-              "y": "PUNTUAL",
-              "frecuencia": 23
-            },
-            {
-              "y": "SANITAS PREMIUM",
-              "frecuencia": 2
-            },
-            {
-              "y": "UNIDAD DE CUIDADO COGNITIVO",
-              "frecuencia": 0
-            },
-            {
-              "y": "UNIDAD DE CUIDADO CRÓNICO",
-              "frecuencia": 6
-            },
-            {
-              "y": "UNIDAD DE REHABILITACIÓN",
-              "frecuencia": 83
-            },
-            {
-              "y": "UNIDAD DE SALUD MENTAL",
-              "frecuencia": 3
-            },
-            {
-              "y": "VENTILADO",
-              "frecuencia": 1
-            },
-            {
-              "y": "VENTILADO NO INVASIVO",
-              "frecuencia": 0
-            }
-          ]
-        },
-        {
-          "x": "PERTINENCIA",
-          "valores": [
-            {
-              "y": "APLICACIÓN DE BIOLOGICO",
-              "frecuencia": 0
-            },
-            {
-              "y": "APLICACIÓN DE MEDICAMENTO",
-              "frecuencia": 4
-            },
-            {
-              "y": "DOMICILIARIO",
-              "frecuencia": 0
-            },
-            {
-              "y": "HOSPITALIZACIÓN GENERAL",
-              "frecuencia": 8
-            },
-            {
-              "y": "NEW PALEX",
-              "frecuencia": 0
-            },
-            {
-              "y": "NO VENTILADO",
-              "frecuencia": 19
-            },
-            {
-              "y": "PUNTUAL",
-              "frecuencia": 6
-            },
-            {
-              "y": "SANITAS PREMIUM",
-              "frecuencia": 1
-            },
-            {
-              "y": "UNIDAD DE CUIDADO COGNITIVO",
-              "frecuencia": 0
-            },
-            {
-              "y": "UNIDAD DE CUIDADO CRÓNICO",
-              "frecuencia": 19
-            },
-            {
-              "y": "UNIDAD DE REHABILITACIÓN",
-              "frecuencia": 8
-            },
-            {
-              "y": "UNIDAD DE SALUD MENTAL",
-              "frecuencia": 25
-            },
-            {
-              "y": "VENTILADO",
-              "frecuencia": 0
-            },
-            {
-              "y": "VENTILADO NO INVASIVO",
-              "frecuencia": 0
-            }
-          ]
-        },
-        {
-          "x": "SEGURIDAD",
-          "valores": [
-            {
-              "y": "APLICACIÓN DE BIOLOGICO",
-              "frecuencia": 0
-            },
-            {
-              "y": "APLICACIÓN DE MEDICAMENTO",
-              "frecuencia": 27
-            },
-            {
-              "y": "DOMICILIARIO",
-              "frecuencia": 1
-            },
-            {
-              "y": "HOSPITALIZACIÓN GENERAL",
-              "frecuencia": 3
-            },
-            {
-              "y": "NEW PALEX",
-              "frecuencia": 0
-            },
-            {
-              "y": "NO VENTILADO",
-              "frecuencia": 8
-            },
-            {
-              "y": "PUNTUAL",
-              "frecuencia": 4
-            },
-            {
-              "y": "SANITAS PREMIUM",
-              "frecuencia": 0
-            },
-            {
-              "y": "UNIDAD DE CUIDADO COGNITIVO",
-              "frecuencia": 0
-            },
-            {
-              "y": "UNIDAD DE CUIDADO CRÓNICO",
-              "frecuencia": 5
-            },
-            {
-              "y": "UNIDAD DE REHABILITACIÓN",
-              "frecuencia": 7
-            },
-            {
-              "y": "UNIDAD DE SALUD MENTAL",
-              "frecuencia": 25
-            },
-            {
-              "y": "VENTILADO",
-              "frecuencia": 2
-            },
-            {
-              "y": "VENTILADO NO INVASIVO",
-              "frecuencia": 0
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "variable_x": "causa",
-      "variable_y": "canal",
-      "tabla": [
-        {
-          "x": "ACCESIBILIDAD",
-          "valores": [
-            {
-              "y": "BUZON DE SUGERENCIAS",
-              "frecuencia": 12
-            },
-            {
-              "y": "CALLCENTER",
-              "frecuencia": 1
-            },
-            {
-              "y": "CORREO ELECTRONICO",
-              "frecuencia": 28
-            },
-            {
-              "y": "PCR SANITAS",
-              "frecuencia": 11
-            },
-            {
-              "y": "PRESENCIAL",
-              "frecuencia": 5
-            },
-            {
-              "y": "PÁGINA WEB",
-              "frecuencia": 4
-            }
-          ]
-        },
-        {
-          "x": "CONTINUIDAD",
-          "valores": [
-            {
-              "y": "BUZON DE SUGERENCIAS",
-              "frecuencia": 117
-            },
-            {
-              "y": "CALLCENTER",
-              "frecuencia": 2
-            },
-            {
-              "y": "CORREO ELECTRONICO",
-              "frecuencia": 966
-            },
-            {
-              "y": "PCR SANITAS",
-              "frecuencia": 3
-            },
-            {
-              "y": "PRESENCIAL",
-              "frecuencia": 13
-            },
-            {
-              "y": "PÁGINA WEB",
-              "frecuencia": 431
-            }
-          ]
-        },
-        {
-          "x": "NO APLICA",
-          "valores": [
-            {
-              "y": "BUZON DE SUGERENCIAS",
-              "frecuencia": 145
-            },
-            {
-              "y": "CALLCENTER",
-              "frecuencia": 0
-            },
-            {
-              "y": "CORREO ELECTRONICO",
-              "frecuencia": 34
-            },
-            {
-              "y": "PCR SANITAS",
-              "frecuencia": 1
-            },
-            {
-              "y": "PRESENCIAL",
-              "frecuencia": 7
-            },
-            {
-              "y": "PÁGINA WEB",
-              "frecuencia": 111
-            }
-          ]
-        },
-        {
-          "x": "OPORTUNIDAD",
-          "valores": [
-            {
-              "y": "BUZON DE SUGERENCIAS",
-              "frecuencia": 16
-            },
-            {
-              "y": "CALLCENTER",
-              "frecuencia": 0
-            },
-            {
-              "y": "CORREO ELECTRONICO",
-              "frecuencia": 103
-            },
-            {
-              "y": "PCR SANITAS",
-              "frecuencia": 1
-            },
-            {
-              "y": "PRESENCIAL",
-              "frecuencia": 6
-            },
-            {
-              "y": "PÁGINA WEB",
-              "frecuencia": 63
-            }
-          ]
-        },
-        {
-          "x": "PERTINENCIA",
-          "valores": [
-            {
-              "y": "BUZON DE SUGERENCIAS",
-              "frecuencia": 12
-            },
-            {
-              "y": "CALLCENTER",
-              "frecuencia": 3
-            },
-            {
-              "y": "CORREO ELECTRONICO",
-              "frecuencia": 45
-            },
-            {
-              "y": "PCR SANITAS",
-              "frecuencia": 5
-            },
-            {
-              "y": "PRESENCIAL",
-              "frecuencia": 1
-            },
-            {
-              "y": "PÁGINA WEB",
-              "frecuencia": 24
-            }
-          ]
-        },
-        {
-          "x": "SEGURIDAD",
-          "valores": [
-            {
-              "y": "BUZON DE SUGERENCIAS",
-              "frecuencia": 11
-            },
-            {
-              "y": "CALLCENTER",
-              "frecuencia": 0
-            },
-            {
-              "y": "CORREO ELECTRONICO",
-              "frecuencia": 52
-            },
-            {
-              "y": "PCR SANITAS",
-              "frecuencia": 0
-            },
-            {
-              "y": "PRESENCIAL",
-              "frecuencia": 3
-            },
-            {
-              "y": "PÁGINA WEB",
-              "frecuencia": 16
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "variable_x": "programa",
-      "variable_y": "canal",
-      "tabla": [
-        {
-          "x": "APLICACIÓN DE BIOLOGICO",
-          "valores": [
-            {
-              "y": "BUZON DE SUGERENCIAS",
-              "frecuencia": 2
-            },
-            {
-              "y": "CALLCENTER",
-              "frecuencia": 0
-            },
-            {
-              "y": "CORREO ELECTRONICO",
-              "frecuencia": 0
-            },
-            {
-              "y": "PCR SANITAS",
-              "frecuencia": 0
-            },
-            {
-              "y": "PRESENCIAL",
-              "frecuencia": 0
-            },
-            {
-              "y": "PÁGINA WEB",
-              "frecuencia": 0
-            }
-          ]
-        },
-        {
-          "x": "APLICACIÓN DE MEDICAMENTO",
-          "valores": [
-            {
-              "y": "BUZON DE SUGERENCIAS",
-              "frecuencia": 0
-            },
-            {
-              "y": "CALLCENTER",
-              "frecuencia": 1
-            },
-            {
-              "y": "CORREO ELECTRONICO",
-              "frecuencia": 180
-            },
-            {
-              "y": "PCR SANITAS",
-              "frecuencia": 0
-            },
-            {
-              "y": "PRESENCIAL",
-              "frecuencia": 0
-            },
-            {
-              "y": "PÁGINA WEB",
-              "frecuencia": 128
-            }
-          ]
-        },
-        {
-          "x": "DOMICILIARIO",
-          "valores": [
-            {
-              "y": "BUZON DE SUGERENCIAS",
-              "frecuencia": 5
-            },
-            {
-              "y": "CALLCENTER",
-              "frecuencia": 0
-            },
-            {
-              "y": "CORREO ELECTRONICO",
-              "frecuencia": 5
-            },
-            {
-              "y": "PCR SANITAS",
-              "frecuencia": 0
-            },
-            {
-              "y": "PRESENCIAL",
-              "frecuencia": 2
-            },
-            {
-              "y": "PÁGINA WEB",
-              "frecuencia": 7
-            }
-          ]
-        },
-        {
-          "x": "HOSPITALIZACIÓN GENERAL",
-          "valores": [
-            {
-              "y": "BUZON DE SUGERENCIAS",
-              "frecuencia": 29
-            },
-            {
-              "y": "CALLCENTER",
-              "frecuencia": 0
-            },
-            {
-              "y": "CORREO ELECTRONICO",
-              "frecuencia": 13
-            },
-            {
-              "y": "PCR SANITAS",
-              "frecuencia": 0
-            },
-            {
-              "y": "PRESENCIAL",
-              "frecuencia": 0
-            },
-            {
-              "y": "PÁGINA WEB",
-              "frecuencia": 11
-            }
-          ]
-        },
-        {
-          "x": "NEW PALEX",
-          "valores": [
-            {
-              "y": "BUZON DE SUGERENCIAS",
-              "frecuencia": 0
-            },
-            {
-              "y": "CALLCENTER",
-              "frecuencia": 0
-            },
-            {
-              "y": "CORREO ELECTRONICO",
-              "frecuencia": 3
-            },
-            {
-              "y": "PCR SANITAS",
-              "frecuencia": 0
-            },
-            {
-              "y": "PRESENCIAL",
-              "frecuencia": 0
-            },
-            {
-              "y": "PÁGINA WEB",
-              "frecuencia": 1
-            }
-          ]
-        },
-        {
-          "x": "NO VENTILADO",
-          "valores": [
-            {
-              "y": "BUZON DE SUGERENCIAS",
-              "frecuencia": 41
-            },
-            {
-              "y": "CALLCENTER",
-              "frecuencia": 5
-            },
-            {
-              "y": "CORREO ELECTRONICO",
-              "frecuencia": 507
-            },
-            {
-              "y": "PCR SANITAS",
-              "frecuencia": 2
-            },
-            {
-              "y": "PRESENCIAL",
-              "frecuencia": 15
-            },
-            {
-              "y": "PÁGINA WEB",
-              "frecuencia": 252
-            }
-          ]
-        },
-        {
-          "x": "PUNTUAL",
-          "valores": [
-            {
-              "y": "BUZON DE SUGERENCIAS",
-              "frecuencia": 8
-            },
-            {
-              "y": "CALLCENTER",
-              "frecuencia": 0
-            },
-            {
-              "y": "CORREO ELECTRONICO",
-              "frecuencia": 204
-            },
-            {
-              "y": "PCR SANITAS",
-              "frecuencia": 0
-            },
-            {
-              "y": "PRESENCIAL",
-              "frecuencia": 4
-            },
-            {
-              "y": "PÁGINA WEB",
-              "frecuencia": 105
-            }
-          ]
-        },
-        {
-          "x": "SANITAS PREMIUM",
-          "valores": [
-            {
-              "y": "BUZON DE SUGERENCIAS",
-              "frecuencia": 0
-            },
-            {
-              "y": "CALLCENTER",
-              "frecuencia": 0
-            },
-            {
-              "y": "CORREO ELECTRONICO",
-              "frecuencia": 5
-            },
-            {
-              "y": "PCR SANITAS",
-              "frecuencia": 0
-            },
-            {
-              "y": "PRESENCIAL",
-              "frecuencia": 0
-            },
-            {
-              "y": "PÁGINA WEB",
-              "frecuencia": 4
-            }
-          ]
-        },
-        {
-          "x": "UNIDAD DE CUIDADO COGNITIVO",
-          "valores": [
-            {
-              "y": "BUZON DE SUGERENCIAS",
-              "frecuencia": 1
-            },
-            {
-              "y": "CALLCENTER",
-              "frecuencia": 0
-            },
-            {
-              "y": "CORREO ELECTRONICO",
-              "frecuencia": 0
-            },
-            {
-              "y": "PCR SANITAS",
-              "frecuencia": 0
-            },
-            {
-              "y": "PRESENCIAL",
-              "frecuencia": 0
-            },
-            {
-              "y": "PÁGINA WEB",
-              "frecuencia": 0
-            }
-          ]
-        },
-        {
-          "x": "UNIDAD DE CUIDADO CRÓNICO",
-          "valores": [
-            {
-              "y": "BUZON DE SUGERENCIAS",
-              "frecuencia": 47
-            },
-            {
-              "y": "CALLCENTER",
-              "frecuencia": 0
-            },
-            {
-              "y": "CORREO ELECTRONICO",
-              "frecuencia": 32
-            },
-            {
-              "y": "PCR SANITAS",
-              "frecuencia": 1
-            },
-            {
-              "y": "PRESENCIAL",
-              "frecuencia": 2
-            },
-            {
-              "y": "PÁGINA WEB",
-              "frecuencia": 9
-            }
-          ]
-        },
-        {
-          "x": "UNIDAD DE REHABILITACIÓN",
-          "valores": [
-            {
-              "y": "BUZON DE SUGERENCIAS",
-              "frecuencia": 89
-            },
-            {
-              "y": "CALLCENTER",
-              "frecuencia": 0
-            },
-            {
-              "y": "CORREO ELECTRONICO",
-              "frecuencia": 186
-            },
-            {
-              "y": "PCR SANITAS",
-              "frecuencia": 16
-            },
-            {
-              "y": "PRESENCIAL",
-              "frecuencia": 8
-            },
-            {
-              "y": "PÁGINA WEB",
-              "frecuencia": 93
-            }
-          ]
-        },
-        {
-          "x": "UNIDAD DE SALUD MENTAL",
-          "valores": [
-            {
-              "y": "BUZON DE SUGERENCIAS",
-              "frecuencia": 90
-            },
-            {
-              "y": "CALLCENTER",
-              "frecuencia": 0
-            },
-            {
-              "y": "CORREO ELECTRONICO",
-              "frecuencia": 51
-            },
-            {
-              "y": "PCR SANITAS",
-              "frecuencia": 2
-            },
-            {
-              "y": "PRESENCIAL",
-              "frecuencia": 4
-            },
-            {
-              "y": "PÁGINA WEB",
-              "frecuencia": 29
-            }
-          ]
-        },
-        {
-          "x": "VENTILADO",
-          "valores": [
-            {
-              "y": "BUZON DE SUGERENCIAS",
-              "frecuencia": 1
-            },
-            {
-              "y": "CALLCENTER",
-              "frecuencia": 0
-            },
-            {
-              "y": "CORREO ELECTRONICO",
-              "frecuencia": 40
-            },
-            {
-              "y": "PCR SANITAS",
-              "frecuencia": 0
-            },
-            {
-              "y": "PRESENCIAL",
-              "frecuencia": 0
-            },
-            {
-              "y": "PÁGINA WEB",
-              "frecuencia": 9
-            }
-          ]
-        },
-        {
-          "x": "VENTILADO NO INVASIVO",
-          "valores": [
-            {
-              "y": "BUZON DE SUGERENCIAS",
-              "frecuencia": 0
-            },
-            {
-              "y": "CALLCENTER",
-              "frecuencia": 0
-            },
-            {
-              "y": "CORREO ELECTRONICO",
-              "frecuencia": 2
-            },
-            {
-              "y": "PCR SANITAS",
-              "frecuencia": 0
-            },
-            {
-              "y": "PRESENCIAL",
-              "frecuencia": 0
-            },
-            {
-              "y": "PÁGINA WEB",
-              "frecuencia": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "variable_x": "programa",
+      "variable_x": "ambito",
       "variable_y": "tipo_pqrs_grupo",
       "tabla": [
         {
-          "x": "APLICACIÓN DE BIOLOGICO",
+          "x": "AMBULATORIO",
           "valores": [
             {
               "y": "FELICITACION",
-              "frecuencia": 0
+              "frecuencia": 30
             },
             {
               "y": "PETICION",
-              "frecuencia": 0
+              "frecuencia": 47
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 6
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 332
+            }
+          ]
+        },
+        {
+          "x": "HOSPITALIZACIÓN",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 130
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 75
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 23
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 110
+            }
+          ]
+        },
+        {
+          "x": "PAD AGUDO",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 92
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 49
             },
             {
               "y": "QUEJA",
@@ -1357,280 +1295,2046 @@
             },
             {
               "y": "RECLAMO",
-              "frecuencia": 2
+              "frecuencia": 501
             }
           ]
         },
+        {
+          "x": "PAD CRÓNICO",
+          "valores": [
+            {
+              "y": "FELICITACION",
+              "frecuencia": 7
+            },
+            {
+              "y": "PETICION",
+              "frecuencia": 101
+            },
+            {
+              "y": "QUEJA",
+              "frecuencia": 8
+            },
+            {
+              "y": "RECLAMO",
+              "frecuencia": 740
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "variable_x": "area_solicitud",
+      "variable_y": "ambito",
+      "tabla": [
         {
           "x": "APLICACIÓN DE MEDICAMENTO",
           "valores": [
             {
-              "y": "FELICITACION",
-              "frecuencia": 90
+              "y": "AMBULATORIO",
+              "frecuencia": 6
             },
             {
-              "y": "PETICION",
-              "frecuencia": 8
+              "y": "HOSPITALIZACIÓN",
+              "frecuencia": 3
             },
             {
-              "y": "QUEJA",
-              "frecuencia": 0
+              "y": "PAD AGUDO",
+              "frecuencia": 188
             },
             {
-              "y": "RECLAMO",
-              "frecuencia": 211
+              "y": "PAD CRÓNICO",
+              "frecuencia": 1
             }
           ]
         },
         {
-          "x": "DOMICILIARIO",
+          "x": "CALLCENTER",
           "valores": [
             {
-              "y": "FELICITACION",
+              "y": "AMBULATORIO",
+              "frecuencia": 6
+            },
+            {
+              "y": "HOSPITALIZACIÓN",
               "frecuencia": 0
             },
             {
-              "y": "PETICION",
-              "frecuencia": 3
-            },
-            {
-              "y": "QUEJA",
+              "y": "PAD AGUDO",
               "frecuencia": 1
             },
             {
-              "y": "RECLAMO",
-              "frecuencia": 15
+              "y": "PAD CRÓNICO",
+              "frecuencia": 2
             }
           ]
         },
         {
-          "x": "HOSPITALIZACIÓN GENERAL",
+          "x": "CLINICA DE HERIDAS",
           "valores": [
             {
-              "y": "FELICITACION",
-              "frecuencia": 20
-            },
-            {
-              "y": "PETICION",
+              "y": "AMBULATORIO",
               "frecuencia": 5
             },
             {
-              "y": "QUEJA",
+              "y": "HOSPITALIZACIÓN",
+              "frecuencia": 0
+            },
+            {
+              "y": "PAD AGUDO",
+              "frecuencia": 5
+            },
+            {
+              "y": "PAD CRÓNICO",
+              "frecuencia": 1
+            }
+          ]
+        },
+        {
+          "x": "CUIDADOR",
+          "valores": [
+            {
+              "y": "AMBULATORIO",
+              "frecuencia": 0
+            },
+            {
+              "y": "HOSPITALIZACIÓN",
+              "frecuencia": 0
+            },
+            {
+              "y": "PAD AGUDO",
+              "frecuencia": 22
+            },
+            {
+              "y": "PAD CRÓNICO",
+              "frecuencia": 79
+            }
+          ]
+        },
+        {
+          "x": "DEMORA EN GENERACIÓN DE MIPRES",
+          "valores": [
+            {
+              "y": "AMBULATORIO",
+              "frecuencia": 0
+            },
+            {
+              "y": "HOSPITALIZACIÓN",
+              "frecuencia": 0
+            },
+            {
+              "y": "PAD AGUDO",
+              "frecuencia": 0
+            },
+            {
+              "y": "PAD CRÓNICO",
+              "frecuencia": 2
+            }
+          ]
+        },
+        {
+          "x": "DIETAS HOSPITALARIAS",
+          "valores": [
+            {
+              "y": "AMBULATORIO",
+              "frecuencia": 0
+            },
+            {
+              "y": "HOSPITALIZACIÓN",
               "frecuencia": 3
             },
             {
-              "y": "RECLAMO",
-              "frecuencia": 25
+              "y": "PAD AGUDO",
+              "frecuencia": 1
+            },
+            {
+              "y": "PAD CRÓNICO",
+              "frecuencia": 0
             }
           ]
         },
         {
-          "x": "NEW PALEX",
+          "x": "ENFERMERIA",
           "valores": [
             {
-              "y": "FELICITACION",
-              "frecuencia": 0
+              "y": "AMBULATORIO",
+              "frecuencia": 7
             },
             {
-              "y": "PETICION",
-              "frecuencia": 0
+              "y": "HOSPITALIZACIÓN",
+              "frecuencia": 9
             },
             {
-              "y": "QUEJA",
-              "frecuencia": 0
+              "y": "PAD AGUDO",
+              "frecuencia": 49
             },
             {
-              "y": "RECLAMO",
-              "frecuencia": 4
+              "y": "PAD CRÓNICO",
+              "frecuencia": 237
             }
           ]
         },
         {
-          "x": "NO VENTILADO",
+          "x": "ENVÍO DE DOCUMENTACION",
           "valores": [
             {
-              "y": "FELICITACION",
-              "frecuencia": 20
+              "y": "AMBULATORIO",
+              "frecuencia": 5
             },
             {
-              "y": "PETICION",
-              "frecuencia": 97
+              "y": "HOSPITALIZACIÓN",
+              "frecuencia": 17
             },
             {
-              "y": "QUEJA",
-              "frecuencia": 8
+              "y": "PAD AGUDO",
+              "frecuencia": 13
             },
             {
-              "y": "RECLAMO",
-              "frecuencia": 697
+              "y": "PAD CRÓNICO",
+              "frecuencia": 38
             }
           ]
         },
         {
-          "x": "PUNTUAL",
+          "x": "FISIATRIA",
           "valores": [
             {
-              "y": "FELICITACION",
+              "y": "AMBULATORIO",
+              "frecuencia": 17
+            },
+            {
+              "y": "HOSPITALIZACIÓN",
+              "frecuencia": 1
+            },
+            {
+              "y": "PAD AGUDO",
               "frecuencia": 3
             },
             {
-              "y": "PETICION",
-              "frecuencia": 39
-            },
-            {
-              "y": "QUEJA",
-              "frecuencia": 0
-            },
-            {
-              "y": "RECLAMO",
-              "frecuencia": 279
+              "y": "PAD CRÓNICO",
+              "frecuencia": 2
             }
           ]
         },
         {
-          "x": "SANITAS PREMIUM",
+          "x": "INFRAESTRUCTURA",
           "valores": [
             {
-              "y": "FELICITACION",
-              "frecuencia": 0
-            },
-            {
-              "y": "PETICION",
+              "y": "AMBULATORIO",
               "frecuencia": 2
             },
             {
-              "y": "QUEJA",
+              "y": "HOSPITALIZACIÓN",
+              "frecuencia": 1
+            },
+            {
+              "y": "PAD AGUDO",
               "frecuencia": 0
             },
             {
-              "y": "RECLAMO",
+              "y": "PAD CRÓNICO",
+              "frecuencia": 0
+            }
+          ]
+        },
+        {
+          "x": "INSTITUCIONALIZACIÓN EN UNIDAD DE SALUD MENTAL",
+          "valores": [
+            {
+              "y": "AMBULATORIO",
+              "frecuencia": 0
+            },
+            {
+              "y": "HOSPITALIZACIÓN",
+              "frecuencia": 77
+            },
+            {
+              "y": "PAD AGUDO",
+              "frecuencia": 0
+            },
+            {
+              "y": "PAD CRÓNICO",
+              "frecuencia": 0
+            }
+          ]
+        },
+        {
+          "x": "INSUMOS O MEDICAMENTOS",
+          "valores": [
+            {
+              "y": "AMBULATORIO",
+              "frecuencia": 0
+            },
+            {
+              "y": "HOSPITALIZACIÓN",
+              "frecuencia": 2
+            },
+            {
+              "y": "PAD AGUDO",
+              "frecuencia": 4
+            },
+            {
+              "y": "PAD CRÓNICO",
+              "frecuencia": 13
+            }
+          ]
+        },
+        {
+          "x": "LABORATORIOS",
+          "valores": [
+            {
+              "y": "AMBULATORIO",
+              "frecuencia": 0
+            },
+            {
+              "y": "HOSPITALIZACIÓN",
+              "frecuencia": 1
+            },
+            {
+              "y": "PAD AGUDO",
+              "frecuencia": 6
+            },
+            {
+              "y": "PAD CRÓNICO",
+              "frecuencia": 8
+            }
+          ]
+        },
+        {
+          "x": "MEDICINA GENERAL",
+          "valores": [
+            {
+              "y": "AMBULATORIO",
+              "frecuencia": 5
+            },
+            {
+              "y": "HOSPITALIZACIÓN",
+              "frecuencia": 7
+            },
+            {
+              "y": "PAD AGUDO",
+              "frecuencia": 81
+            },
+            {
+              "y": "PAD CRÓNICO",
+              "frecuencia": 115
+            }
+          ]
+        },
+        {
+          "x": "MEDICINA INTERNA",
+          "valores": [
+            {
+              "y": "AMBULATORIO",
+              "frecuencia": 2
+            },
+            {
+              "y": "HOSPITALIZACIÓN",
+              "frecuencia": 0
+            },
+            {
+              "y": "PAD AGUDO",
+              "frecuencia": 0
+            },
+            {
+              "y": "PAD CRÓNICO",
+              "frecuencia": 1
+            }
+          ]
+        },
+        {
+          "x": "MÚLTIPLES SERVICIOS",
+          "valores": [
+            {
+              "y": "AMBULATORIO",
+              "frecuencia": 136
+            },
+            {
+              "y": "HOSPITALIZACIÓN",
+              "frecuencia": 173
+            },
+            {
+              "y": "PAD AGUDO",
+              "frecuencia": 175
+            },
+            {
+              "y": "PAD CRÓNICO",
+              "frecuencia": 280
+            }
+          ]
+        },
+        {
+          "x": "NUTRICIÓN Y DIETETICA",
+          "valores": [
+            {
+              "y": "AMBULATORIO",
+              "frecuencia": 0
+            },
+            {
+              "y": "HOSPITALIZACIÓN",
+              "frecuencia": 1
+            },
+            {
+              "y": "PAD AGUDO",
+              "frecuencia": 3
+            },
+            {
+              "y": "PAD CRÓNICO",
+              "frecuencia": 6
+            }
+          ]
+        },
+        {
+          "x": "PERDIDA DE OBJETOS PERSONALES",
+          "valores": [
+            {
+              "y": "AMBULATORIO",
+              "frecuencia": 0
+            },
+            {
+              "y": "HOSPITALIZACIÓN",
+              "frecuencia": 4
+            },
+            {
+              "y": "PAD AGUDO",
+              "frecuencia": 0
+            },
+            {
+              "y": "PAD CRÓNICO",
+              "frecuencia": 0
+            }
+          ]
+        },
+        {
+          "x": "PSICOLOGIA ADULTO",
+          "valores": [
+            {
+              "y": "AMBULATORIO",
+              "frecuencia": 5
+            },
+            {
+              "y": "HOSPITALIZACIÓN",
+              "frecuencia": 0
+            },
+            {
+              "y": "PAD AGUDO",
+              "frecuencia": 1
+            },
+            {
+              "y": "PAD CRÓNICO",
+              "frecuencia": 2
+            }
+          ]
+        },
+        {
+          "x": "PSICOLOGIA PEDIATRICO",
+          "valores": [
+            {
+              "y": "AMBULATORIO",
+              "frecuencia": 3
+            },
+            {
+              "y": "HOSPITALIZACIÓN",
+              "frecuencia": 0
+            },
+            {
+              "y": "PAD AGUDO",
+              "frecuencia": 0
+            },
+            {
+              "y": "PAD CRÓNICO",
+              "frecuencia": 1
+            }
+          ]
+        },
+        {
+          "x": "PSIQUIATRIA ADULTO",
+          "valores": [
+            {
+              "y": "AMBULATORIO",
+              "frecuencia": 3
+            },
+            {
+              "y": "HOSPITALIZACIÓN",
+              "frecuencia": 3
+            },
+            {
+              "y": "PAD AGUDO",
+              "frecuencia": 0
+            },
+            {
+              "y": "PAD CRÓNICO",
+              "frecuencia": 0
+            }
+          ]
+        },
+        {
+          "x": "PSIQUIATRIA PEDIATRICO",
+          "valores": [
+            {
+              "y": "AMBULATORIO",
+              "frecuencia": 10
+            },
+            {
+              "y": "HOSPITALIZACIÓN",
+              "frecuencia": 0
+            },
+            {
+              "y": "PAD AGUDO",
+              "frecuencia": 0
+            },
+            {
+              "y": "PAD CRÓNICO",
+              "frecuencia": 0
+            }
+          ]
+        },
+        {
+          "x": "RECOLECCIÓN DE RESIDUOS",
+          "valores": [
+            {
+              "y": "AMBULATORIO",
+              "frecuencia": 0
+            },
+            {
+              "y": "HOSPITALIZACIÓN",
+              "frecuencia": 1
+            },
+            {
+              "y": "PAD AGUDO",
+              "frecuencia": 30
+            },
+            {
+              "y": "PAD CRÓNICO",
+              "frecuencia": 2
+            }
+          ]
+        },
+        {
+          "x": "REHABILITACIÓN FUNCIONAL",
+          "valores": [
+            {
+              "y": "AMBULATORIO",
+              "frecuencia": 46
+            },
+            {
+              "y": "HOSPITALIZACIÓN",
+              "frecuencia": 0
+            },
+            {
+              "y": "PAD AGUDO",
+              "frecuencia": 1
+            },
+            {
+              "y": "PAD CRÓNICO",
+              "frecuencia": 0
+            }
+          ]
+        },
+        {
+          "x": "TERAPIA DEL LENGUAJE",
+          "valores": [
+            {
+              "y": "AMBULATORIO",
+              "frecuencia": 27
+            },
+            {
+              "y": "HOSPITALIZACIÓN",
+              "frecuencia": 0
+            },
+            {
+              "y": "PAD AGUDO",
+              "frecuencia": 9
+            },
+            {
+              "y": "PAD CRÓNICO",
               "frecuencia": 7
             }
           ]
         },
         {
-          "x": "UNIDAD DE CUIDADO COGNITIVO",
+          "x": "TERAPIA FISICA",
           "valores": [
             {
-              "y": "FELICITACION",
+              "y": "AMBULATORIO",
+              "frecuencia": 104
+            },
+            {
+              "y": "HOSPITALIZACIÓN",
               "frecuencia": 1
             },
             {
-              "y": "PETICION",
-              "frecuencia": 0
+              "y": "PAD AGUDO",
+              "frecuencia": 42
             },
             {
-              "y": "QUEJA",
-              "frecuencia": 0
-            },
-            {
-              "y": "RECLAMO",
-              "frecuencia": 0
+              "y": "PAD CRÓNICO",
+              "frecuencia": 35
             }
           ]
         },
         {
-          "x": "UNIDAD DE CUIDADO CRÓNICO",
+          "x": "TERAPIA OCUPACIONAL",
           "valores": [
             {
-              "y": "FELICITACION",
-              "frecuencia": 26
+              "y": "AMBULATORIO",
+              "frecuencia": 21
             },
             {
-              "y": "PETICION",
-              "frecuencia": 24
+              "y": "HOSPITALIZACIÓN",
+              "frecuencia": 0
             },
             {
-              "y": "QUEJA",
-              "frecuencia": 8
-            },
-            {
-              "y": "RECLAMO",
-              "frecuencia": 33
-            }
-          ]
-        },
-        {
-          "x": "UNIDAD DE REHABILITACIÓN",
-          "valores": [
-            {
-              "y": "FELICITACION",
-              "frecuencia": 29
-            },
-            {
-              "y": "PETICION",
-              "frecuencia": 44
-            },
-            {
-              "y": "QUEJA",
+              "y": "PAD AGUDO",
               "frecuencia": 5
             },
             {
-              "y": "RECLAMO",
-              "frecuencia": 314
+              "y": "PAD CRÓNICO",
+              "frecuencia": 14
             }
           ]
         },
         {
-          "x": "UNIDAD DE SALUD MENTAL",
+          "x": "TERAPIA RESPIRATORIA",
           "valores": [
             {
-              "y": "FELICITACION",
-              "frecuencia": 69
-            },
-            {
-              "y": "PETICION",
-              "frecuencia": 44
-            },
-            {
-              "y": "QUEJA",
-              "frecuencia": 12
-            },
-            {
-              "y": "RECLAMO",
-              "frecuencia": 51
-            }
-          ]
-        },
-        {
-          "x": "VENTILADO",
-          "valores": [
-            {
-              "y": "FELICITACION",
+              "y": "AMBULATORIO",
               "frecuencia": 2
             },
             {
-              "y": "PETICION",
-              "frecuencia": 6
+              "y": "HOSPITALIZACIÓN",
+              "frecuencia": 1
             },
             {
-              "y": "QUEJA",
-              "frecuencia": 0
+              "y": "PAD AGUDO",
+              "frecuencia": 3
             },
             {
-              "y": "RECLAMO",
-              "frecuencia": 42
+              "y": "PAD CRÓNICO",
+              "frecuencia": 5
             }
           ]
         },
         {
-          "x": "VENTILADO NO INVASIVO",
+          "x": "TRABAJO SOCIAL",
           "valores": [
             {
-              "y": "FELICITACION",
+              "y": "AMBULATORIO",
               "frecuencia": 0
             },
             {
-              "y": "PETICION",
+              "y": "HOSPITALIZACIÓN",
+              "frecuencia": 1
+            },
+            {
+              "y": "PAD AGUDO",
               "frecuencia": 0
             },
             {
-              "y": "QUEJA",
-              "frecuencia": 0
-            },
+              "y": "PAD CRÓNICO",
+              "frecuencia": 1
+            }
+          ]
+        },
+        {
+          "x": "TRATO HUMANIZADO",
+          "valores": [
             {
-              "y": "RECLAMO",
+              "y": "AMBULATORIO",
               "frecuencia": 3
+            },
+            {
+              "y": "HOSPITALIZACIÓN",
+              "frecuencia": 32
+            },
+            {
+              "y": "PAD AGUDO",
+              "frecuencia": 0
+            },
+            {
+              "y": "PAD CRÓNICO",
+              "frecuencia": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "variable_x": "ambito",
+      "variable_y": "area_solicitud",
+      "tabla": [
+        {
+          "x": "AMBULATORIO",
+          "valores": [
+            {
+              "y": "APLICACIÓN DE MEDICAMENTO",
+              "frecuencia": 6
+            },
+            {
+              "y": "CALLCENTER",
+              "frecuencia": 6
+            },
+            {
+              "y": "CLINICA DE HERIDAS",
+              "frecuencia": 5
+            },
+            {
+              "y": "CUIDADOR",
+              "frecuencia": 0
+            },
+            {
+              "y": "DEMORA EN GENERACIÓN DE MIPRES",
+              "frecuencia": 0
+            },
+            {
+              "y": "DIETAS HOSPITALARIAS",
+              "frecuencia": 0
+            },
+            {
+              "y": "ENFERMERIA",
+              "frecuencia": 7
+            },
+            {
+              "y": "ENVÍO DE DOCUMENTACION",
+              "frecuencia": 5
+            },
+            {
+              "y": "FISIATRIA",
+              "frecuencia": 17
+            },
+            {
+              "y": "INFRAESTRUCTURA",
+              "frecuencia": 2
+            },
+            {
+              "y": "INSTITUCIONALIZACIÓN EN UNIDAD DE SALUD MENTAL",
+              "frecuencia": 0
+            },
+            {
+              "y": "INSUMOS O MEDICAMENTOS",
+              "frecuencia": 0
+            },
+            {
+              "y": "LABORATORIOS",
+              "frecuencia": 0
+            },
+            {
+              "y": "MEDICINA GENERAL",
+              "frecuencia": 5
+            },
+            {
+              "y": "MEDICINA INTERNA",
+              "frecuencia": 2
+            },
+            {
+              "y": "MÚLTIPLES SERVICIOS",
+              "frecuencia": 136
+            },
+            {
+              "y": "NUTRICIÓN Y DIETETICA",
+              "frecuencia": 0
+            },
+            {
+              "y": "PERDIDA DE OBJETOS PERSONALES",
+              "frecuencia": 0
+            },
+            {
+              "y": "PSICOLOGIA ADULTO",
+              "frecuencia": 5
+            },
+            {
+              "y": "PSICOLOGIA PEDIATRICO",
+              "frecuencia": 3
+            },
+            {
+              "y": "PSIQUIATRIA ADULTO",
+              "frecuencia": 3
+            },
+            {
+              "y": "PSIQUIATRIA PEDIATRICO",
+              "frecuencia": 10
+            },
+            {
+              "y": "RECOLECCIÓN DE RESIDUOS",
+              "frecuencia": 0
+            },
+            {
+              "y": "REHABILITACIÓN FUNCIONAL",
+              "frecuencia": 46
+            },
+            {
+              "y": "TERAPIA DEL LENGUAJE",
+              "frecuencia": 27
+            },
+            {
+              "y": "TERAPIA FISICA",
+              "frecuencia": 104
+            },
+            {
+              "y": "TERAPIA OCUPACIONAL",
+              "frecuencia": 21
+            },
+            {
+              "y": "TERAPIA RESPIRATORIA",
+              "frecuencia": 2
+            },
+            {
+              "y": "TRABAJO SOCIAL",
+              "frecuencia": 0
+            },
+            {
+              "y": "TRATO HUMANIZADO",
+              "frecuencia": 3
+            }
+          ]
+        },
+        {
+          "x": "HOSPITALIZACIÓN",
+          "valores": [
+            {
+              "y": "APLICACIÓN DE MEDICAMENTO",
+              "frecuencia": 3
+            },
+            {
+              "y": "CALLCENTER",
+              "frecuencia": 0
+            },
+            {
+              "y": "CLINICA DE HERIDAS",
+              "frecuencia": 0
+            },
+            {
+              "y": "CUIDADOR",
+              "frecuencia": 0
+            },
+            {
+              "y": "DEMORA EN GENERACIÓN DE MIPRES",
+              "frecuencia": 0
+            },
+            {
+              "y": "DIETAS HOSPITALARIAS",
+              "frecuencia": 3
+            },
+            {
+              "y": "ENFERMERIA",
+              "frecuencia": 9
+            },
+            {
+              "y": "ENVÍO DE DOCUMENTACION",
+              "frecuencia": 17
+            },
+            {
+              "y": "FISIATRIA",
+              "frecuencia": 1
+            },
+            {
+              "y": "INFRAESTRUCTURA",
+              "frecuencia": 1
+            },
+            {
+              "y": "INSTITUCIONALIZACIÓN EN UNIDAD DE SALUD MENTAL",
+              "frecuencia": 77
+            },
+            {
+              "y": "INSUMOS O MEDICAMENTOS",
+              "frecuencia": 2
+            },
+            {
+              "y": "LABORATORIOS",
+              "frecuencia": 1
+            },
+            {
+              "y": "MEDICINA GENERAL",
+              "frecuencia": 7
+            },
+            {
+              "y": "MEDICINA INTERNA",
+              "frecuencia": 0
+            },
+            {
+              "y": "MÚLTIPLES SERVICIOS",
+              "frecuencia": 173
+            },
+            {
+              "y": "NUTRICIÓN Y DIETETICA",
+              "frecuencia": 1
+            },
+            {
+              "y": "PERDIDA DE OBJETOS PERSONALES",
+              "frecuencia": 4
+            },
+            {
+              "y": "PSICOLOGIA ADULTO",
+              "frecuencia": 0
+            },
+            {
+              "y": "PSICOLOGIA PEDIATRICO",
+              "frecuencia": 0
+            },
+            {
+              "y": "PSIQUIATRIA ADULTO",
+              "frecuencia": 3
+            },
+            {
+              "y": "PSIQUIATRIA PEDIATRICO",
+              "frecuencia": 0
+            },
+            {
+              "y": "RECOLECCIÓN DE RESIDUOS",
+              "frecuencia": 1
+            },
+            {
+              "y": "REHABILITACIÓN FUNCIONAL",
+              "frecuencia": 0
+            },
+            {
+              "y": "TERAPIA DEL LENGUAJE",
+              "frecuencia": 0
+            },
+            {
+              "y": "TERAPIA FISICA",
+              "frecuencia": 1
+            },
+            {
+              "y": "TERAPIA OCUPACIONAL",
+              "frecuencia": 0
+            },
+            {
+              "y": "TERAPIA RESPIRATORIA",
+              "frecuencia": 1
+            },
+            {
+              "y": "TRABAJO SOCIAL",
+              "frecuencia": 1
+            },
+            {
+              "y": "TRATO HUMANIZADO",
+              "frecuencia": 32
+            }
+          ]
+        },
+        {
+          "x": "PAD AGUDO",
+          "valores": [
+            {
+              "y": "APLICACIÓN DE MEDICAMENTO",
+              "frecuencia": 188
+            },
+            {
+              "y": "CALLCENTER",
+              "frecuencia": 1
+            },
+            {
+              "y": "CLINICA DE HERIDAS",
+              "frecuencia": 5
+            },
+            {
+              "y": "CUIDADOR",
+              "frecuencia": 22
+            },
+            {
+              "y": "DEMORA EN GENERACIÓN DE MIPRES",
+              "frecuencia": 0
+            },
+            {
+              "y": "DIETAS HOSPITALARIAS",
+              "frecuencia": 1
+            },
+            {
+              "y": "ENFERMERIA",
+              "frecuencia": 49
+            },
+            {
+              "y": "ENVÍO DE DOCUMENTACION",
+              "frecuencia": 13
+            },
+            {
+              "y": "FISIATRIA",
+              "frecuencia": 3
+            },
+            {
+              "y": "INFRAESTRUCTURA",
+              "frecuencia": 0
+            },
+            {
+              "y": "INSTITUCIONALIZACIÓN EN UNIDAD DE SALUD MENTAL",
+              "frecuencia": 0
+            },
+            {
+              "y": "INSUMOS O MEDICAMENTOS",
+              "frecuencia": 4
+            },
+            {
+              "y": "LABORATORIOS",
+              "frecuencia": 6
+            },
+            {
+              "y": "MEDICINA GENERAL",
+              "frecuencia": 81
+            },
+            {
+              "y": "MEDICINA INTERNA",
+              "frecuencia": 0
+            },
+            {
+              "y": "MÚLTIPLES SERVICIOS",
+              "frecuencia": 175
+            },
+            {
+              "y": "NUTRICIÓN Y DIETETICA",
+              "frecuencia": 3
+            },
+            {
+              "y": "PERDIDA DE OBJETOS PERSONALES",
+              "frecuencia": 0
+            },
+            {
+              "y": "PSICOLOGIA ADULTO",
+              "frecuencia": 1
+            },
+            {
+              "y": "PSICOLOGIA PEDIATRICO",
+              "frecuencia": 0
+            },
+            {
+              "y": "PSIQUIATRIA ADULTO",
+              "frecuencia": 0
+            },
+            {
+              "y": "PSIQUIATRIA PEDIATRICO",
+              "frecuencia": 0
+            },
+            {
+              "y": "RECOLECCIÓN DE RESIDUOS",
+              "frecuencia": 30
+            },
+            {
+              "y": "REHABILITACIÓN FUNCIONAL",
+              "frecuencia": 1
+            },
+            {
+              "y": "TERAPIA DEL LENGUAJE",
+              "frecuencia": 9
+            },
+            {
+              "y": "TERAPIA FISICA",
+              "frecuencia": 42
+            },
+            {
+              "y": "TERAPIA OCUPACIONAL",
+              "frecuencia": 5
+            },
+            {
+              "y": "TERAPIA RESPIRATORIA",
+              "frecuencia": 3
+            },
+            {
+              "y": "TRABAJO SOCIAL",
+              "frecuencia": 0
+            },
+            {
+              "y": "TRATO HUMANIZADO",
+              "frecuencia": 0
+            }
+          ]
+        },
+        {
+          "x": "PAD CRÓNICO",
+          "valores": [
+            {
+              "y": "APLICACIÓN DE MEDICAMENTO",
+              "frecuencia": 1
+            },
+            {
+              "y": "CALLCENTER",
+              "frecuencia": 2
+            },
+            {
+              "y": "CLINICA DE HERIDAS",
+              "frecuencia": 1
+            },
+            {
+              "y": "CUIDADOR",
+              "frecuencia": 79
+            },
+            {
+              "y": "DEMORA EN GENERACIÓN DE MIPRES",
+              "frecuencia": 2
+            },
+            {
+              "y": "DIETAS HOSPITALARIAS",
+              "frecuencia": 0
+            },
+            {
+              "y": "ENFERMERIA",
+              "frecuencia": 237
+            },
+            {
+              "y": "ENVÍO DE DOCUMENTACION",
+              "frecuencia": 38
+            },
+            {
+              "y": "FISIATRIA",
+              "frecuencia": 2
+            },
+            {
+              "y": "INFRAESTRUCTURA",
+              "frecuencia": 0
+            },
+            {
+              "y": "INSTITUCIONALIZACIÓN EN UNIDAD DE SALUD MENTAL",
+              "frecuencia": 0
+            },
+            {
+              "y": "INSUMOS O MEDICAMENTOS",
+              "frecuencia": 13
+            },
+            {
+              "y": "LABORATORIOS",
+              "frecuencia": 8
+            },
+            {
+              "y": "MEDICINA GENERAL",
+              "frecuencia": 115
+            },
+            {
+              "y": "MEDICINA INTERNA",
+              "frecuencia": 1
+            },
+            {
+              "y": "MÚLTIPLES SERVICIOS",
+              "frecuencia": 280
+            },
+            {
+              "y": "NUTRICIÓN Y DIETETICA",
+              "frecuencia": 6
+            },
+            {
+              "y": "PERDIDA DE OBJETOS PERSONALES",
+              "frecuencia": 0
+            },
+            {
+              "y": "PSICOLOGIA ADULTO",
+              "frecuencia": 2
+            },
+            {
+              "y": "PSICOLOGIA PEDIATRICO",
+              "frecuencia": 1
+            },
+            {
+              "y": "PSIQUIATRIA ADULTO",
+              "frecuencia": 0
+            },
+            {
+              "y": "PSIQUIATRIA PEDIATRICO",
+              "frecuencia": 0
+            },
+            {
+              "y": "RECOLECCIÓN DE RESIDUOS",
+              "frecuencia": 2
+            },
+            {
+              "y": "REHABILITACIÓN FUNCIONAL",
+              "frecuencia": 0
+            },
+            {
+              "y": "TERAPIA DEL LENGUAJE",
+              "frecuencia": 7
+            },
+            {
+              "y": "TERAPIA FISICA",
+              "frecuencia": 35
+            },
+            {
+              "y": "TERAPIA OCUPACIONAL",
+              "frecuencia": 14
+            },
+            {
+              "y": "TERAPIA RESPIRATORIA",
+              "frecuencia": 5
+            },
+            {
+              "y": "TRABAJO SOCIAL",
+              "frecuencia": 1
+            },
+            {
+              "y": "TRATO HUMANIZADO",
+              "frecuencia": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "variable_x": "area_solicitud",
+      "variable_y": "canal",
+      "tabla": [
+        {
+          "x": "APLICACIÓN DE MEDICAMENTO",
+          "valores": [
+            {
+              "y": "BUZON DE SUGERENCIAS",
+              "frecuencia": 3
+            },
+            {
+              "y": "CALLCENTER",
+              "frecuencia": 1
+            },
+            {
+              "y": "CORREO ELECTRONICO",
+              "frecuencia": 82
+            },
+            {
+              "y": "PCR SANITAS",
+              "frecuencia": 0
+            },
+            {
+              "y": "PRESENCIAL",
+              "frecuencia": 2
+            },
+            {
+              "y": "PÁGINA WEB",
+              "frecuencia": 110
+            }
+          ]
+        },
+        {
+          "x": "CALLCENTER",
+          "valores": [
+            {
+              "y": "BUZON DE SUGERENCIAS",
+              "frecuencia": 0
+            },
+            {
+              "y": "CALLCENTER",
+              "frecuencia": 0
+            },
+            {
+              "y": "CORREO ELECTRONICO",
+              "frecuencia": 2
+            },
+            {
+              "y": "PCR SANITAS",
+              "frecuencia": 0
+            },
+            {
+              "y": "PRESENCIAL",
+              "frecuencia": 0
+            },
+            {
+              "y": "PÁGINA WEB",
+              "frecuencia": 7
+            }
+          ]
+        },
+        {
+          "x": "CLINICA DE HERIDAS",
+          "valores": [
+            {
+              "y": "BUZON DE SUGERENCIAS",
+              "frecuencia": 1
+            },
+            {
+              "y": "CALLCENTER",
+              "frecuencia": 0
+            },
+            {
+              "y": "CORREO ELECTRONICO",
+              "frecuencia": 4
+            },
+            {
+              "y": "PCR SANITAS",
+              "frecuencia": 0
+            },
+            {
+              "y": "PRESENCIAL",
+              "frecuencia": 2
+            },
+            {
+              "y": "PÁGINA WEB",
+              "frecuencia": 4
+            }
+          ]
+        },
+        {
+          "x": "CUIDADOR",
+          "valores": [
+            {
+              "y": "BUZON DE SUGERENCIAS",
+              "frecuencia": 6
+            },
+            {
+              "y": "CALLCENTER",
+              "frecuencia": 1
+            },
+            {
+              "y": "CORREO ELECTRONICO",
+              "frecuencia": 60
+            },
+            {
+              "y": "PCR SANITAS",
+              "frecuencia": 0
+            },
+            {
+              "y": "PRESENCIAL",
+              "frecuencia": 3
+            },
+            {
+              "y": "PÁGINA WEB",
+              "frecuencia": 31
+            }
+          ]
+        },
+        {
+          "x": "DEMORA EN GENERACIÓN DE MIPRES",
+          "valores": [
+            {
+              "y": "BUZON DE SUGERENCIAS",
+              "frecuencia": 1
+            },
+            {
+              "y": "CALLCENTER",
+              "frecuencia": 0
+            },
+            {
+              "y": "CORREO ELECTRONICO",
+              "frecuencia": 1
+            },
+            {
+              "y": "PCR SANITAS",
+              "frecuencia": 0
+            },
+            {
+              "y": "PRESENCIAL",
+              "frecuencia": 0
+            },
+            {
+              "y": "PÁGINA WEB",
+              "frecuencia": 0
+            }
+          ]
+        },
+        {
+          "x": "DIETAS HOSPITALARIAS",
+          "valores": [
+            {
+              "y": "BUZON DE SUGERENCIAS",
+              "frecuencia": 2
+            },
+            {
+              "y": "CALLCENTER",
+              "frecuencia": 0
+            },
+            {
+              "y": "CORREO ELECTRONICO",
+              "frecuencia": 2
+            },
+            {
+              "y": "PCR SANITAS",
+              "frecuencia": 0
+            },
+            {
+              "y": "PRESENCIAL",
+              "frecuencia": 0
+            },
+            {
+              "y": "PÁGINA WEB",
+              "frecuencia": 0
+            }
+          ]
+        },
+        {
+          "x": "ENFERMERIA",
+          "valores": [
+            {
+              "y": "BUZON DE SUGERENCIAS",
+              "frecuencia": 12
+            },
+            {
+              "y": "CALLCENTER",
+              "frecuencia": 0
+            },
+            {
+              "y": "CORREO ELECTRONICO",
+              "frecuencia": 213
+            },
+            {
+              "y": "PCR SANITAS",
+              "frecuencia": 0
+            },
+            {
+              "y": "PRESENCIAL",
+              "frecuencia": 5
+            },
+            {
+              "y": "PÁGINA WEB",
+              "frecuencia": 72
+            }
+          ]
+        },
+        {
+          "x": "ENVÍO DE DOCUMENTACION",
+          "valores": [
+            {
+              "y": "BUZON DE SUGERENCIAS",
+              "frecuencia": 1
+            },
+            {
+              "y": "CALLCENTER",
+              "frecuencia": 1
+            },
+            {
+              "y": "CORREO ELECTRONICO",
+              "frecuencia": 16
+            },
+            {
+              "y": "PCR SANITAS",
+              "frecuencia": 1
+            },
+            {
+              "y": "PRESENCIAL",
+              "frecuencia": 0
+            },
+            {
+              "y": "PÁGINA WEB",
+              "frecuencia": 54
+            }
+          ]
+        },
+        {
+          "x": "FISIATRIA",
+          "valores": [
+            {
+              "y": "BUZON DE SUGERENCIAS",
+              "frecuencia": 1
+            },
+            {
+              "y": "CALLCENTER",
+              "frecuencia": 0
+            },
+            {
+              "y": "CORREO ELECTRONICO",
+              "frecuencia": 21
+            },
+            {
+              "y": "PCR SANITAS",
+              "frecuencia": 1
+            },
+            {
+              "y": "PRESENCIAL",
+              "frecuencia": 0
+            },
+            {
+              "y": "PÁGINA WEB",
+              "frecuencia": 0
+            }
+          ]
+        },
+        {
+          "x": "INFRAESTRUCTURA",
+          "valores": [
+            {
+              "y": "BUZON DE SUGERENCIAS",
+              "frecuencia": 3
+            },
+            {
+              "y": "CALLCENTER",
+              "frecuencia": 0
+            },
+            {
+              "y": "CORREO ELECTRONICO",
+              "frecuencia": 0
+            },
+            {
+              "y": "PCR SANITAS",
+              "frecuencia": 0
+            },
+            {
+              "y": "PRESENCIAL",
+              "frecuencia": 0
+            },
+            {
+              "y": "PÁGINA WEB",
+              "frecuencia": 0
+            }
+          ]
+        },
+        {
+          "x": "INSTITUCIONALIZACIÓN EN UNIDAD DE SALUD MENTAL",
+          "valores": [
+            {
+              "y": "BUZON DE SUGERENCIAS",
+              "frecuencia": 68
+            },
+            {
+              "y": "CALLCENTER",
+              "frecuencia": 0
+            },
+            {
+              "y": "CORREO ELECTRONICO",
+              "frecuencia": 9
+            },
+            {
+              "y": "PCR SANITAS",
+              "frecuencia": 0
+            },
+            {
+              "y": "PRESENCIAL",
+              "frecuencia": 0
+            },
+            {
+              "y": "PÁGINA WEB",
+              "frecuencia": 0
+            }
+          ]
+        },
+        {
+          "x": "INSUMOS O MEDICAMENTOS",
+          "valores": [
+            {
+              "y": "BUZON DE SUGERENCIAS",
+              "frecuencia": 3
+            },
+            {
+              "y": "CALLCENTER",
+              "frecuencia": 0
+            },
+            {
+              "y": "CORREO ELECTRONICO",
+              "frecuencia": 9
+            },
+            {
+              "y": "PCR SANITAS",
+              "frecuencia": 0
+            },
+            {
+              "y": "PRESENCIAL",
+              "frecuencia": 0
+            },
+            {
+              "y": "PÁGINA WEB",
+              "frecuencia": 7
+            }
+          ]
+        },
+        {
+          "x": "LABORATORIOS",
+          "valores": [
+            {
+              "y": "BUZON DE SUGERENCIAS",
+              "frecuencia": 0
+            },
+            {
+              "y": "CALLCENTER",
+              "frecuencia": 0
+            },
+            {
+              "y": "CORREO ELECTRONICO",
+              "frecuencia": 8
+            },
+            {
+              "y": "PCR SANITAS",
+              "frecuencia": 1
+            },
+            {
+              "y": "PRESENCIAL",
+              "frecuencia": 0
+            },
+            {
+              "y": "PÁGINA WEB",
+              "frecuencia": 6
+            }
+          ]
+        },
+        {
+          "x": "MEDICINA GENERAL",
+          "valores": [
+            {
+              "y": "BUZON DE SUGERENCIAS",
+              "frecuencia": 8
+            },
+            {
+              "y": "CALLCENTER",
+              "frecuencia": 1
+            },
+            {
+              "y": "CORREO ELECTRONICO",
+              "frecuencia": 138
+            },
+            {
+              "y": "PCR SANITAS",
+              "frecuencia": 0
+            },
+            {
+              "y": "PRESENCIAL",
+              "frecuencia": 2
+            },
+            {
+              "y": "PÁGINA WEB",
+              "frecuencia": 59
+            }
+          ]
+        },
+        {
+          "x": "MEDICINA INTERNA",
+          "valores": [
+            {
+              "y": "BUZON DE SUGERENCIAS",
+              "frecuencia": 2
+            },
+            {
+              "y": "CALLCENTER",
+              "frecuencia": 0
+            },
+            {
+              "y": "CORREO ELECTRONICO",
+              "frecuencia": 1
+            },
+            {
+              "y": "PCR SANITAS",
+              "frecuencia": 0
+            },
+            {
+              "y": "PRESENCIAL",
+              "frecuencia": 0
+            },
+            {
+              "y": "PÁGINA WEB",
+              "frecuencia": 0
+            }
+          ]
+        },
+        {
+          "x": "MÚLTIPLES SERVICIOS",
+          "valores": [
+            {
+              "y": "BUZON DE SUGERENCIAS",
+              "frecuencia": 113
+            },
+            {
+              "y": "CALLCENTER",
+              "frecuencia": 1
+            },
+            {
+              "y": "CORREO ELECTRONICO",
+              "frecuencia": 449
+            },
+            {
+              "y": "PCR SANITAS",
+              "frecuencia": 7
+            },
+            {
+              "y": "PRESENCIAL",
+              "frecuencia": 9
+            },
+            {
+              "y": "PÁGINA WEB",
+              "frecuencia": 185
+            }
+          ]
+        },
+        {
+          "x": "NUTRICIÓN Y DIETETICA",
+          "valores": [
+            {
+              "y": "BUZON DE SUGERENCIAS",
+              "frecuencia": 0
+            },
+            {
+              "y": "CALLCENTER",
+              "frecuencia": 0
+            },
+            {
+              "y": "CORREO ELECTRONICO",
+              "frecuencia": 2
+            },
+            {
+              "y": "PCR SANITAS",
+              "frecuencia": 0
+            },
+            {
+              "y": "PRESENCIAL",
+              "frecuencia": 0
+            },
+            {
+              "y": "PÁGINA WEB",
+              "frecuencia": 8
+            }
+          ]
+        },
+        {
+          "x": "PERDIDA DE OBJETOS PERSONALES",
+          "valores": [
+            {
+              "y": "BUZON DE SUGERENCIAS",
+              "frecuencia": 1
+            },
+            {
+              "y": "CALLCENTER",
+              "frecuencia": 0
+            },
+            {
+              "y": "CORREO ELECTRONICO",
+              "frecuencia": 3
+            },
+            {
+              "y": "PCR SANITAS",
+              "frecuencia": 0
+            },
+            {
+              "y": "PRESENCIAL",
+              "frecuencia": 0
+            },
+            {
+              "y": "PÁGINA WEB",
+              "frecuencia": 0
+            }
+          ]
+        },
+        {
+          "x": "PSICOLOGIA ADULTO",
+          "valores": [
+            {
+              "y": "BUZON DE SUGERENCIAS",
+              "frecuencia": 4
+            },
+            {
+              "y": "CALLCENTER",
+              "frecuencia": 0
+            },
+            {
+              "y": "CORREO ELECTRONICO",
+              "frecuencia": 2
+            },
+            {
+              "y": "PCR SANITAS",
+              "frecuencia": 0
+            },
+            {
+              "y": "PRESENCIAL",
+              "frecuencia": 0
+            },
+            {
+              "y": "PÁGINA WEB",
+              "frecuencia": 2
+            }
+          ]
+        },
+        {
+          "x": "PSICOLOGIA PEDIATRICO",
+          "valores": [
+            {
+              "y": "BUZON DE SUGERENCIAS",
+              "frecuencia": 1
+            },
+            {
+              "y": "CALLCENTER",
+              "frecuencia": 0
+            },
+            {
+              "y": "CORREO ELECTRONICO",
+              "frecuencia": 3
+            },
+            {
+              "y": "PCR SANITAS",
+              "frecuencia": 0
+            },
+            {
+              "y": "PRESENCIAL",
+              "frecuencia": 0
+            },
+            {
+              "y": "PÁGINA WEB",
+              "frecuencia": 0
+            }
+          ]
+        },
+        {
+          "x": "PSIQUIATRIA ADULTO",
+          "valores": [
+            {
+              "y": "BUZON DE SUGERENCIAS",
+              "frecuencia": 1
+            },
+            {
+              "y": "CALLCENTER",
+              "frecuencia": 0
+            },
+            {
+              "y": "CORREO ELECTRONICO",
+              "frecuencia": 1
+            },
+            {
+              "y": "PCR SANITAS",
+              "frecuencia": 0
+            },
+            {
+              "y": "PRESENCIAL",
+              "frecuencia": 0
+            },
+            {
+              "y": "PÁGINA WEB",
+              "frecuencia": 4
+            }
+          ]
+        },
+        {
+          "x": "PSIQUIATRIA PEDIATRICO",
+          "valores": [
+            {
+              "y": "BUZON DE SUGERENCIAS",
+              "frecuencia": 1
+            },
+            {
+              "y": "CALLCENTER",
+              "frecuencia": 0
+            },
+            {
+              "y": "CORREO ELECTRONICO",
+              "frecuencia": 5
+            },
+            {
+              "y": "PCR SANITAS",
+              "frecuencia": 1
+            },
+            {
+              "y": "PRESENCIAL",
+              "frecuencia": 0
+            },
+            {
+              "y": "PÁGINA WEB",
+              "frecuencia": 3
+            }
+          ]
+        },
+        {
+          "x": "RECOLECCIÓN DE RESIDUOS",
+          "valores": [
+            {
+              "y": "BUZON DE SUGERENCIAS",
+              "frecuencia": 0
+            },
+            {
+              "y": "CALLCENTER",
+              "frecuencia": 0
+            },
+            {
+              "y": "CORREO ELECTRONICO",
+              "frecuencia": 25
+            },
+            {
+              "y": "PCR SANITAS",
+              "frecuencia": 0
+            },
+            {
+              "y": "PRESENCIAL",
+              "frecuencia": 0
+            },
+            {
+              "y": "PÁGINA WEB",
+              "frecuencia": 8
+            }
+          ]
+        },
+        {
+          "x": "REHABILITACIÓN FUNCIONAL",
+          "valores": [
+            {
+              "y": "BUZON DE SUGERENCIAS",
+              "frecuencia": 2
+            },
+            {
+              "y": "CALLCENTER",
+              "frecuencia": 0
+            },
+            {
+              "y": "CORREO ELECTRONICO",
+              "frecuencia": 26
+            },
+            {
+              "y": "PCR SANITAS",
+              "frecuencia": 6
+            },
+            {
+              "y": "PRESENCIAL",
+              "frecuencia": 0
+            },
+            {
+              "y": "PÁGINA WEB",
+              "frecuencia": 13
+            }
+          ]
+        },
+        {
+          "x": "TERAPIA DEL LENGUAJE",
+          "valores": [
+            {
+              "y": "BUZON DE SUGERENCIAS",
+              "frecuencia": 9
+            },
+            {
+              "y": "CALLCENTER",
+              "frecuencia": 0
+            },
+            {
+              "y": "CORREO ELECTRONICO",
+              "frecuencia": 23
+            },
+            {
+              "y": "PCR SANITAS",
+              "frecuencia": 0
+            },
+            {
+              "y": "PRESENCIAL",
+              "frecuencia": 1
+            },
+            {
+              "y": "PÁGINA WEB",
+              "frecuencia": 10
+            }
+          ]
+        },
+        {
+          "x": "TERAPIA FISICA",
+          "valores": [
+            {
+              "y": "BUZON DE SUGERENCIAS",
+              "frecuencia": 42
+            },
+            {
+              "y": "CALLCENTER",
+              "frecuencia": 0
+            },
+            {
+              "y": "CORREO ELECTRONICO",
+              "frecuencia": 83
+            },
+            {
+              "y": "PCR SANITAS",
+              "frecuencia": 3
+            },
+            {
+              "y": "PRESENCIAL",
+              "frecuencia": 8
+            },
+            {
+              "y": "PÁGINA WEB",
+              "frecuencia": 46
+            }
+          ]
+        },
+        {
+          "x": "TERAPIA OCUPACIONAL",
+          "valores": [
+            {
+              "y": "BUZON DE SUGERENCIAS",
+              "frecuencia": 4
+            },
+            {
+              "y": "CALLCENTER",
+              "frecuencia": 1
+            },
+            {
+              "y": "CORREO ELECTRONICO",
+              "frecuencia": 24
+            },
+            {
+              "y": "PCR SANITAS",
+              "frecuencia": 1
+            },
+            {
+              "y": "PRESENCIAL",
+              "frecuencia": 2
+            },
+            {
+              "y": "PÁGINA WEB",
+              "frecuencia": 8
+            }
+          ]
+        },
+        {
+          "x": "TERAPIA RESPIRATORIA",
+          "valores": [
+            {
+              "y": "BUZON DE SUGERENCIAS",
+              "frecuencia": 2
+            },
+            {
+              "y": "CALLCENTER",
+              "frecuencia": 0
+            },
+            {
+              "y": "CORREO ELECTRONICO",
+              "frecuencia": 5
+            },
+            {
+              "y": "PCR SANITAS",
+              "frecuencia": 0
+            },
+            {
+              "y": "PRESENCIAL",
+              "frecuencia": 0
+            },
+            {
+              "y": "PÁGINA WEB",
+              "frecuencia": 4
+            }
+          ]
+        },
+        {
+          "x": "TRABAJO SOCIAL",
+          "valores": [
+            {
+              "y": "BUZON DE SUGERENCIAS",
+              "frecuencia": 0
+            },
+            {
+              "y": "CALLCENTER",
+              "frecuencia": 0
+            },
+            {
+              "y": "CORREO ELECTRONICO",
+              "frecuencia": 1
+            },
+            {
+              "y": "PCR SANITAS",
+              "frecuencia": 0
+            },
+            {
+              "y": "PRESENCIAL",
+              "frecuencia": 0
+            },
+            {
+              "y": "PÁGINA WEB",
+              "frecuencia": 1
+            }
+          ]
+        },
+        {
+          "x": "TRATO HUMANIZADO",
+          "valores": [
+            {
+              "y": "BUZON DE SUGERENCIAS",
+              "frecuencia": 22
+            },
+            {
+              "y": "CALLCENTER",
+              "frecuencia": 0
+            },
+            {
+              "y": "CORREO ELECTRONICO",
+              "frecuencia": 10
+            },
+            {
+              "y": "PCR SANITAS",
+              "frecuencia": 0
+            },
+            {
+              "y": "PRESENCIAL",
+              "frecuencia": 1
+            },
+            {
+              "y": "PÁGINA WEB",
+              "frecuencia": 6
             }
           ]
         }
@@ -1665,7 +3369,7 @@
             },
             {
               "y": "PÁGINA WEB",
-              "frecuencia": 94
+              "frecuencia": 93
             }
           ]
         },
@@ -1759,31 +3463,60 @@
       ]
     },
     {
-      "variable_x": "causa",
+      "variable_x": "area_solicitud",
       "variable_y": "mes",
       "tabla": [
         {
-          "x": "ACCESIBILIDAD",
+          "x": "APLICACIÓN DE MEDICAMENTO",
           "valores": [
             {
               "y": "AGOSTO",
-              "frecuencia": 12
+              "frecuencia": 20
             },
             {
               "y": "DICIEMBRE",
-              "frecuencia": 8
+              "frecuencia": 91
             },
             {
               "y": "JULIO",
-              "frecuencia": 10
+              "frecuencia": 27
             },
             {
               "y": "NOVIEMBRE",
-              "frecuencia": 3
+              "frecuencia": 28
             },
             {
               "y": "OCTUBRE",
-              "frecuencia": 27
+              "frecuencia": 15
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 17
+            }
+          ]
+        },
+        {
+          "x": "CALLCENTER",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 2
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 2
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 1
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 1
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 2
             },
             {
               "y": "SEPTIEMBRE",
@@ -1792,127 +3525,707 @@
           ]
         },
         {
-          "x": "CONTINUIDAD",
+          "x": "CLINICA DE HERIDAS",
           "valores": [
             {
               "y": "AGOSTO",
-              "frecuencia": 252
+              "frecuencia": 1
             },
             {
               "y": "DICIEMBRE",
-              "frecuencia": 255
+              "frecuencia": 2
             },
             {
               "y": "JULIO",
-              "frecuencia": 273
-            },
-            {
-              "y": "NOVIEMBRE",
-              "frecuencia": 203
-            },
-            {
-              "y": "OCTUBRE",
-              "frecuencia": 314
-            },
-            {
-              "y": "SEPTIEMBRE",
-              "frecuencia": 235
-            }
-          ]
-        },
-        {
-          "x": "NO APLICA",
-          "valores": [
-            {
-              "y": "AGOSTO",
-              "frecuencia": 50
-            },
-            {
-              "y": "DICIEMBRE",
-              "frecuencia": 84
-            },
-            {
-              "y": "JULIO",
-              "frecuencia": 38
-            },
-            {
-              "y": "NOVIEMBRE",
-              "frecuencia": 42
-            },
-            {
-              "y": "OCTUBRE",
-              "frecuencia": 46
-            },
-            {
-              "y": "SEPTIEMBRE",
-              "frecuencia": 38
-            }
-          ]
-        },
-        {
-          "x": "OPORTUNIDAD",
-          "valores": [
-            {
-              "y": "AGOSTO",
-              "frecuencia": 58
-            },
-            {
-              "y": "DICIEMBRE",
               "frecuencia": 4
             },
             {
-              "y": "JULIO",
-              "frecuencia": 70
-            },
-            {
               "y": "NOVIEMBRE",
-              "frecuencia": 4
+              "frecuencia": 3
             },
             {
               "y": "OCTUBRE",
-              "frecuencia": 23
+              "frecuencia": 0
             },
             {
               "y": "SEPTIEMBRE",
-              "frecuencia": 30
+              "frecuencia": 1
             }
           ]
         },
         {
-          "x": "PERTINENCIA",
+          "x": "CUIDADOR",
           "valores": [
             {
               "y": "AGOSTO",
-              "frecuencia": 19
+              "frecuencia": 17
             },
             {
               "y": "DICIEMBRE",
-              "frecuencia": 10
-            },
-            {
-              "y": "JULIO",
               "frecuencia": 15
             },
             {
+              "y": "JULIO",
+              "frecuencia": 23
+            },
+            {
               "y": "NOVIEMBRE",
-              "frecuencia": 16
+              "frecuencia": 10
             },
             {
               "y": "OCTUBRE",
-              "frecuencia": 20
+              "frecuencia": 21
             },
             {
               "y": "SEPTIEMBRE",
-              "frecuencia": 10
+              "frecuencia": 15
             }
           ]
         },
         {
-          "x": "SEGURIDAD",
+          "x": "DEMORA EN GENERACIÓN DE MIPRES",
           "valores": [
             {
               "y": "AGOSTO",
-              "frecuencia": 20
+              "frecuencia": 0
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 1
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 1
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 0
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 0
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 0
+            }
+          ]
+        },
+        {
+          "x": "DIETAS HOSPITALARIAS",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 0
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 2
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 1
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 0
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 1
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 0
+            }
+          ]
+        },
+        {
+          "x": "ENFERMERIA",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 56
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 48
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 73
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 31
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 62
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 32
+            }
+          ]
+        },
+        {
+          "x": "ENVÍO DE DOCUMENTACION",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 13
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 15
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 10
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 11
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 17
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 7
+            }
+          ]
+        },
+        {
+          "x": "FISIATRIA",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 8
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 3
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 10
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 0
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 2
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 0
+            }
+          ]
+        },
+        {
+          "x": "INFRAESTRUCTURA",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 1
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 0
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 1
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 0
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 1
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 0
+            }
+          ]
+        },
+        {
+          "x": "INSTITUCIONALIZACIÓN EN UNIDAD DE SALUD MENTAL",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 9
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 11
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 11
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 6
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 28
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 12
+            }
+          ]
+        },
+        {
+          "x": "INSUMOS O MEDICAMENTOS",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 3
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 1
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 3
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 2
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 4
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 6
+            }
+          ]
+        },
+        {
+          "x": "LABORATORIOS",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 1
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 4
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 3
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 2
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 3
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 2
+            }
+          ]
+        },
+        {
+          "x": "MEDICINA GENERAL",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 49
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 27
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 45
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 21
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 37
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 29
+            }
+          ]
+        },
+        {
+          "x": "MEDICINA INTERNA",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 2
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 0
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 1
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 0
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 0
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 0
+            }
+          ]
+        },
+        {
+          "x": "MÚLTIPLES SERVICIOS",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 133
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 108
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 139
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 108
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 153
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 123
+            }
+          ]
+        },
+        {
+          "x": "NUTRICIÓN Y DIETETICA",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 4
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 0
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 3
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 0
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 3
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 0
+            }
+          ]
+        },
+        {
+          "x": "PERDIDA DE OBJETOS PERSONALES",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 1
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 0
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 2
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 0
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 1
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 0
+            }
+          ]
+        },
+        {
+          "x": "PSICOLOGIA ADULTO",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 2
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 1
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 3
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 1
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 0
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 1
+            }
+          ]
+        },
+        {
+          "x": "PSICOLOGIA PEDIATRICO",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 1
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 1
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 0
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 2
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 0
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 0
+            }
+          ]
+        },
+        {
+          "x": "PSIQUIATRIA ADULTO",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 1
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 2
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 1
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 0
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 2
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 0
+            }
+          ]
+        },
+        {
+          "x": "PSIQUIATRIA PEDIATRICO",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 2
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 0
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 1
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 2
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 3
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 2
+            }
+          ]
+        },
+        {
+          "x": "RECOLECCIÓN DE RESIDUOS",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 9
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 2
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 9
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 2
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 5
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 6
+            }
+          ]
+        },
+        {
+          "x": "REHABILITACIÓN FUNCIONAL",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 5
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 4
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 1
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 10
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 14
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 13
+            }
+          ]
+        },
+        {
+          "x": "TERAPIA DEL LENGUAJE",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 9
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 2
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 10
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 4
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 9
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 9
+            }
+          ]
+        },
+        {
+          "x": "TERAPIA FISICA",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 39
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 14
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 29
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 21
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 44
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 35
+            }
+          ]
+        },
+        {
+          "x": "TERAPIA OCUPACIONAL",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 13
             },
             {
               "y": "DICIEMBRE",
@@ -1920,431 +4233,228 @@
             },
             {
               "y": "JULIO",
-              "frecuencia": 20
+              "frecuencia": 8
             },
             {
               "y": "NOVIEMBRE",
-              "frecuencia": 10
+              "frecuencia": 4
             },
             {
               "y": "OCTUBRE",
-              "frecuencia": 12
+              "frecuencia": 4
             },
             {
               "y": "SEPTIEMBRE",
-              "frecuencia": 14
+              "frecuencia": 5
+            }
+          ]
+        },
+        {
+          "x": "TERAPIA RESPIRATORIA",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 2
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 2
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 1
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 3
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 2
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 1
+            }
+          ]
+        },
+        {
+          "x": "TRABAJO SOCIAL",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 0
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 0
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 0
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 0
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 1
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 1
+            }
+          ]
+        },
+        {
+          "x": "TRATO HUMANIZADO",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 8
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 2
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 5
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 6
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 8
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 10
             }
           ]
         }
       ]
     },
     {
-      "variable_x": "programa",
-      "variable_y": "mes",
+      "variable_x": "ambito",
+      "variable_y": "canal",
       "tabla": [
         {
-          "x": "APLICACIÓN DE BIOLOGICO",
+          "x": "AMBULATORIO",
           "valores": [
             {
-              "y": "AGOSTO",
-              "frecuencia": 1
-            },
-            {
-              "y": "DICIEMBRE",
-              "frecuencia": 0
-            },
-            {
-              "y": "JULIO",
-              "frecuencia": 0
-            },
-            {
-              "y": "NOVIEMBRE",
-              "frecuencia": 0
-            },
-            {
-              "y": "OCTUBRE",
-              "frecuencia": 0
-            },
-            {
-              "y": "SEPTIEMBRE",
-              "frecuencia": 1
-            }
-          ]
-        },
-        {
-          "x": "APLICACIÓN DE MEDICAMENTO",
-          "valores": [
-            {
-              "y": "AGOSTO",
-              "frecuencia": 66
-            },
-            {
-              "y": "DICIEMBRE",
-              "frecuencia": 97
-            },
-            {
-              "y": "JULIO",
-              "frecuencia": 53
-            },
-            {
-              "y": "NOVIEMBRE",
-              "frecuencia": 30
-            },
-            {
-              "y": "OCTUBRE",
-              "frecuencia": 28
-            },
-            {
-              "y": "SEPTIEMBRE",
-              "frecuencia": 35
-            }
-          ]
-        },
-        {
-          "x": "DOMICILIARIO",
-          "valores": [
-            {
-              "y": "AGOSTO",
-              "frecuencia": 4
-            },
-            {
-              "y": "DICIEMBRE",
-              "frecuencia": 0
-            },
-            {
-              "y": "JULIO",
-              "frecuencia": 5
-            },
-            {
-              "y": "NOVIEMBRE",
-              "frecuencia": 0
-            },
-            {
-              "y": "OCTUBRE",
-              "frecuencia": 7
-            },
-            {
-              "y": "SEPTIEMBRE",
-              "frecuencia": 3
-            }
-          ]
-        },
-        {
-          "x": "HOSPITALIZACIÓN GENERAL",
-          "valores": [
-            {
-              "y": "AGOSTO",
-              "frecuencia": 14
-            },
-            {
-              "y": "DICIEMBRE",
-              "frecuencia": 6
-            },
-            {
-              "y": "JULIO",
-              "frecuencia": 14
-            },
-            {
-              "y": "NOVIEMBRE",
-              "frecuencia": 5
-            },
-            {
-              "y": "OCTUBRE",
-              "frecuencia": 8
-            },
-            {
-              "y": "SEPTIEMBRE",
-              "frecuencia": 6
-            }
-          ]
-        },
-        {
-          "x": "NEW PALEX",
-          "valores": [
-            {
-              "y": "AGOSTO",
-              "frecuencia": 1
-            },
-            {
-              "y": "DICIEMBRE",
-              "frecuencia": 0
-            },
-            {
-              "y": "JULIO",
-              "frecuencia": 3
-            },
-            {
-              "y": "NOVIEMBRE",
-              "frecuencia": 0
-            },
-            {
-              "y": "OCTUBRE",
-              "frecuencia": 0
-            },
-            {
-              "y": "SEPTIEMBRE",
-              "frecuencia": 0
-            }
-          ]
-        },
-        {
-          "x": "NO VENTILADO",
-          "valores": [
-            {
-              "y": "AGOSTO",
-              "frecuencia": 138
-            },
-            {
-              "y": "DICIEMBRE",
-              "frecuencia": 134
-            },
-            {
-              "y": "JULIO",
-              "frecuencia": 176
-            },
-            {
-              "y": "NOVIEMBRE",
-              "frecuencia": 93
-            },
-            {
-              "y": "OCTUBRE",
-              "frecuencia": 168
-            },
-            {
-              "y": "SEPTIEMBRE",
-              "frecuencia": 113
-            }
-          ]
-        },
-        {
-          "x": "PUNTUAL",
-          "valores": [
-            {
-              "y": "AGOSTO",
-              "frecuencia": 37
-            },
-            {
-              "y": "DICIEMBRE",
-              "frecuencia": 49
-            },
-            {
-              "y": "JULIO",
-              "frecuencia": 53
-            },
-            {
-              "y": "NOVIEMBRE",
-              "frecuencia": 68
-            },
-            {
-              "y": "OCTUBRE",
-              "frecuencia": 70
-            },
-            {
-              "y": "SEPTIEMBRE",
-              "frecuencia": 44
-            }
-          ]
-        },
-        {
-          "x": "SANITAS PREMIUM",
-          "valores": [
-            {
-              "y": "AGOSTO",
-              "frecuencia": 2
-            },
-            {
-              "y": "DICIEMBRE",
-              "frecuencia": 2
-            },
-            {
-              "y": "JULIO",
-              "frecuencia": 5
-            },
-            {
-              "y": "NOVIEMBRE",
-              "frecuencia": 0
-            },
-            {
-              "y": "OCTUBRE",
-              "frecuencia": 0
-            },
-            {
-              "y": "SEPTIEMBRE",
-              "frecuencia": 0
-            }
-          ]
-        },
-        {
-          "x": "UNIDAD DE CUIDADO COGNITIVO",
-          "valores": [
-            {
-              "y": "AGOSTO",
-              "frecuencia": 0
-            },
-            {
-              "y": "DICIEMBRE",
-              "frecuencia": 0
-            },
-            {
-              "y": "JULIO",
-              "frecuencia": 0
-            },
-            {
-              "y": "NOVIEMBRE",
-              "frecuencia": 0
-            },
-            {
-              "y": "OCTUBRE",
-              "frecuencia": 1
-            },
-            {
-              "y": "SEPTIEMBRE",
-              "frecuencia": 0
-            }
-          ]
-        },
-        {
-          "x": "UNIDAD DE CUIDADO CRÓNICO",
-          "valores": [
-            {
-              "y": "AGOSTO",
-              "frecuencia": 16
-            },
-            {
-              "y": "DICIEMBRE",
-              "frecuencia": 14
-            },
-            {
-              "y": "JULIO",
-              "frecuencia": 6
-            },
-            {
-              "y": "NOVIEMBRE",
-              "frecuencia": 13
-            },
-            {
-              "y": "OCTUBRE",
-              "frecuencia": 23
-            },
-            {
-              "y": "SEPTIEMBRE",
-              "frecuencia": 19
-            }
-          ]
-        },
-        {
-          "x": "UNIDAD DE REHABILITACIÓN",
-          "valores": [
-            {
-              "y": "AGOSTO",
+              "y": "BUZON DE SUGERENCIAS",
               "frecuencia": 95
             },
             {
-              "y": "DICIEMBRE",
-              "frecuencia": 34
+              "y": "CALLCENTER",
+              "frecuencia": 0
             },
             {
-              "y": "JULIO",
-              "frecuencia": 72
+              "y": "CORREO ELECTRONICO",
+              "frecuencia": 193
             },
             {
-              "y": "NOVIEMBRE",
-              "frecuencia": 35
+              "y": "PCR SANITAS",
+              "frecuencia": 16
             },
             {
-              "y": "OCTUBRE",
-              "frecuencia": 85
+              "y": "PRESENCIAL",
+              "frecuencia": 11
             },
             {
-              "y": "SEPTIEMBRE",
-              "frecuencia": 71
+              "y": "PÁGINA WEB",
+              "frecuencia": 100
             }
           ]
         },
         {
-          "x": "UNIDAD DE SALUD MENTAL",
+          "x": "HOSPITALIZACIÓN",
           "valores": [
             {
-              "y": "AGOSTO",
-              "frecuencia": 28
+              "y": "BUZON DE SUGERENCIAS",
+              "frecuencia": 181
             },
             {
-              "y": "DICIEMBRE",
-              "frecuencia": 20
+              "y": "CALLCENTER",
+              "frecuencia": 0
             },
             {
-              "y": "JULIO",
-              "frecuencia": 28
+              "y": "CORREO ELECTRONICO",
+              "frecuencia": 99
             },
             {
-              "y": "NOVIEMBRE",
-              "frecuencia": 26
+              "y": "PCR SANITAS",
+              "frecuencia": 3
             },
             {
-              "y": "OCTUBRE",
-              "frecuencia": 47
+              "y": "PRESENCIAL",
+              "frecuencia": 6
             },
             {
-              "y": "SEPTIEMBRE",
-              "frecuencia": 27
+              "y": "PÁGINA WEB",
+              "frecuencia": 49
             }
           ]
         },
         {
-          "x": "VENTILADO",
+          "x": "PAD AGUDO",
           "valores": [
             {
-              "y": "AGOSTO",
-              "frecuencia": 8
+              "y": "BUZON DE SUGERENCIAS",
+              "frecuencia": 9
             },
             {
-              "y": "DICIEMBRE",
-              "frecuencia": 11
+              "y": "CALLCENTER",
+              "frecuencia": 1
             },
             {
-              "y": "JULIO",
-              "frecuencia": 11
+              "y": "CORREO ELECTRONICO",
+              "frecuencia": 391
             },
             {
-              "y": "NOVIEMBRE",
-              "frecuencia": 7
+              "y": "PCR SANITAS",
+              "frecuencia": 0
             },
             {
-              "y": "OCTUBRE",
+              "y": "PRESENCIAL",
+              "frecuencia": 4
+            },
+            {
+              "y": "PÁGINA WEB",
+              "frecuencia": 237
+            }
+          ]
+        },
+        {
+          "x": "PAD CRÓNICO",
+          "valores": [
+            {
+              "y": "BUZON DE SUGERENCIAS",
+              "frecuencia": 28
+            },
+            {
+              "y": "CALLCENTER",
               "frecuencia": 5
             },
             {
-              "y": "SEPTIEMBRE",
-              "frecuencia": 8
-            }
-          ]
-        },
-        {
-          "x": "VENTILADO NO INVASIVO",
-          "valores": [
-            {
-              "y": "AGOSTO",
-              "frecuencia": 1
+              "y": "CORREO ELECTRONICO",
+              "frecuencia": 545
             },
             {
-              "y": "DICIEMBRE",
-              "frecuencia": 0
+              "y": "PCR SANITAS",
+              "frecuencia": 2
             },
             {
-              "y": "JULIO",
-              "frecuencia": 0
+              "y": "PRESENCIAL",
+              "frecuencia": 14
             },
             {
-              "y": "NOVIEMBRE",
-              "frecuencia": 1
-            },
-            {
-              "y": "OCTUBRE",
-              "frecuencia": 0
-            },
-            {
-              "y": "SEPTIEMBRE",
-              "frecuencia": 1
+              "y": "PÁGINA WEB",
+              "frecuencia": 262
             }
           ]
         }
@@ -2508,7 +4618,7 @@
             },
             {
               "y": "DICIEMBRE",
-              "frecuencia": 130
+              "frecuencia": 129
             },
             {
               "y": "JULIO",
@@ -2525,6 +4635,186 @@
             {
               "y": "SEPTIEMBRE",
               "frecuencia": 73
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "variable_x": "tipo_usuario",
+      "variable_y": "mes",
+      "tabla": [
+        {
+          "x": "ANÓNIMO",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 14
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 2
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 14
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 8
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 15
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 6
+            }
+          ]
+        },
+        {
+          "x": "ASEGURADORA",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 151
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 145
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 200
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 119
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 164
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 144
+            }
+          ]
+        },
+        {
+          "x": "EMPRESA O PERSONA JURIDICA",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 7
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 0
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 3
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 2
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 2
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 4
+            }
+          ]
+        },
+        {
+          "x": "ENTES DE CONTROL",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 0
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 3
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 4
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 4
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 2
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 0
+            }
+          ]
+        },
+        {
+          "x": "PÉRGAMO",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 0
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 0
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 0
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 0
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 0
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 1
+            }
+          ]
+        },
+        {
+          "x": "USUARIO EN MANEJO POR LA IPS",
+          "valores": [
+            {
+              "y": "AGOSTO",
+              "frecuencia": 239
+            },
+            {
+              "y": "DICIEMBRE",
+              "frecuencia": 216
+            },
+            {
+              "y": "JULIO",
+              "frecuencia": 205
+            },
+            {
+              "y": "NOVIEMBRE",
+              "frecuencia": 145
+            },
+            {
+              "y": "OCTUBRE",
+              "frecuencia": 259
+            },
+            {
+              "y": "SEPTIEMBRE",
+              "frecuencia": 173
             }
           ]
         }

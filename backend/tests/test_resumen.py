@@ -15,7 +15,7 @@ def test_resumen_codigo_200():
 def test_resumen_total_pqrs():
     response = client.get("/api/resumen")
     data = response.json()
-    assert data["total_pqrs"] == 2252
+    assert data["total_pqrs"] == 2251
 
 
 def test_resumen_periodo():
@@ -27,9 +27,9 @@ def test_resumen_periodo():
 def test_resumen_claves_principales():
     data = client.get("/api/resumen").json()
     for clave in [
-        "causa_mas_frecuente",
+        "ambito_mas_frecuente",
         "canal_mas_utilizado",
         "tiempo_promedio_respuesta_dias",
-        "servicio_mas_pqrs",
+        "area_mas_frecuente",
     ]:
         assert clave in data

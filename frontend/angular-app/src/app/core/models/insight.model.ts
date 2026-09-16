@@ -35,9 +35,9 @@ export interface FiltroCluster {
 
 export interface Filtros {
   tipos: string[];
-  causas: string[];
+  ambitos: string[];
   canales: string[];
-  servicios: string[];
+  areas: string[];
   meses: Record<number, string>[];
   clusters: FiltroCluster[];
 }
